@@ -20,8 +20,6 @@ public class WordSolver {
     private List<List<Coordinate>> words;
 
     // from center of letter to edges + padding
-    private static final int LETTER_HALF_WIDTH = 25;
-    private static final int LETTER_HALF_HEIGHT = 25;
     private static final int DONUT_CENTER_X = 735;
     private static final int DONUT_CENTER_Y = 775;
 
@@ -31,29 +29,19 @@ public class WordSolver {
     private static final String FILE_NAME = "output.txt";
     private BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME));
     private Scanner scanner = new Scanner(System.in);
+    List<Character> letters;
     private int radius;
 
     public WordSolver() throws AWTException, FileNotFoundException {
         bot = new Robot();
         words = new ArrayList<>();
+        letters = new ArrayList<>();
     }
 
     public void solve() {
         while (true) {
-            //input letters MANUALLY
-            // List<Character> letters = new ArrayList<>();
-            // char letter;
-            // do {
-            //     System.out.print("Input letter or '1' to exit: ");
-            //     letter = scanner.nextLine().charAt(0);
-            //     if (letter != '1') {
-            //         letters.add(letter);
-            //     }
-            // } while (letter != '1');
-            List<Character> letters = new ArrayList<>();
-
             System.out.println("RUN!");
-            bot.delay(3000);
+            bot.delay(1000);
 
             radius = findDonutRadius();
             int numLetters = circle.countLetters(DONUT_CENTER_X, DONUT_CENTER_Y, radius);
@@ -91,7 +79,9 @@ public class WordSolver {
         for (int i = 0; i < numLetters; i++) {
             int x = (int) (DONUT_CENTER_X + radius * Math.cos(Math.toRadians(360 / numLetters) * i));
             int y = (int) (DONUT_CENTER_Y + radius * Math.sin(Math.toRadians(360 / numLetters) * i));
-            coords.add(new Coordinate(x, y, i, letterID.identifyLetter(x, y)));
+            char letter = letterID.identifyLetter(x, y, bot);
+            letters.add(letter);
+            coords.add(new Coordinate(x, y, i, letter));
         }
         return coords;
     }
@@ -107,7 +97,6 @@ public class WordSolver {
                 isValid = true;
 
                 for (int i = 0; i < lineChars.length; i++) {
-                // for (char c : line.toCharArray()) {
                     if (!temp.contains(lineChars[i])) {
                         isValid = false;
                         break;
