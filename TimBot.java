@@ -5,7 +5,7 @@ public class TimBot {
             WordSolver solver = new WordSolver();
             solver.solve();
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println("Exception thrown");
         } 
     }
 }

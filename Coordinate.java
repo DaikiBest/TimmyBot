@@ -2,20 +2,13 @@ public class Coordinate {
     private int x;
     private int y;
     private int index;
-    private String name;
+    private char name;
 
-    public Coordinate(int x, int y, int index, String name) {
+    public Coordinate(int x, int y, int index, char name) {
         this.x = x;
         this.y = y;
         this.index = index;
         this.name = name;
-    }
-
-    public Coordinate(int x, int y, int index) {
-        this.x = x;
-        this.y = y;
-        this.index = index;
-        this.name = "";
     }
 
     public int getX() {
@@ -30,7 +23,7 @@ public class Coordinate {
         return index;
     }
 
-    public String getName() {
+    public char getLetter() {
         return name;
     }
 }
