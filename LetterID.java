@@ -20,6 +20,7 @@ public class LetterID {
 
     public LetterID() {
         // setup blueprints (MANUAL)
+        // MISSING: j, k, q, x, z
         blueprints = new HashMap<>();
         blueprints.put("159528;25866", 'i');
         blueprints.put("132183;138564", 'u');
