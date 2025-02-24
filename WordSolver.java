@@ -36,34 +36,34 @@ public class WordSolver {
 
     public WordSolver() throws AWTException, FileNotFoundException {
         bot = new Robot();
-        words = new ArrayList<>();
-        letters = new ArrayList<>();
     }
 
     public void solve() {
         System.out.println("RUN!");
         bot.delay(1000);
         while (true) {
+            words = new ArrayList<>();
+            letters = new ArrayList<>();
             radius = findDonutRadius();
             int numLetters = circle.countLetters(DONUT_CENTER_X, DONUT_CENTER_Y, radius);
             System.out.println(numLetters + " letters");
             coords = calculateCoodinates(letters, numLetters);
     
-            // findValidWords(letters);
-            // makeMoves();
-            // bot.delay(500);
+            findValidWords(letters);
+            makeMoves();
+            bot.delay(1600);
 
-            // // Continue after trying answer: either try again (reroll), or nextLevel
-            // if (isDonutScreen()) {
-            //     bot.mouseMove(REROLL_X, REROLL_Y);
-            //     bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-            //     bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-            // } else {
-            //     nextLevel();
-            // }
-            // bot.delay(250);
+            // Continue after trying answer: either try again (reroll), or nextLevel
+            if (isDonutScreen()) {
+                bot.mouseMove(REROLL_X, REROLL_Y);
+                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                bot.mouseMove(100, 100);
+            } else {
+                nextLevel();
+            }
+            bot.delay(250);
             bot.mouseMove(100, 100);
-            break;
         }
     }
 
@@ -120,7 +120,7 @@ public class WordSolver {
                     words.add(currWord);
                 }
             }
-            reader.mark(0); //reset reader back to beginning
+            reader = new BufferedReader(new FileReader(FILE_NAME)); //reset reader
         } catch (UnsupportedOperationException e) {
             System.out.println("unsuported");
         } catch (IndexOutOfBoundsException e) {
@@ -179,14 +179,10 @@ public class WordSolver {
     }
 
     private void nextLevel() {
-        bot.delay(3500); //in case power ups gained, click twice
-        bot.mouseMove(750, 275);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseMove(500, 275);
         bot.delay(3500);
         bot.mouseMove(750, 275);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseMove(500, 275);
     }
 }
