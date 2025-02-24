@@ -1,34 +1,37 @@
 
 import java.awt.*;
-import java.util.Scanner;
 
 public class CirclePixelChecker {
 	private static final int TOLERANCE = 20;
 	private static final int MIN_DISTANCE = 65;
-    private Robot robot;
+    private Robot bot;
 
 	public int countLetters(int centerX, int centerY, int radius) {
-		Scanner scanner = new Scanner(System.in);
 		try {
-            robot = new Robot();
+            bot = new Robot();
         } catch (Exception e) {
             // TODO: handle exception
         }
 
-		int count = 0;
+		int count = 1; //always assumes there's at least one letter
 		boolean wasWhite = false;
 		Point prevWhitePx = null, start = null;
 
-		for (int angle = 0; angle < 360; angle++) {
+		for (int angle = 0; angle < 325; angle++) {
 			int x = (int) (centerX + radius * Math.cos(Math.toRadians(angle)));
 			int y = (int) (centerY + radius * Math.sin(Math.toRadians(angle)));
 
-			Color color = robot.getPixelColor(x, y);
-			// robot.mouseMove(x, y);
+
+			Color color = bot.getPixelColor(x, y);
+			// bot.mouseMove(x, y);
 
 			boolean isCloseToWhite = (Math.abs(color.getRed() - 255) <= TOLERANCE)
 					&& (Math.abs(color.getGreen() - 255) <= TOLERANCE)
 					&& (Math.abs(color.getBlue() - 255) <= TOLERANCE);
+
+            if (isCloseToWhite) {
+
+            }
 
 			if (isCloseToWhite) {
 				if (start == null)
@@ -45,8 +48,6 @@ public class CirclePixelChecker {
 				wasWhite = false;
 			}
 		}
-
-		scanner.close();
         return count;
 	}
 
