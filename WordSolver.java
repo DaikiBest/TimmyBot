@@ -22,13 +22,15 @@ public class WordSolver {
     // from center of letter to edges + padding
     private static final int DONUT_CENTER_X = 735;
     private static final int DONUT_CENTER_Y = 775;
-
+    private static final int DONUT_CENTER_RGB = -11269612;
+    private static final int REROLL_X = 80;
+    private static final int REROLL_Y = 700;
+    private static final int DONUT_BACKGROUND_RGB = -3665874;
     private static final double DONUT_RADIUS_RATIO = 96.0 / 33.0;
-    private static final int TOLERANCE = 10;
 
     private static final String FILE_NAME = "output.txt";
     private BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME));
-    private Scanner scanner = new Scanner(System.in);
+    // private Scanner scanner = new Scanner(System.in);
     List<Character> letters;
     private int radius;
 
@@ -39,25 +41,34 @@ public class WordSolver {
     }
 
     public void solve() {
+        System.out.println("RUN!");
+        bot.delay(1000);
         while (true) {
-            System.out.println("RUN!");
-            bot.delay(1000);
-
             radius = findDonutRadius();
             int numLetters = circle.countLetters(DONUT_CENTER_X, DONUT_CENTER_Y, radius);
             System.out.println(numLetters + " letters");
             coords = calculateCoodinates(letters, numLetters);
     
-            findValidWords(letters);
-            makeMoves();
-            
+            // findValidWords(letters);
+            // makeMoves();
+            // bot.delay(500);
+
+            // // Continue after trying answer: either try again (reroll), or nextLevel
+            // if (isDonutScreen()) {
+            //     bot.mouseMove(REROLL_X, REROLL_Y);
+            //     bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+            //     bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+            // } else {
+            //     nextLevel();
+            // }
+            // bot.delay(250);
             bot.mouseMove(100, 100);
             break;
         }
     }
 
     private int findDonutRadius() {
-        int color = -11269612;
+        int color = DONUT_CENTER_RGB;
         int prevColor = color;
         int colorDistance;
         int y = DONUT_CENTER_Y;
@@ -130,14 +141,10 @@ public class WordSolver {
     }
 
     private void makeMoves() {
-        int color = bot.getPixelColor(1100, 800).getRed();
         for (List<Coordinate> currWord : words) {
             //if no longer on donut screen
-            if (abs(color - bot.getPixelColor(1100, 800).getRed()) > TOLERANCE) {
-                bot.delay(5000);
-                bot.mouseMove(750, 275);
-                bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+            if (!isDonutScreen()) {
+                nextLevel();
                 break;
             }
 
@@ -153,7 +160,7 @@ public class WordSolver {
                 move(prev, currWord.get(i));
                 prev = currWord.get(i);
             }
-            bot.delay(40);
+            bot.delay(5);
             bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         }
     }
@@ -161,9 +168,25 @@ public class WordSolver {
     private void move(Coordinate prev, Coordinate next) {
         bot.mouseMove(prev.getX(), prev.getY());
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.delay(40);
+        bot.delay(5);
         bot.mouseMove(DONUT_CENTER_X, DONUT_CENTER_Y);
-        bot.delay(40);
+        bot.delay(5);
         bot.mouseMove(next.getX(), next.getY());
+    }
+
+    private boolean isDonutScreen() {
+        return abs(DONUT_BACKGROUND_RGB - bot.getPixelColor(REROLL_X, REROLL_Y + 80).getRGB()) <= 2000000;
+    }
+
+    private void nextLevel() {
+        bot.delay(3500); //in case power ups gained, click twice
+        bot.mouseMove(750, 275);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseMove(500, 275);
+        bot.delay(3500);
+        bot.mouseMove(750, 275);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 }

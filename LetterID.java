@@ -16,23 +16,23 @@ public class LetterID {
     private static final int LETTER_HALF_HEIGHT = 25;
 
     public LetterID() {
-        //setup blueprints (MANUAL)
+        // setup blueprints (MANUAL)
         blueprints = new HashMap<>();
-        blueprints.put(7614, 'i');
-        blueprints.put(9597, 'l');
-        blueprints.put(9731, 's');
-        blueprints.put(11065, 'f');
-        blueprints.put(11975, 't');
-        blueprints.put(12504, 'a');
-        blueprints.put(14199, 'e');
-        blueprints.put(14287, 'k');
-        blueprints.put(14418, 'g');
-        blueprints.put(15328, 'o');
-        blueprints.put(17008, 'r');
-        blueprints.put(18561, 'b');
-        blueprints.put(18846, 'n');
-        blueprints.put(19791, 'm');
-        blueprints.put(20730, 'w');
+        blueprints.put(35904, 'i');
+        blueprints.put(93031, 'c');
+        blueprints.put(98513, 'y');
+        blueprints.put(103194, 'f');
+        blueprints.put(123801, 't'); //139287
+        blueprints.put(111276, 'e');
+        blueprints.put(134633, 'a');
+        blueprints.put(166375, 'b');
+        blueprints.put(171684, 'o');
+        blueprints.put(191484, 'r');
+        blueprints.put(201492, 'd');
+        blueprints.put(266945, 'h');
+        blueprints.put(272571, 'n');
+        blueprints.put(340474, 'm');
+        blueprints.put(374040, 'w');
     }
 
     public char identifyLetter(int x, int y, Robot bot) {
@@ -40,66 +40,53 @@ public class LetterID {
     }
 
     private int scorePoints(int letterX, int letterY, Robot bot) {
+        // int whiteScore = 0; // number of white pixels
         int columnScore = 0;
-        int rowScore = 0;
-        int colConsScore = 1; //column consecutive scoring
-        int rowConsScore = 1; //row consecutive scoring
-        BufferedImage img = bot.createScreenCapture(new Rectangle(letterX - LETTER_HALF_WIDTH, letterY - LETTER_HALF_HEIGHT,
-                LETTER_HALF_WIDTH * 2, LETTER_HALF_HEIGHT * 2));
-        
-        for (int var = 0; var < img.getWidth(); var++) {
-            
-            //Column wise scoring (var = x)
+        int colConsScore = 0; // column consecutive scoring
+        int letterWidth = 0;
+        boolean countingWidth = false;
+        // int rowScore = 0;
+        // int rowConsScore = 0; // row consecutive scoring
+
+        BufferedImage img = bot
+                .createScreenCapture(new Rectangle(letterX - LETTER_HALF_WIDTH, letterY - LETTER_HALF_HEIGHT,
+                        LETTER_HALF_WIDTH * 2, LETTER_HALF_HEIGHT * 2));
+
+        for (int var = 0; var < img.getWidth(); var++) { // REQUIRES: IMG WIDTH = HEIGHT!!!
+            // Column wise scoring (var = x)
             for (int y = 0; y < img.getHeight(); y++) {
 
-                int pixel = img.getRGB(var, y);
-                Color color = new Color(pixel, true);
-                if (color.getRed() > 160 && color.getGreen() < 100 && color.getBlue() < 100) {
-                    img.setRGB(var, y, Color.BLACK.getRGB());
-                }
-                
-                if (Math.abs(img.getRGB(var, y) - 0xFFFFFFFF) <= 0x6A0000) {
-                    columnScore += 1 * colConsScore;
+                if (img.getRGB(var, y) == 0xFFFFFFFF) {
+                    columnScore += colConsScore;
                     colConsScore++;
-                    // img.setRGB(var, y, 0x123456);
-                    // bot.delay(20);
-                    // bot.mouseMove(var + letterX - LETTER_HALF_WIDTH, y + letterY - LETTER_HALF_HEIGHT);
+
+                    countingWidth = true;
+                    // System.out.print(colConsScore + " ");
                 } else {
-                    colConsScore = 1;
+                    // System.out.print("  ");
+                    colConsScore = 0;
                 }
             }
 
-            //Row wise scoring (var = y)
-            for (int x = 0; x < img.getHeight(); x++) {
-
-                int pixel = img.getRGB(x, var);
-                Color color = new Color(pixel, true);
-                if (color.getRed() > 160 && color.getGreen() < 100 && color.getBlue() < 100) {
-                    img.setRGB(x, var, Color.BLACK.getRGB());
-                }
-                
-                if (Math.abs(img.getRGB(x, var) - 0xFFFFFFFF) <= 0x6A0000) {
-                    rowScore += 1 * rowConsScore;
-                    rowConsScore++;
-                    // img.setRGB(var, x, 0x123456);
-                    // bot.delay(20);
-                    // bot.mouseMove(x + letterX - LETTER_HALF_WIDTH, var + letterY - LETTER_HALF_HEIGHT);
-                } else {
-                    rowConsScore = 1;
-                }
+            if (countingWidth) {
+                letterWidth++;
+                countingWidth = false;
             }
         }
 
-        File file = new File("me" + letterX + letterY + ".png");
-        try {
-            ImageIO.write(img, "PNG", file);
-            
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        // File file = new File("me" + letterX + letterY + ".png");
+        // try {
+        //     ImageIO.write(img, "PNG", file);
 
-        System.out.print("Column score: " + columnScore + "\tRow score: " + rowScore + "\tTotal: " + (columnScore + rowScore));
-        return columnScore + rowScore;
+        // } catch (Exception e) {
+        //     // TODO: handle exception
+        // }
+
+        System.out.print("Column: " + columnScore + "\tWidth: " + letterWidth + "\tTotal: " + (columnScore * letterWidth));
+        // System.out.print("Column: " + columnScore + "\tRow: " + rowScore + "\tWhite: " + whiteScore +
+        //         "\tTotal: " + ((columnScore - rowScore) / whiteScore));
+        // weight of # white
+        return columnScore * letterWidth;
     }
 
     private char findClosestMatch(int score) {
