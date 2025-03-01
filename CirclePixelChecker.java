@@ -33,10 +33,6 @@ public class CirclePixelChecker {
 					&& (Math.abs(color.getGreen() - 255) <= TOLERANCE)
 					&& (Math.abs(color.getBlue() - 255) <= TOLERANCE);
 
-            if (isCloseToWhite) {
-
-            }
-
 			if (isCloseToWhite) {
 				if (start == null)
 					start = new Point(x, y);

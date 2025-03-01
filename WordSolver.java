@@ -201,7 +201,7 @@ public class WordSolver {
     }
 
     private boolean isDonutScreen() {
-        return abs(DONUT_BACKGROUND_RGB - bot.getPixelColor(REROLL_X, reroll_y + 80).getRGB()) <= 2000000;
+        return abs(DONUT_BACKGROUND_RGB - bot.getPixelColor(REROLL_X + 100, reroll_y + 80).getRGB()) <= 2000000;
     }
 
     private boolean isRepeatedAttempt() {
