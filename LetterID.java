@@ -15,40 +15,52 @@ import java.util.HashMap;
 
 public class LetterID {
     public Map<String, Character> blueprints;
-    private static final int LETTER_HALF_WIDTH = 25;
-    private static final int LETTER_HALF_HEIGHT = 25;
+    private int LETTER_SIZE_BASELINE = 25; //square letters
+    private int letter_size;
 
     public LetterID() {
         // setup blueprints (MANUAL)
-        // MISSING: j, k, q, x, z
+        // MISSING: j
         blueprints = new HashMap<>();
         blueprints.put("159528;25866", 'i');
         blueprints.put("132183;138564", 'u');
         blueprints.put("148842;255430", 'w');
         
         blueprints.put("50580;206000", 'e');
-        blueprints.put("45214;58812", 'y');
+        blueprints.put("37356;55860", 'y');
+        blueprints.put("51516;96026", 'f');
+        blueprints.put("41540;286965", 'g');
         
         blueprints.put("53729;153663", 'a');
         blueprints.put("53603;286585", 'o');
-        blueprints.put("63557;128800", 't');
-        blueprints.put("62055;59136", 'l'); //l sucks
+        blueprints.put("62439;125580", 't');
+        blueprints.put("69168;67221", 'l');
+        blueprints.put("63315;90209", 'v');
         
+        blueprints.put("22302;255164", 'z');
+        blueprints.put("19064;160416", 's');
         
         blueprints.put("91084;205378", 'r');
         blueprints.put("88575;189280", 'p');
-        blueprints.put("75228;277062", 'b');
-        blueprints.put("93800;262117", 'd');
+        blueprints.put("75228;277062", 'b');//b sucks
+        blueprints.put("100590;283776", 'd');//d sucks
         
-        blueprints.put("63315;90209", 'v');
-        blueprints.put("172620;225085", 'h');
-        blueprints.put("63024;118982", 'f');
-        blueprints.put("41540;286965", 'g');
-        blueprints.put("183760;239162", 'm');
+        blueprints.put("213950;279936", 'h');
+        blueprints.put("192591;248248", 'm');
         blueprints.put("219052;207621", 'n');
-        blueprints.put("19064;160416", 's');
+
+        blueprints.put("61666;368845", 'q');
+        blueprints.put("33660;103100", 'x');
+        blueprints.put("81830;125716", 'k');
         
         blueprints.put("25542;172032", 'c');
+    }
+
+    public void computeLetterSize(double ratio) {
+        letter_size = (int) (LETTER_SIZE_BASELINE * ratio);
+        if (letter_size == 0) {
+            letter_size = LETTER_SIZE_BASELINE;
+        }
     }
 
     public char identifyLetter(int x, int y, Robot bot) {
@@ -70,8 +82,8 @@ public class LetterID {
         int uninterruptedCount = 0;
 
         BufferedImage img = bot
-                .createScreenCapture(new Rectangle(letterX - LETTER_HALF_WIDTH, letterY - LETTER_HALF_HEIGHT,
-                        LETTER_HALF_WIDTH * 2, LETTER_HALF_HEIGHT * 2));
+                .createScreenCapture(new Rectangle(letterX - letter_size, letterY - letter_size,
+                        letter_size * 2, letter_size * 2));
 
         for (int var = 0; var < img.getWidth(); var++) { // REQUIRES: IMG WIDTH = HEIGHT!!!
             
@@ -108,7 +120,7 @@ public class LetterID {
             averageWidth = uninterruptedLengthSum / uninterruptedCount;
         }
 
-        int score1 = columnScore * averageWidth;
+        int score1 = columnScore * averageWidth ;
         int score2 = rowScore * (whiteScore / 10);
 
         System.out.print("column " + columnScore + "row " + rowScore + "\tTotal: " + score1 + ";" + score2);
@@ -143,14 +155,23 @@ public class LetterID {
         if (letter == 'i' || letter == 'w' || letter == 'u') {
             List<Character> potentialLetters = Arrays.asList('i', 'w', 'u');
             return findClosestMatchScore2(potentialLetters, score2);
-        } else if (letter == 'e' || letter == 'y') {
-            List<Character> potentialLetters = Arrays.asList('a', 'o', 'e', 'y');
+        } else if (letter == 'e' || letter == 'f' || letter == 'y' || letter == 'g') {
+            List<Character> potentialLetters = Arrays.asList('e', 'f', 'y', 'g');
             return findClosestMatchScore2(potentialLetters, score2);
-        } else if (letter == 'p' || letter == 'r' || letter == 'b' || letter == 'd') {
-            List<Character> potentialLetters = Arrays.asList('p', 'r', 'b', 'd');
+        } else if (letter == 'd') {
+            List<Character> potentialLetters = Arrays.asList('p', 'r', 'd');
             return findClosestMatchScore2(potentialLetters, score2);
-        } else if (letter == 'l' || letter == 't' || letter == 'a' || letter == 'o') {
-            List<Character> potentialLetters = Arrays.asList('t', 'l', 'a', 'o');
+        } else if (letter == 'p' || letter == 'r' || letter == 'b') {
+            List<Character> potentialLetters = Arrays.asList('p', 'r', 'b');
+            return findClosestMatchScore2(potentialLetters, score2);
+        } else if (letter == 'l' || letter == 'a' || letter == 'o' || letter == 'v' || letter == 't') {
+            List<Character> potentialLetters = Arrays.asList('l', 'a', 'o', 't', 'v');
+            return findClosestMatchScore2(potentialLetters, score2);
+        } else if (letter == 'h' || letter == 'm' || letter == 'n') {
+            List<Character> potentialLetters = Arrays.asList('h', 'm', 'n');
+            return findClosestMatchScore2(potentialLetters, score2);
+        } else if (letter == 'z' || letter == 's') {
+            List<Character> potentialLetters = Arrays.asList('z', 's');
             return findClosestMatchScore2(potentialLetters, score2);
         }
         return letter;

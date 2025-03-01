@@ -1,9 +1,12 @@
+/** CREDITS
+ * PAT
+ */
 
 import java.awt.*;
 
 public class CirclePixelChecker {
 	private static final int TOLERANCE = 20;
-	private static final int MIN_DISTANCE = 65;
+	private static final int MIN_DISTANCE = 60;
     private Robot bot;
 
 	public int countLetters(int centerX, int centerY, int radius) {
@@ -24,6 +27,7 @@ public class CirclePixelChecker {
 
 			Color color = bot.getPixelColor(x, y);
 			// bot.mouseMove(x, y);
+            // bot.delay(10);
 
 			boolean isCloseToWhite = (Math.abs(color.getRed() - 255) <= TOLERANCE)
 					&& (Math.abs(color.getGreen() - 255) <= TOLERANCE)
@@ -40,6 +44,7 @@ public class CirclePixelChecker {
 				if (!wasWhite && (prevWhitePx == null || distance(x, y, prevWhitePx.x, prevWhitePx.y) > MIN_DISTANCE)) {
 					if (!start.equals(new Point(x, y))) {
 						count++;
+                        // bot.delay(300);
 					}
 					prevWhitePx = new Point(x, y);
 				}
