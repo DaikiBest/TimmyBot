@@ -1,6 +1,4 @@
 import java.awt.AWTException;
-import java.awt.Color;
-import java.awt.Rectangle;
 import java.awt.event.InputEvent;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -10,8 +8,6 @@ import java.util.List;
 import java.util.ArrayList;
 import static java.lang.Math.abs;
 
-import javax.imageio.ImageIO;
-
 public class WordSolver {
     private Robot bot;
     private CirclePixelChecker circle = new CirclePixelChecker();
@@ -20,11 +16,11 @@ public class WordSolver {
     private List<List<Coordinate>> words;
 
     // from center of letter to edges + padding
-    private static final int DONUT_CENTER_X = 1214;//735
+    private static final int DONUT_CENTER_X = 735;
     private int donut_center_y = 775; //default, but dynamic
     private static final int DONUT_CENTER_RGB = -11269612;
     private static final int REROLL_X = 80;
-    private static final int REROLL_Y = 700;
+    private int reroll_y = 700;
     private static final int DONUT_BACKGROUND_RGB = -3665874; //timmy red
 
     private static final int BASELINE_RADIUS = 96;
@@ -47,17 +43,16 @@ public class WordSolver {
         System.out.println("RUN!");
         bot.delay(1000);
 
-        //compute height once
+        //compute donut configs once
         donut_center_y = computeHeight();
+        //adjust for different sized donuts
+        radius = findDonutRadius();
+        letterID.computeLetterSize(ratio);
 
         while (true) {
             if (!isDonutScreen()) { //not in level
                 nextLevel();
             } else {
-                //adjust for different sized donuts
-                radius = findDonutRadius();
-                letterID.computeLetterSize(ratio); 
-
                 words = new ArrayList<>();
                 letters = new ArrayList<>();
                 int numLetters = circle.countLetters(DONUT_CENTER_X, donut_center_y, radius);
@@ -65,13 +60,12 @@ public class WordSolver {
                 coords = calculateCoodinates(letters, numLetters);
         
                 //if not trying same solution
-                
                 if (!isRepeatedAttempt()) {
                     findValidWords(letters);
                     makeMoves();
                     previousAttempts.add(letters);
                 }
-                reroll(); //after checking solutions, reroll regardless of trying or not
+                // reroll(); //after checking solutions, reroll regardless of trying or not
                 bot.mouseMove(100, 100);
             }
             
@@ -93,7 +87,9 @@ public class WordSolver {
             }
             y++;
         } while ((y < 955)); //bottom of screen
-        System.out.println(height);
+
+        reroll_y = 955 - height + 80; //80 below the top of red-bottom panel
+        
         return 955 - (height / 2);
     }
 
@@ -110,7 +106,6 @@ public class WordSolver {
         } while ((colorDistance < 2000000));
 
         ratio = (donut_center_y - y) / (double) BASELINE_DONUT_HEIGHT; //newDonutHeight / 34 (baseline)
-        // System.out.println((donut_center_y - y) + " " + ratio);
 
         return (int) (BASELINE_RADIUS * ratio);
     }
@@ -206,7 +201,7 @@ public class WordSolver {
     }
 
     private boolean isDonutScreen() {
-        return abs(DONUT_BACKGROUND_RGB - bot.getPixelColor(REROLL_X, REROLL_Y + 80).getRGB()) <= 2000000;
+        return abs(DONUT_BACKGROUND_RGB - bot.getPixelColor(REROLL_X, reroll_y + 80).getRGB()) <= 2000000;
     }
 
     private boolean isRepeatedAttempt() {
@@ -218,7 +213,7 @@ public class WordSolver {
     }
 
     private void reroll() {
-        bot.mouseMove(REROLL_X, REROLL_Y);
+        bot.mouseMove(REROLL_X, reroll_y);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseMove(100, 100);
