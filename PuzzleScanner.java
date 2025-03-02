@@ -32,46 +32,57 @@ public class PuzzleScanner {
                 CROSSWORD_Y - CROSSWORD_HALF_SIZE, CROSSWORD_HALF_SIZE * 2, CROSSWORD_HALF_SIZE * 2));
 
         List<Coordinate> currWord = new ArrayList<>();
-        int increment = 1;
+        boolean isCheckingLine = true;
+        boolean toggleNextStopChecking;
+        boolean toggleNextStartChecking;
 
-        for (int var1 = 0; var1 < CROSSWORD_HALF_SIZE * 2; var1 += increment) {
+        for (int var1 = 0; var1 < CROSSWORD_HALF_SIZE * 2; var1++) {
             boolean countingWord = false;
             int distanceToNext = 0;
+            toggleNextStopChecking = false;
+            toggleNextStartChecking = true;
             // Column words
             for (int var2 = 0; var2 < img.getHeight(); var2++) {
                 int x = ((isColumn) ? var1 : var2);
                 int y = ((isColumn) ? var2 : var1);
                 bot.mouseMove(x + CENTER_X - CROSSWORD_HALF_SIZE, y + CROSSWORD_Y -
                 CROSSWORD_HALF_SIZE);
-                if (Math.abs(img.getRGB(x, y) - CROSSWORD_BLANK_RGB) <= 800000) {
+                if (isCheckingLine) {
+                    if (Math.abs(img.getRGB(x, y) - CROSSWORD_BLANK_RGB) <= 800000) {
 
-                    if (increment == 1) { // does only once: update increment to jump to next letter
-                        if (isColumn) {
-                            wordBoxSize = computeWordBoxSize(x, y, img);
+                        if (!countingWord && distanceToNext > CROSSWORD_DIST_TOLERANCE) { // start new word
+                            currWord = new ArrayList<>();
+                            countingWord = true;
                         }
-                        increment = wordBoxSize;
+                        if (countingWord && distanceToNext > 3) { // dont count same letter many times
+                            currWord.add(new Coordinate(x + CENTER_X - CROSSWORD_HALF_SIZE,
+                                    y + CROSSWORD_Y - CROSSWORD_HALF_SIZE));
+                            bot.delay(300);
+                        }
+                        distanceToNext = 0;
+                        toggleNextStopChecking = true;
+                    } else {
+                        // save currWord if 3 or more letters and word has just ended
+                        if (distanceToNext > CROSSWORD_DIST_TOLERANCE) {
+                            if (countingWord && currWord.size() >= 3 && distanceToNext > CROSSWORD_DIST_TOLERANCE) {
+                                wordsInPuzzle.add(currWord);
+                                bot.delay(2000);
+                            }    
+                            countingWord = false;
+                        }
+                        distanceToNext++;
                     }
-
-                    if (!countingWord && distanceToNext > CROSSWORD_DIST_TOLERANCE) { // start new word
-                        currWord = new ArrayList<>();
-                        countingWord = true;
-                    }
-                    if (countingWord && distanceToNext > 3) { // dont count same letter many times
-                        currWord.add(new Coordinate(x + CENTER_X - CROSSWORD_HALF_SIZE,
-                                y + CROSSWORD_Y - CROSSWORD_HALF_SIZE));
-                        bot.delay(300);
-                    }
-                    distanceToNext = 0;
                 } else {
-                    // save currWord if 3 or more letters and word has just ended
-                    if (countingWord && currWord.size() >= 3 && distanceToNext > CROSSWORD_DIST_TOLERANCE) {
-                        wordsInPuzzle.add(currWord);
-                        countingWord = false;
-                        bot.delay(1200);
+                    if (img.getRGB(x, y) == CROSSWORD_BLANK_RGB) {
+                        toggleNextStartChecking = false;
                     }
-
-                    distanceToNext++;
                 }
+            }
+            if (toggleNextStopChecking) {
+                isCheckingLine = false;
+            } else if (toggleNextStartChecking) {
+                isCheckingLine = true;
+                var1 += CROSSWORD_DIST_TOLERANCE;
             }
         }
         if (isColumn) { // after doing the column words, go again now for rows
