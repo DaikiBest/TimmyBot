@@ -2,18 +2,19 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.imageio.ImageIO;
+
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
+import java.io.File;
 
 public class PuzzleScanner {
     private Robot bot;
-    private static final int CENTER_X = 735; // a little redundant; alrdy in WordSolver
     private static final int CROSSWORD_BLANK_RGB = -6979980;
-    // private static final int CROSSWORD_FILL_RGB = -14737633;
-    // private static final int CROSSWORD_WHITE_RGB = 0xFFFFFFFF;
-    private static final int CROSSWORD_HALF_SIZE = 200;
-    private static final int CROSSWORD_Y = 385;
+    private static final int CROSSWORD_HALF_SIZE = 225;
+    private static final int CROSSWORD_Y = 405; // STATIC old: 385
     private static final int CROSSWORD_DIST_TOLERANCE = 12; // bound for distance to next letter
 
     private List<List<Coordinate>> wordsInPuzzle;
@@ -24,12 +25,19 @@ public class PuzzleScanner {
     }
 
     // Obtains the list of words to be solved from the crossword puzzle
-    public void scanPuzzle(boolean isColumn, int wordBoxSize) {
+    public void scanPuzzle(boolean isColumn, int wordBoxSize, int CENTER_X) {
         BufferedImage img = bot.createScreenCapture(new Rectangle(CENTER_X - CROSSWORD_HALF_SIZE,
                 CROSSWORD_Y - CROSSWORD_HALF_SIZE, CROSSWORD_HALF_SIZE * 2, CROSSWORD_HALF_SIZE * 2));
+        
+        // File file = new File("my" + ".png");
+        // try {
+        //     ImageIO.write(img, "PNG", file);
+        // } catch (Exception e) {
+
+        // }
 
         List<Coordinate> currWord = new ArrayList<>();
-        boolean isCheckingLine = true;
+        boolean isCheckingLine = false;
         boolean toggleNextStopChecking;
         boolean toggleNextStartChecking;
 
@@ -45,13 +53,13 @@ public class PuzzleScanner {
                 // bot.mouseMove(x + CENTER_X - CROSSWORD_HALF_SIZE, y + CROSSWORD_Y -
                 // CROSSWORD_HALF_SIZE);
                 if (isCheckingLine) {
-                    if (Math.abs(img.getRGB(x, y) - CROSSWORD_BLANK_RGB) <= 800000) {
+                    if (img.getRGB(x, y) == CROSSWORD_BLANK_RGB) {
 
                         if (!countingWord && distanceToNext > CROSSWORD_DIST_TOLERANCE) { // start new word
                             currWord = new ArrayList<>();
                             countingWord = true;
                         }
-                        if (countingWord && distanceToNext > 3) { // dont count same letter many times
+                        if (countingWord && distanceToNext > 1) { // dont count same letter many times
                             currWord.add(new Coordinate(x + CENTER_X - CROSSWORD_HALF_SIZE,
                                     y + CROSSWORD_Y - CROSSWORD_HALF_SIZE));
                             // bot.delay(300);
@@ -61,9 +69,9 @@ public class PuzzleScanner {
                     } else {
                         // save currWord if 3 or more letters and word has just ended
                         if (distanceToNext > CROSSWORD_DIST_TOLERANCE) {
-                            if (countingWord && currWord.size() >= 3 && distanceToNext > CROSSWORD_DIST_TOLERANCE) {
+                            if (countingWord && currWord.size() >= 3) {
                                 wordsInPuzzle.add(currWord);
-                                // bot.delay(2000);
+                                // bot.delay(1000);
                             }    
                             countingWord = false;
                         }
@@ -83,8 +91,9 @@ public class PuzzleScanner {
             }
         }
         if (isColumn) { // after doing the column words, go again now for rows
-            scanPuzzle(false, wordBoxSize);
+            scanPuzzle(false, wordBoxSize, CENTER_X);
         }
+        img.flush();
     }
 
     // Updates words left to be solved from puzzle
@@ -94,7 +103,7 @@ public class PuzzleScanner {
             remove = true;
             List<Coordinate> puzzleWords = itr.next();
             for (Coordinate letter : puzzleWords) {
-                if (Math.abs(bot.getPixelColor(letter.getX(), letter.getY()).getRGB() - CROSSWORD_BLANK_RGB) <= 800000) {
+                if (Math.abs(bot.getPixelColor(letter.getX(), letter.getY()).getRGB() - CROSSWORD_BLANK_RGB) <= 500000) {
                     remove = false;
                     break;
                 }

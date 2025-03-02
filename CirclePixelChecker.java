@@ -9,13 +9,16 @@ public class CirclePixelChecker {
 	private static final int MIN_DISTANCE = 60;
     private Robot bot;
 
+    public CirclePixelChecker(Robot bot) {
+        this.bot = bot;
+    }
+
     // Revolve around the donut and counts the number of letters it finds
 	public int countLetters(int centerX, int centerY, int radius) {
-		try {
-            bot = new Robot();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+
+
+        // BUFFESRED IMAGE!!!! WAYYY FASTEr!!!!!!!! OUT OF MEMORY??!!
+
 
 		int count = 1; //always assumes there's at least one letter
 		boolean wasWhite = false;
