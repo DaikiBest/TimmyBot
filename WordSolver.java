@@ -57,6 +57,7 @@ public class WordSolver {
             if (!isDonutScreen()) { // not in level
                 nextLevel();
             } else {
+
                 letters = new ArrayList<>();
                 int numLetters = circle.countLetters(CENTER_X, donut_center_y, radius);
                 System.out.println(numLetters + " letters");
@@ -68,7 +69,7 @@ public class WordSolver {
                     makeMoves(words);
                     previousAttempts.add(letters);
                 }
-                // reroll(); //after checking solutions, reroll regardless of trying or not
+                reroll(); //after checking solutions, reroll regardless of trying or not
                 bot.mouseMove(100, 100);
             }
 
@@ -184,8 +185,15 @@ public class WordSolver {
             if (!isDonutScreen()) { // if no longer on donut screen
                 nextLevel();
                 break;
-            } else if (!filterOut(currWord)) { // filter for lengths and repeated words
-                
+            } else if (filterOut(currWord)) { // filter for lengths and repeated words
+                // print word
+                String word = "";
+                for (Coordinate curr : currWord) {
+                    word = word + curr.getLetter();
+                }
+                System.out.print("!!!" + word + " not necessary length! ");
+            } else {
+
                 // print word
                 String word = "";
                 for (Coordinate curr : currWord) {
