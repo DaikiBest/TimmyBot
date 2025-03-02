@@ -22,9 +22,10 @@ public class LetterID {
         // setup blueprints (MANUAL)
         this.bot = bot;
         blueprints = new HashMap<>();
-        addLetters();
+        addLetterBlueprints();
     }
 
+    // Adjusts the sizes of the letters by ratio
     public void computeLetterSize(double ratio) {
         letter_size = (int) (LETTER_SIZE_BASELINE * ratio);
         if (letter_size == 0) {
@@ -32,17 +33,20 @@ public class LetterID {
         }
     }
 
+    // Identify letter and return the character corresponding to letter
     public char identifyLetter(int x, int y) {
         char letter = identify(prepID(x, y));
         return letter;
 
     }
 
+    // Prepares the letter to be ID'd
     private int[][] prepID(int letterX, int letterY) {
         BufferedImage img = cropLetter(letterX, letterY);
         return makeLetterArray(img);
     }
 
+    // Crops image of letter to be as fit as possible
     private BufferedImage cropLetter(int letterX, int letterY) {
         BufferedImage initialImage = bot.createScreenCapture(new Rectangle(letterX - letter_size,
                 letterY - letter_size, letter_size * 2, letter_size * 2));
@@ -84,16 +88,9 @@ public class LetterID {
             img = initialImage;
         }
         return img;
-
-        // File file = new File(letterX + letterY + ".png");
-        // try {
-        // ImageIO.write(img, "PNG", file);
-
-        // } catch (Exception e) {
-        // // TODO: handle exception
-        // }
     }
 
+    // Makes the 10x10 letter array from the cropped image
     private int[][] makeLetterArray(BufferedImage img) {
         // letter arrays of 10x10
         int[][] letterArr = new int[10][10];
@@ -119,6 +116,7 @@ public class LetterID {
         return letterArr;
     }
 
+    // Identify letterArr by finding closest match from the blueprints
     private char identify(int[][] letterArr) {
         int maxPoints = 0;
         char letter = 'z';
@@ -140,7 +138,8 @@ public class LetterID {
         return letter;
     }
 
-    private void addLetters() {
+    // Letter blueprints
+    private void addLetterBlueprints() {
         int[][] g = { { 0, 0, 0, 0, 1, 1, 1, 0, 0, 0 }, { 0, 0, 1, 1, 1, 1, 1, 1, 1, 0 },
                 { 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, { 0, 1, 1, 0, 0, 0, 0, 1, 1, 1 }, { 1, 1, 1, 0, 0, 0, 0, 0, 1, 1 },
                 { 1, 1, 0, 0, 0, 0, 0, 0, 1, 1 }, { 1, 1, 0, 0, 0, 0, 0, 0, 1, 1 }, { 1, 1, 0, 0, 0, 1, 1, 0, 1, 1 },

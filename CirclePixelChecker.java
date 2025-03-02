@@ -9,6 +9,7 @@ public class CirclePixelChecker {
 	private static final int MIN_DISTANCE = 60;
     private Robot bot;
 
+    // Revolve around the donut and counts the number of letters it finds
 	public int countLetters(int centerX, int centerY, int radius) {
 		try {
             bot = new Robot();
@@ -52,6 +53,7 @@ public class CirclePixelChecker {
         return count;
 	}
 
+    // Distance between two points
 	private static double distance(int x1, int y1, int x2, int y2) {
 		return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 	}

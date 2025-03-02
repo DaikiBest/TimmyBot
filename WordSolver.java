@@ -12,7 +12,7 @@ import static java.lang.Math.abs;
 
 public class WordSolver {
     private Robot bot;
-    private CirclePixelChecker circle = new CirclePixelChecker();
+    private CirclePixelChecker circle;
     private PuzzleScanner puzzleScanner;
     private LetterID letterID;
 
@@ -40,6 +40,7 @@ public class WordSolver {
         puzzleScanner = new PuzzleScanner(bot);
         letterID = new LetterID(bot);
         previousAttempts = new ArrayList<>();
+        circle = new CirclePixelChecker();
     }
 
     // Solve the timmy word challenge
