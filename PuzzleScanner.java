@@ -2,12 +2,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.imageio.ImageIO;
-
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class PuzzleScanner {
     private Robot bot;
@@ -45,8 +42,8 @@ public class PuzzleScanner {
             for (int var2 = 0; var2 < img.getHeight(); var2++) {
                 int x = ((isColumn) ? var1 : var2);
                 int y = ((isColumn) ? var2 : var1);
-                bot.mouseMove(x + CENTER_X - CROSSWORD_HALF_SIZE, y + CROSSWORD_Y -
-                CROSSWORD_HALF_SIZE);
+                // bot.mouseMove(x + CENTER_X - CROSSWORD_HALF_SIZE, y + CROSSWORD_Y -
+                // CROSSWORD_HALF_SIZE);
                 if (isCheckingLine) {
                     if (Math.abs(img.getRGB(x, y) - CROSSWORD_BLANK_RGB) <= 800000) {
 
@@ -57,7 +54,7 @@ public class PuzzleScanner {
                         if (countingWord && distanceToNext > 3) { // dont count same letter many times
                             currWord.add(new Coordinate(x + CENTER_X - CROSSWORD_HALF_SIZE,
                                     y + CROSSWORD_Y - CROSSWORD_HALF_SIZE));
-                            bot.delay(300);
+                            // bot.delay(300);
                         }
                         distanceToNext = 0;
                         toggleNextStopChecking = true;
@@ -66,7 +63,7 @@ public class PuzzleScanner {
                         if (distanceToNext > CROSSWORD_DIST_TOLERANCE) {
                             if (countingWord && currWord.size() >= 3 && distanceToNext > CROSSWORD_DIST_TOLERANCE) {
                                 wordsInPuzzle.add(currWord);
-                                bot.delay(2000);
+                                // bot.delay(2000);
                             }    
                             countingWord = false;
                         }
@@ -90,18 +87,6 @@ public class PuzzleScanner {
         }
     }
 
-    // Compute size of the word-boxes in curr crossword
-    private int computeWordBoxSize(int x, int y, BufferedImage img) {
-        int width = 0;
-        int blankColor = CROSSWORD_BLANK_RGB;
-        while (Math.abs(blankColor - CROSSWORD_BLANK_RGB) <= 3000000) {
-            width++;
-            blankColor = img.getRGB(x + width, y);
-        }
-        System.out.println(width);
-        return width;
-    }
-
     // Updates words left to be solved from puzzle
     public void updatePuzzleWords() {
         boolean remove;
@@ -109,7 +94,7 @@ public class PuzzleScanner {
             remove = true;
             List<Coordinate> puzzleWords = itr.next();
             for (Coordinate letter : puzzleWords) {
-                if (bot.getPixelColor(letter.getX(), letter.getY()).getRGB() == CROSSWORD_BLANK_RGB) {
+                if (Math.abs(bot.getPixelColor(letter.getX(), letter.getY()).getRGB() - CROSSWORD_BLANK_RGB) <= 800000) {
                     remove = false;
                     break;
                 }
