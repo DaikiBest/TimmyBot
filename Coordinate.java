@@ -1,14 +1,20 @@
 public class Coordinate {
     private int x;
     private int y;
-    private int index;
-    private char name;
+    private char letter;
 
-    public Coordinate(int x, int y, int index, char name) {
+    // Constructor for only coords
+    public Coordinate(int x, int y) {
         this.x = x;
         this.y = y;
-        this.index = index;
-        this.name = name;
+        this.letter = 'z';
+    }
+
+    // Constructor with letter
+    public Coordinate(int x, int y, char letter) {
+        this.x = x;
+        this.y = y;
+        this.letter = letter;
     }
 
     public int getX() {
@@ -18,12 +24,8 @@ public class Coordinate {
     public int getY() {
         return y;
     }
-    
-    public int getIndex() {
-        return index;
-    }
 
     public char getLetter() {
-        return name;
+        return letter;
     }
 }

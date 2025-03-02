@@ -12,12 +12,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class LetterID {
-    public Map<int[][], Character> blueprints;
+    private Map<int[][], Character> blueprints;
     private int LETTER_SIZE_BASELINE = 25; // square letters
     private int letter_size;
+    private Robot bot;
 
-    public LetterID() {
+    public LetterID(Robot bot) {
         // setup blueprints (MANUAL)
+        this.bot = bot;
         blueprints = new HashMap<>();
         addLetters();
     }
@@ -29,18 +31,18 @@ public class LetterID {
         }
     }
 
-    public char identifyLetter(int x, int y, Robot bot) {
-        char letter = identify(prepID(x, y, bot));
+    public char identifyLetter(int x, int y) {
+        char letter = identify(prepID(x, y));
         return letter;
 
     }
 
-    private int[][] prepID(int letterX, int letterY, Robot bot) {
-        BufferedImage img = cropLetter(letterX, letterY, bot);
+    private int[][] prepID(int letterX, int letterY) {
+        BufferedImage img = cropLetter(letterX, letterY);
         return makeLetterArray(img);
     }
 
-    private BufferedImage cropLetter(int letterX, int letterY, Robot bot) {
+    private BufferedImage cropLetter(int letterX, int letterY) {
         BufferedImage initialImage = bot.createScreenCapture(new Rectangle(letterX - letter_size,
                 letterY - letter_size, letter_size * 2, letter_size * 2));
         int firstX = 0;
@@ -209,7 +211,7 @@ public class LetterID {
                 { 1, 1, 0, 0, 0, 0, 0, 0, 1, 1 }, { 1, 1, 0, 0, 0, 0, 0, 0, 1, 1 }, { 1, 1, 0, 0, 0, 0, 0, 0, 1, 1 },
                 { 0, 1, 1, 0, 0, 0, 0, 0, 1, 1 }, { 0, 1, 1, 0, 0, 0, 0, 0, 1, 1 } };
         blueprints.put(c, 'c');
-        
+
         // int[][] p = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 0, 0, 1, 1, 0, 0, 0}, {1, 1, 0, 0, 0, 1, 1, 0, 0, 0}, {1, 1, 1, 0, 0, 1, 1, 0, 0, 0}, {1, 1, 1, 0, 0, 1, 1, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, {0, 0, 1, 1, 1, 1, 0, 0, 0, 0}};
         // blueprints.put(e, 'e');
         // int[][] p = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 0, 0, 1, 1, 0, 0, 0}, {1, 1, 0, 0, 0, 1, 1, 0, 0, 0}, {1, 1, 1, 0, 0, 1, 1, 0, 0, 0}, {1, 1, 1, 0, 0, 1, 1, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 0, 0, 0}, {0, 0, 1, 1, 1, 1, 0, 0, 0, 0}};
