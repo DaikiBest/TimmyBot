@@ -85,8 +85,6 @@ public class LetterID {
         } catch (RasterFormatException e) {
             img = initialImage;
         }
-
-        initialImage.flush();
         return img;
     }
 
@@ -98,19 +96,19 @@ public class LetterID {
         double xIncrement = img.getWidth() / 10.0;
         double yIncrement = img.getHeight() / 10.0;
         for (int y = 0; y < 10; y++) {
-            System.out.print("\n");
+            // System.out.print("\n");
             for (int x = 0; x < 10; x++) {
                 letterArr[x][y] = ((img.getRGB((int) (xIncrement * x), (int) (yIncrement * y)) == 0xFFFFFFFF) ? 1 : 0);
-                System.out.print(((img.getRGB((int) (xIncrement * x), (int) (yIncrement * y)) == 0xFFFFFFFF)
-                        ? "\u001B[31m" + "1" + "\u001B[0m"
-                        : "0"));
+                // System.out.print(((img.getRGB((int) (xIncrement * x), (int) (yIncrement * y)) == 0xFFFFFFFF)
+                //         ? "\u001B[31m" + "1" + "\u001B[0m"
+                //         : "0"));
             }
         }
 
-        String p = Arrays.deepToString(letterArr);
-        p = p.replaceAll("\\[", "{");
-        p = p.replaceAll("]", "}");
-        System.out.println(p);
+        // String p = Arrays.deepToString(letterArr);
+        // p = p.replaceAll("\\[", "{");
+        // p = p.replaceAll("]", "}");
+        // System.out.println(p);
 
         return letterArr;
     }
@@ -133,7 +131,7 @@ public class LetterID {
                 letter = blueprints.get(blueLetter);
             }
         }
-        System.out.println("Letter: " + letter + " | Confidence: " + maxPoints + "%");
+        // System.out.println("Letter: " + letter + " | Confidence: " + maxPoints + "%");
         return letter;
     }
 

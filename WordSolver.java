@@ -36,8 +36,7 @@ public class WordSolver {
 
     private static final String FILE_NAME = "output.txt";
     private BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME));
-    List<Character> letters;
-    List<List<Character>> previousAttempts;
+    private List<Character> letters;
     private int radius;
 
     public WordSolver() throws AWTException, FileNotFoundException {
@@ -45,7 +44,6 @@ public class WordSolver {
         puzzleScanner = new PuzzleScanner(bot);
         letterID = new LetterID(bot);
         circle = new CirclePixelChecker(bot);
-        previousAttempts = new ArrayList<>();
     }
 
     // Solve the timmy word challenge
@@ -57,7 +55,6 @@ public class WordSolver {
             if (!isDonutScreen()) { // not in level
                 nextLevel();
             } else {
-                bot.delay(1500);
                 // compute configs
                 donut_center_y = computeHeight();
                 // adjust for different sized donuts
@@ -65,16 +62,14 @@ public class WordSolver {
                 letterID.computeLetterSize(ratio);
                 
                 letters = new ArrayList<>();
-                int numLetters = circle.countLetters(CENTER_X, donut_center_y, radius);
+                int numLetters = circle.countLetters(CENTER_X, donut_center_y, radius, ratio);
                 System.out.println(numLetters + " letters");
                 List<Coordinate> coords = calculateCoodinates(letters, numLetters);
-                puzzleScanner.scanPuzzle(true, 1, CENTER_X);
+                puzzleScanner.scan(true, 1, CENTER_X);
 
-                if (!isRepeatedAttempt()) { // if not trying same solution
-                    List<List<Coordinate>> words = findValidWords(letters, coords);
-                    makeMoves(words);
-                    previousAttempts.add(letters);
-                }
+                List<List<Coordinate>> words = findValidWords(letters, coords);
+                makeMoves(words);
+
                 reroll(); // after checking solutions, reroll regardless of trying or not
                 bot.mouseMove(100, 100);
             }
@@ -85,7 +80,6 @@ public class WordSolver {
     private int computeHeight() {
         BufferedImage img = bot.createScreenCapture(new Rectangle(CENTER_X, 450, 1, 956 - 450));
 
-        int color = DONUT_BACKGROUND_RGB;
         int y = 0;
         int height = 0;
         boolean counting = false;
@@ -93,14 +87,14 @@ public class WordSolver {
             if (counting) {
                 height++;
             } else {
-                if (abs(color - img.getRGB(0, y)) <= 50000)
+                if (abs(DONUT_BACKGROUND_RGB - img.getRGB(0, y)) <= 70000)
                     counting = true;
             }
             y++;
         } while ((y < img.getHeight())); // bottom of screen
 
         reroll_y = 955 - height + 80; // 80 below the top of red-bottom panel
-        System.out.print("Height: " + height + " ");
+        System.out.print("\nHeight: " + height + " ");
 
         return 955 - (height / 2);
     }
@@ -127,7 +121,6 @@ public class WordSolver {
     // where the letter is located on the donut and the letter it is predicted to be
     private List<Coordinate> calculateCoodinates(List<Character> letters, int numLetters) {
         List<Coordinate> coords = new ArrayList<>();
-
         for (int i = 0; i < numLetters; i++) {
             int x = (int) (CENTER_X + radius * Math.cos(Math.toRadians(360 / numLetters) * i));
             int y = (int) (donut_center_y + radius * Math.sin(Math.toRadians(360 / numLetters) * i));
@@ -199,8 +192,6 @@ public class WordSolver {
             } else if (filterOut(currWord)) { // filter for lengths and repeated words
                 System.out.print("\u001B[31m[" + word + "] \u001B[0m");
             } else {
-                System.out.print(word + " ");
-
                 Coordinate prev = currWord.get(0);
                 for (int i = 1; i < currWord.size(); i++) {
                     move(prev, currWord.get(i));
@@ -209,6 +200,7 @@ public class WordSolver {
                 bot.delay(MOVEMENT_DELAY);
                 bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
+                System.out.print(word + " ");
                 puzzleScanner.updatePuzzleWords();
             }
         }
@@ -224,10 +216,14 @@ public class WordSolver {
         bot.mouseMove(next.getX(), next.getY());
     }
 
-    // Filters out currWord if it is not a needed length...
-    // Returns true if it does Filter Out the currWord, false if word is to be tried
+    // Filters out currWord if it is not a needed length
+    // Returns true if it does filter currWord, false if word is to be tried
+    // Omit word filtering if the puzzle was not empty when scanned
     private boolean filterOut(List<Coordinate> currWord) {
-        // return false;
+        //if board is not empty, don't filter out
+        if (puzzleScanner.getWordsPuzzle().isEmpty()) {
+            return false;
+        }
         List<List<Coordinate>> wordsInPuzzle = puzzleScanner.getWordsPuzzle();
         for (List<Coordinate> puzzleWord : wordsInPuzzle)
             if (puzzleWord.size() == currWord.size())
@@ -240,32 +236,31 @@ public class WordSolver {
         return abs(DONUT_BACKGROUND_RGB - bot.getPixelColor(1415, 775).getRGB()) <= 200000;
     }
 
-    // Current combination of letters has been tried for this puzzle
-    private boolean isRepeatedAttempt() {
-        return previousAttempts.stream().anyMatch(sublist -> equalsInAnyOrder(sublist, letters));
-    }
-
-    // Helper for isRepeatedAttempt()
-    private boolean equalsInAnyOrder(List<Character> sublist, List<Character> letters) {
-        return sublist.containsAll(letters) && letters.containsAll(sublist) && (sublist.size() == letters.size());
-    }
-
     // Press reroll button: reroll the letter to be in new positions
     private void reroll() {
         bot.mouseMove(REROLL_X, reroll_y);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseMove(100, 100);
+        bot.delay(300);
     }
 
     // Move to next level; reset curr level data
     private void nextLevel() {
-        bot.mouseMove(1120, 500); //750, 275 for fullscreen
+        bot.mouseMove(1120, 510); //750, 275 for fullscreen
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseMove(500, 275);
-        previousAttempts.clear(); // next level, no previous attempts
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK); //click twice
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseMove(1120, 550);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         puzzleScanner.clearWordsPuzzle();
-        bot.delay(1000);
+
+        // click on console (to make quitting easier)
+        bot.mouseMove(625, 825);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        bot.delay(250);
     }
 }

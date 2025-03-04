@@ -3,15 +3,15 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import java.io.File;
 
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
-import java.io.File;
 
 public class PuzzleScanner {
     private Robot bot;
+    private static final int CROSSWORD_SOLVED_RGB = 0xFF3F1F20;
     private static final int CROSSWORD_BLANK_RGB = -6979980;
     private static final int CROSSWORD_HALF_SIZE = 225;
     private static final int CROSSWORD_Y = 405; // STATIC old: 385
@@ -24,14 +24,24 @@ public class PuzzleScanner {
         wordsInPuzzle = new ArrayList<>();
     }
 
+    // Scans puzzle; will skip the puzzle scanner if the board is not empty
+    public void scan(boolean isColumn, int wordBoxSize, int CENTER_X) {
+        try {
+            scanPuzzle(true, 1, CENTER_X);
+        } catch (Exception e) {
+            System.out.println("\u001B[31mPuzzle is not empty.\u001B[0m");
+            wordsInPuzzle.clear(); // if puzzle not empty, omit PuzzleScanner
+        }
+    }
+
     // Obtains the list of words to be solved from the crossword puzzle
-    public void scanPuzzle(boolean isColumn, int wordBoxSize, int CENTER_X) {
+    private void scanPuzzle(boolean isColumn, int wordBoxSize, int CENTER_X) throws PuzzleNotEmptyException {
         BufferedImage img = bot.createScreenCapture(new Rectangle(CENTER_X - CROSSWORD_HALF_SIZE,
                 CROSSWORD_Y - CROSSWORD_HALF_SIZE, CROSSWORD_HALF_SIZE * 2, CROSSWORD_HALF_SIZE * 2));
-        
+
         // File file = new File("my" + ".png");
         // try {
-        //     ImageIO.write(img, "PNG", file);
+        // ImageIO.write(img, "PNG", file);
         // } catch (Exception e) {
 
         // }
@@ -66,13 +76,16 @@ public class PuzzleScanner {
                         }
                         distanceToNext = 0;
                         toggleNextStopChecking = true;
+                    } else if (img.getRGB(x, y) == CROSSWORD_SOLVED_RGB) { //if puzzle is not empty
+                        img.flush();
+                        throw new PuzzleNotEmptyException();
                     } else {
                         // save currWord if 3 or more letters and word has just ended
                         if (distanceToNext > CROSSWORD_DIST_TOLERANCE) {
                             if (countingWord && currWord.size() >= 3) {
                                 wordsInPuzzle.add(currWord);
                                 // bot.delay(1000);
-                            }    
+                            }
                             countingWord = false;
                         }
                         distanceToNext++;
@@ -93,7 +106,6 @@ public class PuzzleScanner {
         if (isColumn) { // after doing the column words, go again now for rows
             scanPuzzle(false, wordBoxSize, CENTER_X);
         }
-        img.flush();
     }
 
     // Updates words left to be solved from puzzle
@@ -103,7 +115,8 @@ public class PuzzleScanner {
             remove = true;
             List<Coordinate> puzzleWords = itr.next();
             for (Coordinate letter : puzzleWords) {
-                if (Math.abs(bot.getPixelColor(letter.getX(), letter.getY()).getRGB() - CROSSWORD_BLANK_RGB) <= 500000) {
+                if (Math.abs(
+                        bot.getPixelColor(letter.getX(), letter.getY()).getRGB() - CROSSWORD_BLANK_RGB) <= 500000) {
                     remove = false;
                     break;
                 }
