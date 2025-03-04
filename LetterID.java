@@ -99,11 +99,13 @@ public class LetterID {
             // System.out.print("\n");
             for (int x = 0; x < 10; x++) {
                 letterArr[x][y] = ((img.getRGB((int) (xIncrement * x), (int) (yIncrement * y)) == 0xFFFFFFFF) ? 1 : 0);
-                // System.out.print(((img.getRGB((int) (xIncrement * x), (int) (yIncrement * y)) == 0xFFFFFFFF)
-                //         ? "\u001B[31m" + "1" + "\u001B[0m"
-                //         : "0"));
+                // System.out.print(((img.getRGB((int) (xIncrement * x), (int) (yIncrement * y))
+                // == 0xFFFFFFFF)
+                // ? "\u001B[31m" + "1" + "\u001B[0m"
+                // : "0"));
             }
         }
+        // System.out.print("\n");
 
         // String p = Arrays.deepToString(letterArr);
         // p = p.replaceAll("\\[", "{");
@@ -131,7 +133,8 @@ public class LetterID {
                 letter = blueprints.get(blueLetter);
             }
         }
-        // System.out.println("Letter: " + letter + " | Confidence: " + maxPoints + "%");
+        System.out.println("Letter: " + letter +
+                " | Confidence: " + maxPoints + "%");
         return letter;
     }
 
@@ -252,14 +255,11 @@ public class LetterID {
                 { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 }, { 0, 0, 0, 0, 0, 0, 0, 0, 1, 1 },
                 { 0, 0, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1, 1, 0, 0, 0, 0 } };
         blueprints.put(w, 'w');
-
-        // int[][] x = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-        // {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 1, 1, 0, 0, 0, 0, 0, 0, 1}, {1, 1, 1, 0,
-        // 0, 0, 0, 0, 0, 1}, {1, 1, 1, 0, 0, 0, 0, 0, 0, 1}, {0, 1, 1, 0, 0, 0, 0, 0,
-        // 1, 1}, {0, 1, 1, 1, 0, 0, 0, 1, 1, 1}, {0, 0, 1, 1, 1, 1, 1, 1, 1, 1}, {0, 0,
-        // 0, 1, 1, 1, 1, 1, 1, 0}};
-        // blueprints.put(x, 'x');
-
+        int[][] x = { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+                { 1, 1, 1, 0, 0, 0, 0, 0, 1, 1 }, { 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 }, { 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 },
+                { 0, 0, 0, 0, 1, 1, 1, 0, 0, 0 }, { 0, 0, 1, 1, 1, 1, 1, 1, 0, 0 }, { 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 },
+                { 1, 1, 1, 0, 0, 0, 0, 0, 1, 1 }, { 1, 1, 0, 0, 0, 0, 0, 0, 0, 1 } };
+        blueprints.put(x, 'x');
         int[][] y = { { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
                 { 1, 1, 1, 1, 0, 0, 0, 0, 0, 0 }, { 0, 1, 1, 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 },
                 { 0, 0, 0, 0, 1, 1, 1, 1, 1, 1 }, { 0, 0, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 1, 1, 1, 1, 0, 0, 0, 0, 0 },

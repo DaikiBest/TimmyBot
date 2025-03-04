@@ -25,7 +25,7 @@ public class WordSolver {
     private int donut_center_y = 775;
     private static final int LETTER_VERTICAL_OFFSET = 20; // FOR SOME REASON LETTER HITBOX WAY ABOVE LETTER
     private static final int DONUT_HOLE_RGB = -11269612;
-    private int REROLL_X = 1033; // STATIC: 80 pixels from left of screen
+    private int REROLL_X = 1033; // STATIC: 70 pixels from left of screen
     private int reroll_y = 700;
     private static final int DONUT_BACKGROUND_RGB = 0xFFC90A27; // timmy red
     private static final int MOVEMENT_DELAY = 5;
@@ -93,7 +93,7 @@ public class WordSolver {
             y++;
         } while ((y < img.getHeight())); // bottom of screen
 
-        reroll_y = 955 - height + 80; // 80 below the top of red-bottom panel
+        reroll_y = 955 - height + 70; // 70 below the top of red-bottom panel
         System.out.print("\nHeight: " + height + " ");
 
         return 955 - (height / 2);
