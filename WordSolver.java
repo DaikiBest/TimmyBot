@@ -52,12 +52,12 @@ public class WordSolver {
     // Solve the timmy word challenge
     public void solve() {
         System.out.println("RUN!");
-        // bot.delay(1000);
 
         while (true) {
             if (!isDonutScreen()) { // not in level
                 nextLevel();
             } else {
+                puzzleScanner.clearWordsPuzzle();
                 donut_center_y = computeHeight();
                 radius = findDonutRadius();
                 letterID.computeLetterSize(ratio);
@@ -161,7 +161,7 @@ public class WordSolver {
                 if (isValid) {
                     validWords.put(line, offset);
                 }
-                offset += 10;
+                offset += line.length() + 1;
             }
             reader.close();
         } catch (Exception e) {
@@ -216,11 +216,12 @@ public class WordSolver {
                 // If current word solved the puzzle, increase frequency
                 if (puzzleScanner.updatePuzzleWords()) {
                     try {
-                        System.out.print("\u001B[34m" + (frequency + 1) + "\u001B[0m ");
+                        ++frequency;
+                        System.out.print("\u001B[34m" + frequency + "\u001B[0m ");
                         RandomAccessFile fileHandler = new RandomAccessFile(FILE_NAME, "rw");
                         int offset = Integer.valueOf(validWordsMap.get(key));
                         String updatedDict = word + String.join("", Collections.nCopies(7 - word.length(), " ")) + ":"
-                                + ++frequency;
+                                + String.join("", Collections.nCopies(3 - Integer.toString(frequency).length(), "0")) + frequency;
                         fileHandler.seek(offset);
                         fileHandler.writeBytes(updatedDict);
                         fileHandler.close();
@@ -302,7 +303,7 @@ public class WordSolver {
     private void reroll() {
         bot.mouseMove(REROLL_X, reroll_y);
         pressButton();
-        bot.mouseMove(100, 100);
+        bot.mouseMove(1469, 510);
         bot.delay(300);
     }
 
@@ -313,14 +314,13 @@ public class WordSolver {
         pressButton();
         bot.mouseMove(1120, 550);
         pressButton();
-        puzzleScanner.clearWordsPuzzle();
 
         // click on console (to make quitting easier)
         bot.mouseMove(625, 825);
         pressButton();
         bot.delay(500);
         
-        bot.mouseMove(1120, 510);
+        bot.mouseMove(1469, 510);
         pressButton();
     }
 

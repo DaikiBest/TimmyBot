@@ -62,6 +62,10 @@ public class PuzzleScanner {
                 int y = ((isColumn) ? var2 : var1);
                 // bot.mouseMove(x + CENTER_X - CROSSWORD_HALF_SIZE, y + CROSSWORD_Y -
                 // CROSSWORD_HALF_SIZE);
+                if (img.getRGB(x, y) == CROSSWORD_SOLVED_RGB) {
+                    img.flush();
+                    throw new PuzzleNotEmptyException();
+                }
                 if (isCheckingLine) {
                     if (img.getRGB(x, y) == CROSSWORD_BLANK_RGB) {
 
@@ -76,9 +80,6 @@ public class PuzzleScanner {
                         }
                         distanceToNext = 0;
                         toggleNextStopChecking = true;
-                    } else if (img.getRGB(x, y) == CROSSWORD_SOLVED_RGB) { // if puzzle is not empty
-                        img.flush();
-                        throw new PuzzleNotEmptyException();
                     } else {
                         // save currWord if 3 or more letters and word has just ended
                         if (distanceToNext > CROSSWORD_DIST_TOLERANCE) {
