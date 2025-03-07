@@ -28,7 +28,7 @@ public class PuzzleScanner {
     public void scan(boolean isColumn, int wordBoxSize, int CENTER_X) {
         try {
             scanPuzzle(true, 1, CENTER_X);
-        } catch (Exception e) {
+        } catch (PuzzleNotEmptyException e) {
             System.out.println("\u001B[31mPuzzle is not empty.\u001B[0m");
             wordsInPuzzle.clear(); // if puzzle not empty, omit PuzzleScanner
         }
@@ -100,7 +100,7 @@ public class PuzzleScanner {
                 isCheckingLine = false;
             } else if (toggleNextStartChecking) {
                 isCheckingLine = true;
-                var1 += 5; // Avoid being on round edge
+                var1 += 10; // Avoid being on round edge
             }
         }
         if (isColumn) { // after doing the column words, go again now for rows

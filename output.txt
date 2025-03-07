@@ -386,7 +386,7 @@ absohm :0
 absoil :0
 absolve:0
 absorb :0
-absorbs:0
+absorbs:1
 absorpt:0
 abstain:0
 abstort:0
@@ -540,7 +540,7 @@ accuser:0
 accuses:0
 accusor:0
 ace    :0
-aced   :0
+aced   :2
 acedy  :0
 acedia :0
 acedias:0
@@ -567,7 +567,7 @@ acerose:0
 acerous:0
 acerra :0
 acerval:0
-aces   :0
+aces   :2
 aceship:0
 acestes:0
 aceta  :0
@@ -829,7 +829,7 @@ across :0
 acroter:0
 acrotic:0
 acrux  :0
-act    :0
+act    :1
 acta   :0
 actable:0
 actaea :0
@@ -1127,7 +1127,7 @@ admire :0
 admired:0
 admirer:0
 admires:0
-admit  :0
+admit  :1
 admits :0
 admitty:0
 admix  :0
@@ -1506,7 +1506,7 @@ afshah :0
 afshar :0
 aft    :0
 aftaba :0
-after  :0
+after  :1
 aftergo:0
 afters :0
 aftmost:0
@@ -1523,7 +1523,7 @@ agade  :0
 agadic :0
 agag   :0
 again  :0
-against:0
+against:1
 agal   :0
 agalaxy:0
 agalena:0
@@ -1608,7 +1608,7 @@ agendum:0
 agene  :0
 agenes :0
 agenize:0
-agent  :0
+agent  :1
 agentry:0
 agents :0
 ager   :0
@@ -1716,7 +1716,7 @@ agnosia:0
 agnosis:0
 agnus  :0
 agnuses:0
-ago    :0
+ago    :1
 agog   :0
 agoge  :0
 agogic :0
@@ -1872,7 +1872,7 @@ ayapana:0
 aias   :0
 aiawong:0
 aiblins:0
-aid    :0
+aid    :1
 aidable:0
 aidance:0
 aidant :0
@@ -1931,7 +1931,7 @@ ailsyte:0
 ailuro :0
 ailurus:0
 ailweed:0
-aim    :0
+aim    :1
 aimable:0
 aimak  :0
 aimara :0
@@ -1967,7 +1967,7 @@ ayond  :0
 aionial:0
 ayont  :0
 ayous  :0
-air    :0
+air    :2
 aira   :0
 airable:0
 airampo:0
@@ -2041,7 +2041,7 @@ airwave:0
 airwise:0
 ais    :0
 ays    :0
-aisle  :0
+aisle  :1
 aisled :0
 aisles :0
 aisling:0
@@ -2361,7 +2361,7 @@ aldoses:0
 aldrin :0
 aldrins:0
 aldus  :0
-ale    :0
+ale    :7
 alea   :0
 aleak  :0
 alebion:0
@@ -2401,7 +2401,7 @@ aleppo :0
 alerce :0
 alerion:0
 alerse :0
-alert  :0
+alert  :1
 alerta :0
 alerted:0
 alerter:0
@@ -2649,7 +2649,7 @@ alkoran:0
 alkoxy :0
 alkoxid:0
 alkoxyl:0
-all    :0
+all    :1
 allah  :0
 allay  :0
 allayed:0
@@ -2907,7 +2907,7 @@ altaite:0
 altar  :0
 altared:0
 altars :0
-alter  :1
+alter  :2
 altered:0
 alterer:0
 altern :0
@@ -3198,7 +3198,7 @@ amgarn :0
 amhar  :0
 amharic:0
 amhran :0
-ami    :0
+ami    :1
 amy    :0
 amia   :0
 amiable:0
@@ -3631,7 +3631,7 @@ ancora :0
 ancoral:0
 ancre  :0
 ancress:0
-and    :0
+and    :2
 anda   :0
 andaman:0
 andante:0
@@ -3736,7 +3736,7 @@ angelin:0
 angelo :0
 angelon:0
 angelot:0
-angels :0
+angels :1
 angelus:0
 anger  :0
 angered:0
@@ -4078,7 +4078,7 @@ anstoss:0
 ansu   :0
 answer :0
 answers:0
-ant    :2
+ant    :4
 anta   :0
 antacid:0
 antae  :0
@@ -4196,7 +4196,7 @@ antres :0
 antrin :0
 antrum :0
 antrums:0
-ants   :0
+ants   :1
 antship:0
 antsy  :0
 antsier:0
@@ -4267,12 +4267,12 @@ apalit :0
 apama  :0
 apanage:0
 apandry:0
-apar   :0
+apar   :1
 aparai :0
 apardon:0
 aparejo:0
 apargia:0
-apart  :0
+apart  :1
 apasote:0
 apass  :0
 apast  :0
@@ -4802,7 +4802,7 @@ arclike:0
 arco   :0
 arcos  :0
 arcose :0
-arcs   :0
+arcs   :1
 arcsin :0
 arcsine:0
 arctan :0
@@ -4831,7 +4831,7 @@ ardelia:0
 ardelio:0
 ardella:0
 ardency:0
-ardent :0
+ardent :1
 arder  :0
 ardilla:0
 ardish :0
@@ -4848,7 +4848,7 @@ ardrigh:0
 ardu   :0
 arduous:0
 ardure :0
-are    :3
+are    :1
 area   :0
 areach :0
 aread  :0
@@ -5285,7 +5285,7 @@ arson  :0
 arsonic:0
 arsono :0
 arsons :0
-art    :0
+art    :7
 artaba :0
 artabe :0
 artal  :0
@@ -5463,7 +5463,7 @@ asg    :0
 asgard :0
 asgd   :0
 asgmt  :0
-ash    :1
+ash    :2
 asha   :0
 ashake :0
 ashame :0
@@ -5668,7 +5668,7 @@ asserts:0
 asserve:0
 asses  :0
 assess :0
-asset  :0
+asset  :1
 asseth :0
 assets :0
 assever:0
@@ -5847,7 +5847,7 @@ ataxies:0
 ataxite:0
 atazir :0
 atbash :0
-ate    :2
+ate    :5
 ateba  :0
 atebrin:0
 atechny:0
@@ -6411,7 +6411,7 @@ averred:0
 averrer:0
 avers  :0
 averse :0
-avert  :0
+avert  :1
 averted:0
 averter:0
 avertin:0
@@ -7600,7 +7600,7 @@ barato :0
 baratte:0
 barauna:0
 baraza :0
-barb   :0
+barb   :1
 barba  :0
 barbal :0
 barbar :0
@@ -7938,7 +7938,7 @@ basotho:0
 basque :0
 basqued:0
 basques:0
-bass   :0
+bass   :1
 bassa  :0
 bassan :0
 bassara:0
@@ -8437,7 +8437,7 @@ becurry:0
 becurse:0
 becurst:0
 becut  :0
-bed    :2
+bed    :4
 bedad  :0
 bedaff :0
 beday  :0
@@ -8567,7 +8567,7 @@ bedways:0
 bedward:0
 bedwarf:0
 bedwell:0
-bee    :1
+bee    :2
 beearn :0
 beeball:0
 beebee :0
@@ -8988,7 +8988,7 @@ belotte:0
 belouke:0
 belout :0
 belove :0
-beloved:0
+beloved:1
 below  :0
 belows :0
 bels   :0
@@ -9283,7 +9283,7 @@ berlin :0
 berlina:0
 berline:0
 berlins:0
-berm   :0
+berm   :1
 berme  :0
 bermes :0
 berms  :0
@@ -9737,7 +9737,7 @@ biasses:0
 biaural:0
 biaxal :0
 biaxial:0
-bib    :0
+bib    :1
 bibasic:0
 bibb   :0
 bibbed :0
@@ -9798,12 +9798,12 @@ bicorn :0
 bicorne:0
 bicron :0
 bicrons:0
-bid    :0
+bid    :1
 bidar  :0
 bidarka:0
 bidcock:0
 bidden :0
-bidder :0
+bidder :1
 biddery:0
 bidders:0
 biddy  :0
@@ -9878,7 +9878,7 @@ biform :0
 bifront:0
 bifrost:0
 bifteck:0
-big    :0
+big    :2
 biga   :0
 bigae  :0
 bigam  :0
@@ -10067,7 +10067,7 @@ bimodal:0
 bimong :0
 bimorph:0
 bimotor:0
-bin    :0
+bin    :1
 binal  :0
 byname :0
 bynames:0
@@ -10123,7 +10123,7 @@ binomen:0
 binomy :0
 binotic:0
 binous :0
-bins   :0
+bins   :1
 bint   :0
 bints  :0
 binukau:0
@@ -10161,7 +10161,7 @@ biopsic:0
 bioptic:0
 bioral :0
 biorgan:0
-bios   :0
+bios   :1
 biose  :0
 biosis :0
 biosome:0
@@ -10211,9 +10211,9 @@ birched:0
 birchen:0
 bircher:0
 birches:0
-bird   :0
+bird   :1
 birddom:0
-birde  :0
+birde  :1
 birded :0
 birdeen:0
 birdeye:0
@@ -10223,7 +10223,7 @@ birdy  :0
 birdie :0
 birdied:0
 birdies:0
-birding:0
+birding:1
 birdlet:0
 birdman:0
 birdmen:0
@@ -10292,7 +10292,7 @@ birth  :0
 birthed:0
 birthy :0
 births :0
-bis    :0
+bis    :1
 bys    :0
 bisabol:0
 bysacki:0
@@ -10354,7 +10354,7 @@ bistres:0
 bistro :0
 bistros:0
 bisulc :0
-bit    :0
+bit    :1
 bitable:0
 bitake :0
 bytalk :0
@@ -10385,7 +10385,7 @@ bito   :0
 bitolyl:0
 bitonal:0
 bitore :0
-bits   :0
+bits   :1
 bitser :0
 bitsy  :0
 bitt   :0
@@ -10725,12 +10725,12 @@ blobby :0
 blobs  :0
 bloc   :0
 blocage:0
-block  :0
+block  :1
 blocked:0
 blocker:0
 blocky :0
-blocks :0
-blocs  :0
+blocks :1
+blocs  :1
 blodite:0
 blog   :0
 blok   :0
@@ -10828,7 +10828,7 @@ bluejay:0
 blueleg:0
 bluely :0
 bluer  :0
-blues  :0
+blues  :1
 bluesy :0
 bluest :0
 bluet  :0
@@ -11180,7 +11180,7 @@ bolag  :0
 bolar  :0
 bolas  :0
 bolases:0
-bold   :0
+bold   :1
 bolded :0
 bolden :0
 bolder :0
@@ -11672,7 +11672,7 @@ bosons :0
 bosque :0
 bosques:0
 bosquet:0
-boss   :0
+boss   :1
 bossa  :0
 bossage:0
 bossboy:0
@@ -11863,7 +11863,7 @@ bovista:0
 bovld  :0
 bovoid :0
 bovver :0
-bow    :0
+bow    :1
 bowable:0
 bowback:0
 bowbent:0
@@ -12000,7 +12000,7 @@ brache :0
 braches:0
 brachet:0
 brachia:0
-bracing:0
+bracing:1
 brack  :0
 bracked:0
 bracken:0
@@ -12131,7 +12131,7 @@ brasier:0
 brasil :0
 brasils:0
 brasque:0
-brass  :0
+brass  :1
 brasse :0
 brassed:0
 brassey:0
@@ -12374,7 +12374,7 @@ brigade:0
 brigand:0
 briggs :0
 brighid:0
-bright :0
+bright :1
 brights:0
 brigid :0
 brigous:0
@@ -12393,17 +12393,17 @@ brimmed:0
 brimmer:0
 brims  :0
 brimse :0
-brin   :0
+brin   :2
 brince :0
 brinded:0
 brindle:0
 bryndza:0
-brine  :0
+brine  :1
 brined :0
 briner :0
 briners:0
 brines :0
-bring  :0
+bring  :2
 bringal:0
 bringed:0
 bringer:0
@@ -12622,7 +12622,7 @@ browed :0
 browet :0
 browis :0
 browman:0
-brown  :0
+brown  :1
 browned:0
 browner:0
 browny :0
@@ -12751,12 +12751,12 @@ bubba  :0
 bubber :0
 bubby  :0
 bubbies:0
-bubble :0
+bubble :1
 bubbled:0
 bubbler:0
-bubbles:0
+bubbles:1
 bubbly :0
-bube   :0
+bube   :1
 bubinga:0
 bubo   :0
 buboed :0
@@ -12966,7 +12966,7 @@ bukshi :0
 bul    :0
 bulak  :0
 bulanda:0
-bulb   :0
+bulb   :1
 bulbar :0
 bulbed :0
 bulbel :0
@@ -13292,7 +13292,7 @@ buriers:0
 buries :0
 burying:0
 burin  :0
-burins :0
+burins :1
 burion :0
 burys  :0
 buriti :0
@@ -13402,7 +13402,7 @@ burucha:0
 burundi:0
 burut  :0
 burweed:0
-bus    :1
+bus    :2
 busaos :0
 busbar :0
 busbars:0
@@ -13444,7 +13444,7 @@ busycon:0
 busied :0
 busier :0
 busies :0
-busiest:0
+busiest:1
 busying:0
 busyish:0
 busily :0
@@ -13494,7 +13494,7 @@ busto  :0
 busts  :0
 busuuti:0
 busway :0
-but    :1
+but    :2
 butanal:0
 butane :0
 butanes:0
@@ -14017,7 +14017,7 @@ calepin:0
 calesa :0
 calesas:0
 calesin:0
-calf   :0
+calf   :1
 calfish:0
 calfret:0
 calfs  :0
@@ -14104,7 +14104,7 @@ callus :0
 calm   :0
 calmant:0
 calmato:0
-calmed :0
+calmed :1
 calmer :0
 calmest:0
 calmy  :0
@@ -14281,7 +14281,7 @@ camuse :0
 camused:0
 camuses:0
 camwood:0
-can    :0
+can    :1
 cana   :0
 canaan :0
 canaba :0
@@ -14517,7 +14517,7 @@ canzos :0
 caoba  :0
 caoine :0
 caon   :0
-cap    :0
+cap    :1
 capa   :0
 capable:0
 capably:0
@@ -14749,7 +14749,7 @@ carey  :0
 careys :0
 careme :0
 carene :0
-carer  :0
+carer  :1
 carers :0
 cares  :0
 caress :0
@@ -15034,7 +15034,7 @@ cascara:0
 casco  :0
 cascol :0
 cascrom:0
-case   :0
+case   :1
 casease:0
 caseate:0
 casebox:0
@@ -15132,7 +15132,7 @@ casson :0
 cassone:0
 cassoni:0
 cassons:0
-cassoon:0
+cast   :1
 cast   :0
 castana:0
 castane:0
@@ -15149,7 +15149,7 @@ castile:0
 casting:0
 castle :0
 castled:0
-castles:0
+castles:1
 castlet:0
 castock:0
 castoff:0
@@ -15170,7 +15170,7 @@ casula :0
 casule :0
 casus  :0
 casziel:0
-cat    :0
+cat    :1
 cataian:0
 catalan:0
 catalin:0
@@ -15383,7 +15383,7 @@ cavdia :0
 cave   :1
 cavea  :0
 caveae :0
-caveat :0
+caveats:1
 caveats:0
 caved  :0
 cavey  :0
@@ -15495,7 +15495,7 @@ cedens :0
 cedent :0
 ceder  :0
 ceders :0
-cedes  :0
+cedes  :1
 cedi   :0
 cedilla:0
 ceding :0
@@ -16165,7 +16165,7 @@ chaste :0
 chasten:0
 chaster:0
 chasty :0
-chat   :0
+chat   :1
 chataka:0
 chateau:0
 chateus:0
@@ -16181,7 +16181,7 @@ chatted:0
 chattel:0
 chatter:0
 chatti :0
-chatty :0
+chatty :1
 chaucer:0
 chaufer:0
 chaui  :0
@@ -16863,7 +16863,7 @@ chorda :0
 chordal:0
 chorded:0
 chordee:0
-chords :0
+chords :1
 chore  :0
 chorea :0
 choreal:0
@@ -17185,7 +17185,7 @@ cicuta :0
 cid    :0
 cidarid:0
 cidaris:0
-cider  :0
+cider  :1
 cyder  :0
 ciders :0
 cyders :0
@@ -17364,7 +17364,7 @@ circar :0
 circe  :0
 circean:0
 circle :0
-circled:0
+circled:1
 circler:0
 circles:0
 circlet:0
@@ -17740,7 +17740,7 @@ cleat  :0
 cleated:0
 cleats :0
 cleave :0
-cleaved:0
+cleaved:1
 cleaver:0
 cleaves:0
 cleche :0
@@ -17757,7 +17757,7 @@ cleek  :0
 cleeked:0
 cleeky :0
 cleeks :0
-clef   :0
+clef   :1
 clefs  :0
 cleft  :0
 clefted:0
@@ -18073,7 +18073,7 @@ clucked:0
 clucky :0
 clucks :0
 cludder:0
-clue   :0
+clue   :1
 clued  :0
 clueing:0
 clues  :0
@@ -18163,7 +18163,7 @@ coaling:0
 coalite:0
 coalize:0
 coalpit:0
-coals  :0
+coals  :1
 coaming:0
 coan   :0
 coannex:0
@@ -18202,7 +18202,7 @@ coaxes :0
 coaxy  :0
 coaxial:0
 coaxing:0
-cob    :0
+cob    :1
 cobaea :0
 cobalt :0
 cobalts:0
@@ -18333,7 +18333,7 @@ cocuisa:0
 cocuiza:0
 cocullo:0
 cocus  :0
-cod    :0
+cod    :2
 coda   :0
 codable:0
 codal  :0
@@ -18958,7 +18958,7 @@ comtism:0
 comtist:0
 comus  :0
 comvia :0
-con    :0
+con    :1
 conable:0
 conacre:0
 conal  :0
@@ -19472,7 +19472,7 @@ corcass:0
 corchat:0
 corcir :0
 corcle :0
-cord   :0
+cord   :1
 cordage:0
 cordal :0
 cordant:0
@@ -20077,7 +20077,7 @@ cowry  :0
 cowrie :0
 cowries:0
 cowroid:0
-cows   :0
+cows   :1
 cowshed:0
 cowshot:0
 cowshut:0
@@ -20134,7 +20134,7 @@ cputime:0
 craal  :0
 craaled:0
 craals :0
-crab   :0
+crab   :1
 crabbed:0
 crabber:0
 crabby :0
@@ -20285,7 +20285,7 @@ crassly:0
 cratch :0
 crate  :0
 crated :0
-crater :0
+crater :1
 craters:0
 crates :0
 crating:0
@@ -20445,7 +20445,7 @@ cresses:0
 cresset:0
 cressy :0
 cresson:0
-crest  :0
+crest  :1
 crestal:0
 crested:0
 crests :0
@@ -20741,7 +20741,7 @@ crout  :0
 croute :0
 crouth :0
 crouton:0
-crow   :0
+crow   :1
 crowbar:0
 crowd  :0
 crowded:0
@@ -20762,7 +20762,7 @@ crowned:0
 crowner:0
 crownet:0
 crowns :0
-crows  :0
+crows  :1
 crowtoe:0
 croze  :0
 crozed :0
@@ -20965,7 +20965,7 @@ cubitus:0
 cubla  :0
 cuboid :0
 cuboids:0
-cubs   :0
+cubs   :1
 cubti  :0
 cuca   :0
 cuchan :0
@@ -21005,7 +21005,7 @@ cudgels:0
 cuds   :0
 cudweed:0
 cudwort:0
-cue    :0
+cue    :2
 cueball:0
 cueca  :0
 cuecas :0
@@ -21016,7 +21016,7 @@ cueman :0
 cuemen :0
 cuerda :0
 cuerpo :0
-cues   :0
+cues   :2
 cuesta :0
 cuestas:0
 cueva  :0
@@ -21287,7 +21287,7 @@ curber :0
 curbers:0
 curby  :0
 curbing:0
-curbs  :0
+curbs  :1
 curcas :0
 curch  :0
 curchef:0
@@ -21310,7 +21310,7 @@ cure   :0
 cured  :0
 curer  :0
 curers :0
-cures  :0
+cures  :1
 curet  :0
 curets :0
 curette:0
@@ -21435,11 +21435,11 @@ cururos:0
 curval :0
 curvant:0
 curvate:0
-curve  :0
+curve  :1
 curved :0
 curvey :0
 curver :0
-curves :0
+curves :1
 curvet :0
 curvets:0
 curvy  :0
@@ -21504,7 +21504,7 @@ cutcha :0
 cutcher:0
 cutches:0
 cutdown:0
-cute   :0
+cute   :1
 cutey  :0
 cuteys :0
 cutely :0
@@ -21546,7 +21546,7 @@ cuttage:0
 cuttail:0
 cutted :0
 cutter :0
-cutters:0
+cutters:1
 cutty  :0
 cutties:0
 cutting:0
@@ -21899,7 +21899,7 @@ damon  :0
 damone :0
 damosel:0
 damozel:0
-damp   :0
+damp   :1
 dampang:0
 damped :0
 dampen :0
@@ -22045,7 +22045,7 @@ dardan :0
 dardani:0
 dardaol:0
 dardic :0
-dare   :0
+dare   :2
 dareall:0
 dared  :0
 dareful:0
@@ -22073,7 +22073,7 @@ daring :0
 darings:0
 dariole:0
 darius :0
-dark   :0
+dark   :1
 darked :0
 darkey :0
 darkeys:0
@@ -22094,7 +22094,7 @@ darkly :0
 darks  :0
 darksum:0
 darling:0
-darn   :0
+darn   :2
 darned :0
 darnel :0
 darnels:0
@@ -22182,7 +22182,7 @@ dataset:0
 datch  :0
 datcha :0
 datchas:0
-date   :1
+date   :2
 dated  :0
 datedly:0
 dater  :0
@@ -22355,7 +22355,7 @@ deafly :0
 deair  :0
 deaired:0
 deairs :0
-deal   :0
+deal   :1
 dealate:0
 dealer :0
 dealers:0
@@ -22369,7 +22369,7 @@ deanery:0
 deaness:0
 deaning:0
 deans  :0
-dear   :2
+dear   :5
 deare  :0
 dearer :0
 dearest:0
@@ -22572,7 +22572,7 @@ decl   :0
 declaim:0
 declare:0
 declass:0
-decline:0
+decline:1
 declive:0
 decnet :0
 deco   :0
@@ -22662,16 +22662,16 @@ deeming:0
 deems  :0
 deener :0
 deeny  :0
-deep   :0
+deep   :2
 deepen :0
 deepens:0
 deeper :0
 deepest:0
 deeping:0
 deepish:0
-deeply :0
+deeply :1
 deeps  :0
-deer   :3
+deer   :5
 deerdog:0
 deerfly:0
 deerlet:0
@@ -22704,7 +22704,7 @@ defats :0
 default:0
 defease:0
 defeat :0
-defeats:0
+defeats:1
 defect :0
 defects:0
 defeise:0
@@ -22914,7 +22914,7 @@ delfs  :0
 delft  :0
 delfts :0
 delhi  :0
-deli   :0
+deli   :2
 dely   :0
 delia  :0
 delian :0
@@ -22972,7 +22972,7 @@ deluge :0
 deluged:0
 deluges:0
 deluxe :0
-delve  :0
+delve  :1
 delved :0
 delver :0
 delvers:0
@@ -23053,7 +23053,7 @@ demur  :0
 demure :0
 demurer:0
 demurs :0
-den    :1
+den    :2
 denay  :0
 dename :0
 denar  :0
@@ -23314,7 +23314,7 @@ desexed:0
 desexes:0
 desi   :0
 desight:0
-design :0
+design :1
 designs:0
 desyl  :0
 desilt :0
@@ -23838,7 +23838,7 @@ dictic :0
 diction:0
 dictum :0
 dictums:0
-did    :0
+did    :3
 didache:0
 didact :0
 didacts:0
@@ -23879,7 +23879,7 @@ diduce :0
 diduced:0
 didus  :0
 die    :0
-dye    :0
+dye    :1
 dyeable:0
 dieb   :0
 dieback:0
@@ -23979,7 +23979,7 @@ digoxin:0
 digram :0
 digraph:0
 digress:0
-digs   :0
+digs   :2
 digue  :0
 dihalid:0
 dihalo :0
@@ -24029,7 +24029,7 @@ dilemi :0
 dilemma:0
 dilis  :0
 dilker :0
-dill   :0
+dill   :1
 dillesk:0
 dilli  :0
 dilly  :0
@@ -24054,7 +24054,7 @@ dilutes:0
 dilutor:0
 diluvy :0
 diluvia:0
-dim    :0
+dim    :2
 dimane :0
 dimaris:0
 dimatis:0
@@ -24066,8 +24066,8 @@ dimer  :0
 dimera :0
 dimeran:0
 dimeric:0
-dimers :0
-dimes  :0
+dimers :1
+dimes  :1
 dimeter:0
 dimetry:0
 dimyary:0
@@ -24122,11 +24122,11 @@ dindle :0
 dindled:0
 dindles:0
 dindon :0
-dine   :0
+dine   :2
 dyne   :0
 dined  :0
 dynel  :0
-diner  :0
+diner  :2
 dineric:0
 dinero :0
 dineros:0
@@ -24135,7 +24135,7 @@ dines  :0
 dynes  :0
 dinetic:0
 dinette:0
-ding   :1
+ding   :4
 dingar :0
 dingbat:0
 dinge  :0
@@ -24340,9 +24340,9 @@ dirling:0
 dirls  :0
 dirndl :0
 dirndls:0
-dirt   :0
+dirt   :1
 dirten :0
-dirty  :0
+dirty  :1
 dirtied:0
 dirtier:0
 dirties:0
@@ -24799,8 +24799,8 @@ dockman:0
 docks  :0
 docmac :0
 docquet:0
-docs   :0
-doctor :0
+docs   :1
+doctor :1
 doctors:0
 doctrix:0
 doctus :0
@@ -24847,9 +24847,9 @@ doeg   :0
 doeglic:0
 doek   :0
 doeling:0
-doer   :0
-doers  :0
-does   :1
+doer   :1
+doers  :1
+does   :2
 doeskin:0
 doesn  :0
 doesnt :0
@@ -25094,7 +25094,7 @@ donax  :0
 doncy  :0
 dondia :0
 dondine:0
-done   :0
+done   :1
 donec  :0
 donee  :0
 donees :0
@@ -25180,7 +25180,7 @@ doomful:0
 dooming:0
 dooms  :0
 doon   :0
-door   :0
+door   :1
 doorba :0
 doorboy:0
 doored :0
@@ -25325,7 +25325,7 @@ dossing:0
 dossman:0
 dossmen:0
 dost   :0
-dot    :0
+dot    :2
 dotage :0
 dotages:0
 dotal  :0
@@ -25477,12 +25477,12 @@ dowlas :0
 dowless:0
 dowly  :0
 dowment:0
-down   :0
+down   :1
 downby :0
 downbye:0
 downcry:0
 downcut:0
-downed :0
+downed :1
 downer :0
 downers:0
 downy  :0
@@ -25711,7 +25711,7 @@ dretch :0
 drevel :0
 drew   :0
 drewite:0
-dry    :1
+dry    :2
 dryable:0
 dryad  :0
 dryades:0
@@ -25731,14 +25731,14 @@ dridder:0
 driddle:0
 drie   :0
 driech :0
-dried  :0
+dried  :2
 driegh :0
 drier  :0
 dryer  :0
 driers :0
 dryers :0
 dries  :0
-driest :0
+driest :1
 dryest :0
 dryfarm:0
 dryfat :0
@@ -25773,7 +25773,7 @@ drinn  :0
 dryope :0
 dryopes:0
 dryops :0
-drip   :0
+drip   :1
 dripped:0
 dripper:0
 drippy :0
@@ -26315,7 +26315,7 @@ dunter :0
 dunting:0
 duntle :0
 dunts  :0
-duo    :0
+duo    :1
 duodena:0
 duodene:0
 duodial:0
@@ -26544,7 +26544,7 @@ eam    :0
 ean    :0
 eaning :0
 eanling:0
-ear    :3
+ear    :9
 earable:0
 earache:0
 earbash:0
@@ -26568,7 +26568,7 @@ earldom:0
 earle  :0
 earless:0
 earlet :0
-early  :0
+early  :1
 earlier:0
 earlike:0
 earlish:0
@@ -26577,7 +26577,7 @@ earlock:0
 earls  :0
 earmark:0
 earmuff:0
-earn   :1
+earn   :2
 earned :0
 earner :0
 earners:0
@@ -26590,7 +26590,7 @@ earock :0
 earpick:0
 earplug:0
 earring:0
-ears   :1
+ears   :4
 earsh  :0
 earshot:0
 earsore:0
@@ -26622,8 +26622,7 @@ easies :0
 easiest:0
 easily :0
 easing :0
-eassel :0
-east   :0
+east   :2
 easted :0
 easter :0
 eastern:0
@@ -26841,7 +26840,7 @@ edessan:0
 edestan:0
 edestin:0
 edgar  :0
-edge   :0
+edge   :1
 edged  :0
 edgeman:0
 edger  :0
@@ -26877,7 +26876,7 @@ edile  :0
 ediles :0
 edility:0
 edison :0
-edit   :0
+edit   :1
 edital :0
 edited :0
 edith  :0
@@ -27097,7 +27096,7 @@ eyebree:0
 eyebrow:0
 eyecup :0
 eyecups:0
-eyed   :0
+eyed   :1
 eyedot :0
 eyedrop:0
 eyeflap:0
@@ -27339,7 +27338,7 @@ eleven :0
 elevens:0
 elevon :0
 elevons:0
-elf    :0
+elf    :1
 elfdom :0
 elfhood:0
 elfic  :0
@@ -27698,9 +27697,9 @@ emirate:0
 emirs  :0
 emys   :0
 emissi :0
-emit   :0
+emit   :1
 emits  :0
-emitted:0
+emitted:1
 emitter:0
 emlen  :0
 emm    :0
@@ -27922,7 +27921,7 @@ encrown:0
 encrust:0
 encup  :0
 encurl :0
-end    :1
+end    :4
 endable:0
 endarch:0
 endark :0
@@ -27985,7 +27984,7 @@ endozoa:0
 endplay:0
 endrin :0
 endrins:0
-ends   :0
+ends   :1
 endseal:0
 endship:0
 endue  :0
@@ -28339,7 +28338,7 @@ entasis:0
 entea  :0
 entelam:0
 entente:0
-enter  :0
+enter  :1
 entera :0
 enteral:0
 entered:0
@@ -28617,7 +28616,7 @@ epipial:0
 epirot :0
 epirote:0
 episcia:0
-episode:0
+episode:1
 episome:0
 epist  :0
 epistle:0
@@ -28714,7 +28713,7 @@ equiv  :0
 equoid :0
 equulei:0
 equus  :0
-era    :2
+era    :9
 erade  :0
 eral   :0
 eranist:0
@@ -29370,7 +29369,7 @@ evap   :0
 evase  :0
 evasion:0
 evasive:0
-eve    :1
+eve    :5
 evea   :0
 eveck  :0
 evected:0
@@ -29383,7 +29382,7 @@ evelyn :0
 evelina:0
 eveline:0
 evelong:0
-even   :0
+even   :2
 evene  :0
 evened :0
 evener :0
@@ -29396,7 +29395,7 @@ evens  :0
 event  :0
 events :0
 eveque :0
-ever   :0
+ever   :3
 everard:0
 everest:0
 everett:0
@@ -29510,11 +29509,11 @@ exaun  :0
 excamb :0
 excave :0
 exceed :0
-exceeds:0
+exceeds:1
 excel  :0
 excels :0
 excelse:0
-except :0
+except :2
 excepts:0
 excern :0
 excerp :0
@@ -29668,8 +29667,8 @@ expand :0
 expands:0
 expanse:0
 expdt  :0
-expect :0
-expects:0
+expect :1
+expects:1
 expede :0
 expeded:0
 expel  :0
@@ -29917,7 +29916,7 @@ fadlike:0
 fadme  :0
 fado   :0
 fados  :0
-fads   :0
+fads   :1
 fae    :0
 faecal :0
 faeces :0
@@ -30045,8 +30044,8 @@ falcer :0
 falces :0
 falcial:0
 falco  :0
-falcon :0
-falcons:0
+falcon :1
+falcons:1
 falcula:0
 falda  :0
 faldage:0
@@ -30210,7 +30209,7 @@ faqir  :0
 faqirs :0
 faquir :0
 faquirs:0
-far    :0
+far    :1
 farad  :0
 faraday:0
 faradic:0
@@ -30509,7 +30508,7 @@ feaked :0
 feaking:0
 feal   :0
 fealty :0
-fear   :0
+fear   :1
 feared :0
 fearer :0
 fearers:0
@@ -30573,7 +30572,7 @@ fedn   :0
 fedora :0
 fedoras:0
 feds   :0
-fee    :0
+fee    :1
 feeable:0
 feeb   :0
 feeble :0
@@ -30593,7 +30592,7 @@ feedman:0
 feeds  :0
 feedway:0
 feeing :0
-feel   :0
+feel   :1
 feeler :0
 feelers:0
 feeless:0
@@ -30685,7 +30684,7 @@ fels   :0
 felsic :0
 felsite:0
 felspar:0
-felt   :1
+felt   :2
 felted :0
 felter :0
 felty  :0
@@ -31030,7 +31029,7 @@ fibroid:0
 fibroin:0
 fibroma:0
 fibrose:0
-fibrous:0
+fibrous:1
 fibs   :0
 fibster:0
 fibula :0
@@ -31468,7 +31467,7 @@ fiscs  :0
 fiscus :0
 fise   :0
 fisetin:0
-fish   :0
+fish   :1
 fishbed:0
 fished :0
 fisheye:0
@@ -31822,7 +31821,7 @@ fleered:0
 fleerer:0
 fleers :0
 flees  :0
-fleet  :0
+fleet  :1
 fleeted:0
 fleeten:0
 fleeter:0
@@ -31879,7 +31878,7 @@ flexor :0
 flexors:0
 flexura:0
 flexure:0
-fly    :0
+fly    :1
 flyable:0
 flyaway:0
 flyback:0
@@ -32102,7 +32101,7 @@ flout  :0
 flouted:0
 flouter:0
 flouts :0
-flow   :0
+flow   :2
 flowage:0
 flowe  :0
 flowed :0
@@ -32115,7 +32114,7 @@ flown  :0
 flowoff:0
 flows  :0
 flrie  :0
-flu    :0
+flu    :2
 fluate :0
 fluavil:0
 flub   :0
@@ -32129,7 +32128,7 @@ fluey  :0
 flueman:0
 fluemen:0
 fluence:0
-fluency:0
+fluency:1
 fluent :0
 fluer  :0
 flueric:0
@@ -32194,12 +32193,12 @@ flusk  :0
 flusker:0
 fluster:0
 flustra:0
-flute  :0
+flute  :1
 fluted :0
 flutey :0
 fluter :0
 fluters:0
-flutes :0
+flutes :1
 fluther:0
 fluty  :0
 flutier:0
@@ -32240,7 +32239,7 @@ fob    :0
 fobbed :0
 fobbing:0
 fobs   :0
-focal  :0
+focal  :1
 focally:0
 foci   :0
 fockle :0
@@ -32275,7 +32274,7 @@ foetor :0
 foetors:0
 foeture:0
 foetus :0
-fog    :0
+fog    :1
 fogas  :0
 fogbank:0
 fogbow :0
@@ -32810,7 +32809,7 @@ foud   :0
 fouett :0
 fouette:0
 fougade:0
-fought :0
+fought :1
 foughty:0
 fougue :0
 foujdar:0
@@ -32837,7 +32836,7 @@ founds :0
 fount  :0
 founte :0
 founts :0
-four   :0
+four   :1
 fourb  :0
 fourble:0
 fourche:0
@@ -32963,7 +32962,7 @@ frameae:0
 framed :0
 framer :0
 framers:0
-frames :0
+frames :1
 framing:0
 frammit:0
 franc  :0
@@ -33060,7 +33059,7 @@ freeman:0
 freemen:0
 freen  :0
 freend :0
-freer  :0
+freer  :1
 freers :0
 frees  :0
 freesia:0
@@ -33431,14 +33430,14 @@ fudging:0
 fuds   :0
 fuegian:0
 fuehrer:0
-fuel   :0
+fuel   :1
 fueled :0
 fueler :0
 fuelers:0
 fueling:0
 fuelled:0
 fueller:0
-fuels  :0
+fuels  :1
 fuerte :0
 fuff   :0
 fuffy  :0
@@ -33574,7 +33573,7 @@ fumose :0
 fumous :0
 fumuli :0
 fumulus:0
-fun    :0
+fun    :1
 funaria:0
 funbre :0
 functor:0
@@ -33642,7 +33641,7 @@ funorin:0
 funs   :0
 funster:0
 funt   :0
-fur    :0
+fur    :1
 fural  :0
 furan  :0
 furandi:0
@@ -33732,7 +33731,7 @@ fusate :0
 fusc   :0
 fuscin :0
 fuscous:0
-fuse   :0
+fuse   :1
 fuseau :0
 fused  :0
 fusee  :0
@@ -33979,7 +33978,7 @@ gaily  :0
 gayly  :0
 gaylies:0
 gayment:0
-gain   :0
+gain   :2
 gainage:0
 gaine  :0
 gained :0
@@ -33990,7 +33989,7 @@ gainful:0
 gaining:0
 gainly :0
 gainor :0
-gains  :0
+gains  :1
 gainsay:0
 gainset:0
 gainst :0
@@ -34187,7 +34186,7 @@ gambone:0
 gambrel:0
 gambs  :0
 gamdia :0
-game   :0
+game   :1
 gamebag:0
 gamed  :0
 gameful:0
@@ -34450,7 +34449,7 @@ garvey :0
 garveys:0
 garvie :0
 garvock:0
-gas    :0
+gas    :2
 gasan  :0
 gasbag :0
 gasbags:0
@@ -34687,7 +34686,7 @@ gearbox:0
 geared :0
 gearing:0
 gearman:0
-gears  :0
+gears  :1
 gearset:0
 gease  :0
 geason :0
@@ -34767,7 +34766,7 @@ geist  :0
 geitjie:0
 gekko  :0
 gekkota:0
-gel    :0
+gel    :2
 gelable:0
 gelada :0
 geladas:0
@@ -34806,7 +34805,7 @@ gelosin:0
 gels   :0
 gelt   :0
 gelts  :0
-gem    :0
+gem    :2
 gemara :0
 gemaric:0
 gemauve:0
@@ -34856,7 +34855,7 @@ genappe:0
 genarch:0
 gender :0
 genders:0
-gene   :0
+gene   :1
 geneal :0
 genear :0
 geneat :0
@@ -34916,7 +34915,7 @@ genomes:0
 genomic:0
 genoms :0
 genos  :0
-genre  :0
+genre  :1
 genres :0
 genro  :0
 genros :0
@@ -35100,7 +35099,7 @@ gether :0
 getic  :0
 getid  :0
 getling:0
-gets   :0
+gets   :1
 getspa :0
 getsul :0
 getter :0
@@ -35274,7 +35273,7 @@ giftie :0
 gifting:0
 gifts  :0
 gifture:0
-gig    :0
+gig    :1
 giga   :0
 gigabit:0
 gigant :0
@@ -35532,7 +35531,7 @@ gyrinid:0
 gyrinus:0
 girja  :0
 girkin :0
-girl   :0
+girl   :1
 girland:0
 girleen:0
 girlery:0
@@ -35577,7 +35576,7 @@ girshes:0
 girsle :0
 girt   :0
 girted :0
-girth  :0
+girth  :1
 girthed:0
 girths :0
 girting:0
@@ -35757,7 +35756,7 @@ gleam  :0
 gleamed:0
 gleamy :0
 gleams :0
-glean  :0
+glean  :1
 gleaned:0
 gleaner:0
 gleans :0
@@ -35799,7 +35798,7 @@ gleyde :0
 gleir  :0
 gleys  :0
 gleit  :0
-glen   :0
+glen   :1
 glene  :0
 glenn  :0
 glenoid:0
@@ -35810,7 +35809,7 @@ glew   :0
 glia   :0
 gliadin:0
 glial  :0
-glib   :0
+glib   :1
 glibber:0
 glibly :0
 glyc   :0
@@ -36221,7 +36220,7 @@ goemot :0
 goen   :0
 goer   :0
 goers  :0
-goes   :0
+goes   :1
 goetae :0
 goethe :0
 goety  :0
@@ -36254,7 +36253,7 @@ goyim  :0
 goyin  :0
 goyish :0
 goyle  :0
-going  :0
+going  :1
 goings :0
 gois   :0
 goys   :0
@@ -36363,7 +36362,7 @@ goney  :0
 goner  :0
 goneril:0
 goners :0
-gong   :0
+gong   :1
 gonged :0
 gonging:0
 gongman:0
@@ -36564,8 +36563,8 @@ gossipy:0
 gossips:0
 gossoon:0
 goster :0
-gosther:0
-got    :0
+got    :2
+got    :1
 gotch  :0
 gotched:0
 gotchy :0
@@ -36656,7 +36655,7 @@ gowks  :0
 gowl   :0
 gowlan :0
 gowland:0
-gown   :0
+gown   :1
 gowned :0
 gowning:0
 gownlet:0
@@ -36823,7 +36822,7 @@ grantha:0
 granthi:0
 grantia:0
 grantor:0
-grants :0
+grants :1
 granula:0
 granule:0
 granum :0
@@ -36945,16 +36944,16 @@ grecoue:0
 grecque:0
 gree   :0
 greece :0
-greed  :0
+greed  :1
 greedy :0
 greeds :0
 greeing:0
 greek  :0
 greeks :0
-green  :0
+green  :1
 greened:0
 greeney:0
-greener:0
+greener:1
 greeny :0
 greenly:0
 greens :0
@@ -37028,7 +37027,7 @@ gry    :0
 gribane:0
 gribble:0
 grice  :0
-grid   :0
+grid   :2
 gridded:0
 gridder:0
 griddle:0
@@ -37069,7 +37068,7 @@ grike  :0
 grill  :0
 grille :0
 grylle :0
-grilled:0
+grilled:1
 grillee:0
 griller:0
 grilles:0
@@ -37111,7 +37110,7 @@ gringos:0
 grinned:0
 grinner:0
 grinny :0
-grinnie:0
+grins  :1
 grins  :0
 grint  :0
 grinter:0
@@ -37169,7 +37168,7 @@ grists :0
 grit   :0
 grith  :0
 griths :0
-grits  :0
+grits  :1
 gritted:0
 gritten:0
 gritter:0
@@ -37297,22 +37296,22 @@ grovers:0
 groves :0
 grovet :0
 grovy  :0
-grow   :0
+grow   :1
 growan :0
 growed :0
 grower :0
 growers:0
-growing:0
+growing:1
 growl  :0
 growled:0
 growler:0
 growly :0
 growls :0
-grown  :0
+grown  :1
 grownup:0
 grows  :0
 growse :0
-growth :0
+growth :1
 growthy:0
 growths:0
 growze :0
@@ -37684,7 +37683,7 @@ gulps  :0
 guls   :0
 gulsach:0
 gult   :0
-gum    :0
+gum    :1
 gumby  :0
 gumbo  :0
 gumboil:0
@@ -37869,7 +37868,7 @@ gustoes:0
 gustoso:0
 gusts  :0
 gustus :0
-gut    :0
+gut    :1
 guti   :0
 gutium :0
 gutless:0
@@ -38040,7 +38039,7 @@ hadrom :0
 hadrome:0
 hadron :0
 hadrons:0
-hadst  :0
+hadst  :1
 hae    :0
 haec   :0
 haed   :0
@@ -38138,7 +38137,7 @@ hah    :0
 haha   :0
 hahnium:0
 hahs   :0
-hay    :0
+hay    :1
 haya   :0
 haiari :0
 hayband:0
@@ -38510,7 +38509,7 @@ hanging:0
 hangle :0
 hangman:0
 hangmen:0
-hangout:0
+hangout:1
 hangs  :0
 hangtag:0
 hangul :0
@@ -38739,7 +38738,7 @@ harv   :0
 harvard:0
 harvey :0
 harvest:0
-has    :1
+has    :2
 hasan  :0
 hasard :0
 hash   :0
@@ -38799,7 +38798,7 @@ hastish:0
 hastive:0
 hastler:0
 hastula:0
-hat    :0
+hat    :3
 hatable:0
 hatband:0
 hatbox :0
@@ -38833,7 +38832,7 @@ hatrail:0
 hatred :0
 hatreds:0
 hatress:0
-hats   :0
+hats   :1
 hatsful:0
 hatt   :0
 hatte  :0
@@ -39136,7 +39135,7 @@ hedgier:0
 hedging:0
 hedonic:0
 hee    :0
-heed   :1
+heed   :2
 heeded :0
 heeder :0
 heeders:0
@@ -39147,9 +39146,9 @@ heeding:0
 heeds  :0
 heehaw :0
 heehaws:0
-heel   :0
+heel   :1
 heelcap:0
-heeled :0
+heeled :1
 heeler :0
 heelers:0
 heeling:0
@@ -39240,7 +39239,7 @@ helas  :0
 helbeh :0
 helco  :0
 helcoid:0
-held   :0
+held   :1
 helder :0
 hele   :0
 helen  :0
@@ -39561,7 +39560,7 @@ herry  :0
 herried:0
 herries:0
 herring:0
-hers   :0
+hers   :2
 hersall:0
 herse  :0
 hersed :0
@@ -39984,7 +39983,7 @@ hinnies:0
 hinoid :0
 hinoki :0
 hins   :0
-hint   :0
+hint   :1
 hinted :0
 hinter :0
 hinters:0
@@ -40122,7 +40121,7 @@ hirtch :0
 hirudin:0
 hirudo :0
 hirundo:0
-his    :0
+his    :2
 hish   :0
 hisis  :0
 hisn   :0
@@ -40154,7 +40153,7 @@ history:0
 histrio:0
 hystrix:0
 hists  :0
-hit    :0
+hit    :3
 hitch  :0
 hitched:0
 hitchel:0
@@ -40294,7 +40293,7 @@ hoer   :0
 hoers  :0
 hoes   :0
 hoeshin:0
-hog    :0
+hog    :3
 hoga   :0
 hogan  :0
 hogans :0
@@ -40795,7 +40794,7 @@ horsts :0
 hort   :0
 hortite:0
 hosanna:0
-hose   :0
+hose   :1
 hosea  :0
 hosed  :0
 hosel  :0
@@ -40828,7 +40827,7 @@ hostler:0
 hostly :0
 hostry :0
 hosts  :0
-hot    :1
+hot    :3
 hotbed :0
 hotbeds:0
 hotbox :0
@@ -40882,7 +40881,7 @@ hounded:0
 hounder:0
 houndy :0
 hounds :0
-hour   :0
+hour   :1
 hourful:0
 houri  :0
 houris :0
@@ -40920,7 +40919,7 @@ hovered:0
 hoverer:0
 hoverly:0
 hovers :0
-how    :0
+how    :1
 howadji:0
 howard :0
 howbeit:0
@@ -41022,7 +41021,7 @@ hueless:0
 huemul :0
 huer   :0
 huerta :0
-hues   :0
+hues   :1
 huff   :0
 huffcap:0
 huffed :0
@@ -41381,7 +41380,7 @@ iacchos:0
 iacchus:0
 yachan :0
 iachimo:0
-yacht  :0
+yacht  :1
 yachted:0
 yachter:0
 yachty :0
@@ -41696,8 +41695,8 @@ icaria :0
 icarian:0
 icarus :0
 icasm  :0
-icbm   :0
-ice    :0
+ice    :3
+ice    :2
 iceberg:0
 iceboat:0
 icebone:0
@@ -41787,7 +41786,7 @@ iddat  :0
 iddhi  :0
 iddio  :0
 ide    :0
-idea   :0
+idea   :1
 ideaed :0
 ideaful:0
 ideal  :0
@@ -41842,13 +41841,13 @@ idist  :0
 idistic:0
 idite  :0
 iditol :0
-idle   :0
+idle   :1
 idleby :0
 idled  :0
 idleful:0
 idleman:0
 idlemen:0
-idler  :0
+idler  :1
 idlers :0
 idles  :0
 idleset:0
@@ -41892,7 +41891,7 @@ yeaned :0
 yeaning:0
 yeans  :0
 yeaoman:0
-year   :0
+year   :2
 yeara  :0
 yeard  :0
 yearday:0
@@ -41905,7 +41904,7 @@ yearned:0
 yearner:0
 yearns :0
 yearock:0
-years  :0
+years  :1
 yearth :0
 yeas   :0
 yeast  :0
@@ -42023,7 +42022,7 @@ yest   :0
 yester :0
 yestern:0
 yesty  :0
-yet    :1
+yet    :2
 yeta   :0
 yetapa :0
 yeth   :0
@@ -42097,7 +42096,7 @@ ignobly:0
 ignore :1
 ignored:0
 ignorer:0
-ignores:0
+ignores:1
 ignote :0
 ignotus:0
 igorot :0
@@ -42218,7 +42217,7 @@ ilk    :0
 ilka   :0
 ilkane :0
 ilks   :0
-ill    :1
+ill    :3
 illamon:0
 illano :0
 illanun:0
@@ -42247,7 +42246,7 @@ illness:0
 illocal:0
 illogic:0
 illoyal:0
-ills   :1
+ills   :2
 illth  :0
 illude :0
 illuded:0
@@ -42453,7 +42452,7 @@ imperil:0
 impers :0
 impest :0
 impetre:0
-impetus:0
+impetus:1
 impf   :0
 imphee :0
 imphees:0
@@ -43002,7 +43001,7 @@ injures:0
 injury :0
 injuria:0
 injust :0
-ink    :0
+ink    :1
 inkblot:0
 inkbush:0
 inked  :0
@@ -43074,7 +43073,7 @@ inmeats:0
 inmesh :0
 inmew  :0
 inmore :0
-inmost :0
+inn    :1
 inn    :0
 innage :0
 innards:0
@@ -43281,7 +43280,7 @@ intisy :0
 intitle:0
 intl   :0
 intnl  :0
-into   :0
+into   :1
 intoed :0
 intomb :0
 intombs:0
@@ -43306,7 +43305,7 @@ intrate:0
 intreat:0
 intrigo:0
 intrine:0
-intro  :0
+intro  :1
 introd :0
 introfy:0
 introit:0
@@ -43526,8 +43525,8 @@ yom    :0
 yomer  :0
 yomim  :0
 yomin  :0
-yomud  :0
-ion    :3
+ion    :9
+ion    :7
 yon    :0
 yond   :0
 yonder :0
@@ -43560,7 +43559,7 @@ ionogen:0
 ionomer:0
 ionone :0
 ionones:0
-ions   :0
+ions   :1
 yonside:0
 yont   :0
 yook   :0
@@ -43659,10 +43658,10 @@ ipomea :0
 ipomoea:0
 ipr    :0
 ips    :0
-ipse   :0
+ipse   :1
 ipseand:0
 ipseity:0
-ipso   :0
+ipso   :1
 iqs    :0
 yquem  :0
 ira    :0
@@ -43742,7 +43741,7 @@ irma   :0
 iroha  :0
 irok   :0
 iroko  :0
-iron   :1
+iron   :2
 irone  :0
 ironed :0
 ironer :0
@@ -43839,7 +43838,7 @@ islamic:0
 island :0
 islandy:0
 islands:0
-isle   :1
+isle   :2
 isled  :0
 isleman:0
 isles  :0
@@ -44019,14 +44018,14 @@ itylus :0
 itys   :0
 itll   :0
 itmo   :0
-ito    :0
+ito    :1
 itoism :0
 itoist :0
 itoland:0
 itonama:0
 itonia :0
 itoubou:0
-its    :4
+its    :5
 itself :0
 itsy   :0
 ytter  :0
@@ -46365,7 +46364,7 @@ kepped :0
 keppen :0
 kepping:0
 keps   :0
-kept   :0
+kept   :1
 ker    :0
 keraci :0
 keramic:0
@@ -46990,7 +46989,7 @@ kistful:0
 kists  :0
 kiswa  :0
 kiswah :0
-kit    :0
+kit    :1
 kitab  :0
 kitabi :0
 kitabis:0
@@ -47208,7 +47207,7 @@ knights:0
 knish  :0
 knishes:0
 knysna :0
-knit   :0
+knit   :1
 knitch :0
 knits  :0
 knitted:0
@@ -47816,7 +47815,7 @@ kwintra:0
 laager :0
 laagers:0
 laang  :0
-lab    :0
+lab    :1
 labaara:0
 laban  :0
 labara :0
@@ -47871,7 +47870,7 @@ laccase:0
 laccic :0
 laccin :0
 laccol :0
-lace   :0
+lace   :1
 laced  :0
 lacey  :0
 laceier:0
@@ -48004,7 +48003,7 @@ laeti  :0
 laetic :0
 laevo  :0
 lafite :0
-laft   :0
+lag    :1
 lag    :0
 lagan  :0
 lagans :0
@@ -48066,7 +48065,7 @@ laid   :0
 laidly :0
 laydown:0
 layed  :0
-layer  :0
+layer  :1
 layered:0
 layery :0
 layers :0
@@ -48081,7 +48080,7 @@ layland:0
 layloc :0
 laylock:0
 layman :0
-laymen :0
+lain   :1
 lain   :0
 lainage:0
 laine  :0
@@ -48298,7 +48297,7 @@ landaus:0
 lande  :0
 landed :0
 lander :0
-landers:0
+landing:1
 landing:0
 landler:0
 landman:0
@@ -48307,12 +48306,12 @@ landmil:0
 lands  :0
 landsat:0
 landway:0
-lane   :0
+lane   :1
 laney  :0
 lanely :0
 lanes  :0
 lanete :0
-laneway:0
+lang   :1
 lang   :0
 langaha:0
 langate:0
@@ -48385,7 +48384,7 @@ laocoon:0
 laodah :0
 laos   :0
 laotian:0
-lap    :0
+lap    :1
 lapacho:0
 lapb   :0
 lapcock:0
@@ -48847,7 +48846,7 @@ leached:0
 leacher:0
 leaches:0
 leachy :0
-lead   :0
+lead   :1
 leadage:0
 leaded :0
 leaden :0
@@ -48883,7 +48882,7 @@ leagued:0
 leaguer:0
 leagues:0
 leah   :0
-leak   :0
+leak   :1
 leakage:0
 leaked :0
 leaker :0
@@ -48991,7 +48990,7 @@ lectors:0
 lectual:0
 lecture:0
 lecturn:0
-led    :0
+led    :5
 leda   :0
 lede   :0
 leden  :0
@@ -48999,7 +48998,7 @@ ledge  :0
 ledged :0
 ledger :0
 ledgers:0
-ledges :0
+ledges :1
 ledget :0
 ledgy  :0
 ledgier:0
@@ -49054,7 +49053,7 @@ leeward:0
 leewill:0
 lefsel :0
 lefsen :0
-left   :0
+left   :1
 lefter :0
 leftest:0
 lefty  :0
@@ -49063,7 +49062,7 @@ leftish:0
 leftism:0
 leftist:0
 lefts  :0
-leg    :0
+leg    :2
 legacy :0
 legal  :0
 legally:0
@@ -49339,7 +49338,7 @@ lesions:0
 leskea :0
 lesleya:0
 leslie :0
-less   :0
+less   :3
 lessee :0
 lessees:0
 lessen :0
@@ -49357,7 +49356,7 @@ lest   :0
 leste  :0
 lester :0
 lestrad:0
-let    :1
+let    :2
 letch  :0
 letches:0
 letchy :0
@@ -49511,7 +49510,7 @@ liang  :0
 liangle:0
 liangs :0
 lianoid:0
-liar   :0
+liar   :1
 liard  :0
 lyard  :0
 liards :0
@@ -49634,8 +49633,8 @@ lyctus :0
 licuala:0
 licuri :0
 licury :0
-lycus  :0
-lid    :0
+lid    :3
+lid    :2
 lida   :0
 lidar  :0
 lidars :0
@@ -49653,8 +49652,8 @@ lydite :0
 lidless:0
 lido   :0
 lidos  :0
-lids   :0
-lie    :1
+lie    :4
+lie    :3
 lye    :0
 liebig :0
 lied   :0
@@ -49681,7 +49680,7 @@ lierne :0
 liernes:0
 lierre :0
 liers  :0
-lies   :0
+lies   :2
 lyes   :0
 liesh  :0
 liest  :0
@@ -49735,7 +49734,7 @@ lygeum :0
 liggat :0
 ligge  :0
 ligger :0
-light  :0
+light  :1
 lighted:0
 lighten:0
 lighter:0
@@ -49802,7 +49801,7 @@ lily   :0
 lilial :0
 lilian :0
 lilied :0
-lilies :0
+lilies :1
 lilyfy :0
 lilith :0
 lilium :0
@@ -49902,7 +49901,7 @@ limosa :0
 limose :0
 limosi :0
 limous :0
-limp   :1
+limp   :2
 limped :0
 limper :0
 limpers:0
@@ -49979,7 +49978,7 @@ lineary:0
 lineas :0
 lineate:0
 linecut:0
-lined  :0
+lined  :1
 liney  :0
 linelet:0
 lineman:0
@@ -49996,7 +49995,7 @@ linet  :0
 lynette:0
 lineup :0
 lineups:0
-ling   :0
+ling   :2
 linga  :0
 lingala:0
 lingam :0
@@ -50097,7 +50096,7 @@ linwood:0
 lynx   :0
 lynxes :0
 lyomeri:0
-lion   :0
+lion   :2
 lyon   :0
 lionced:0
 lioncel:0
@@ -50150,7 +50149,7 @@ lippie :0
 lippier:0
 lipping:0
 lipread:0
-lips   :0
+lips   :1
 lipse  :0
 lipuria:0
 lipwork:0
@@ -50247,7 +50246,7 @@ listing:0
 listred:0
 lists  :0
 liszt  :0
-lit    :0
+lit    :1
 litai  :0
 litany :0
 litarge:0
@@ -50443,7 +50442,7 @@ lobbing:0
 lobbish:0
 lobcock:0
 lobcokt:0
-lobe   :0
+lobe   :1
 lobed  :0
 lobefin:0
 lobelet:0
@@ -50522,7 +50521,7 @@ lockout:0
 lockpin:0
 lockram:0
 lockrum:0
-locks  :0
+locks  :1
 lockup :0
 lockups:0
 locn   :0
@@ -50585,7 +50584,7 @@ lofting:0
 loftman:0
 loftmen:0
 lofts  :0
-log    :0
+log    :2
 logan  :0
 logania:0
 loganin:0
@@ -50611,7 +50610,7 @@ loggias:0
 loggie :0
 loggier:0
 loggin :0
-logging:0
+logging:1
 loggish:0
 loghead:0
 logy   :0
@@ -50623,7 +50622,7 @@ logie  :0
 logier :0
 logiest:0
 logily :0
-login  :0
+login  :1
 logins :0
 logion :0
 logions:0
@@ -50645,7 +50644,7 @@ logres :0
 logria :0
 logris :0
 logroll:0
-logs   :0
+logs   :1
 logship:0
 logway :0
 logways:0
@@ -50744,7 +50743,7 @@ longleg:0
 longly :0
 longpod:0
 longrun:0
-longs  :0
+longs  :1
 longue :0
 longues:0
 longus :0
@@ -50812,7 +50811,7 @@ loops  :0
 loord  :0
 loory  :0
 loos   :0
-loose  :0
+loose  :1
 loosed :0
 loosely:0
 loosen :0
@@ -50911,7 +50910,7 @@ lors   :0
 lorum  :0
 losable:0
 losang :0
-lose   :0
+lose   :1
 losel  :0
 loselry:0
 losels :0
@@ -50919,7 +50918,7 @@ loser  :0
 losers :0
 loses  :0
 losh   :0
-losing :0
+losing :1
 losings:0
 loss   :0
 losser :0
@@ -50966,7 +50965,7 @@ lotusin:0
 lou    :0
 louch  :0
 louche :0
-loud   :0
+loud   :1
 louden :0
 loudens:0
 louder :0
@@ -51036,8 +51035,8 @@ lovably:0
 lovage :0
 lovages:0
 lovat  :0
-love   :0
-loved  :0
+love   :1
+loved  :1
 loveday:0
 lovee  :0
 loveful:0
@@ -51054,7 +51053,7 @@ loves  :0
 lovier :0
 loviers:0
 loving :0
-low    :1
+low    :4
 lowa   :0
 lowable:0
 lowan  :0
@@ -51119,7 +51118,7 @@ lozenge:0
 lozengy:0
 lpm    :0
 lrecl  :0
-lsc    :0
+lsc    :1
 lst    :0
 ltr    :0
 luau   :0
@@ -51342,7 +51341,7 @@ lunes  :0
 lunet  :0
 lunets :0
 lunette:0
-lung   :0
+lung   :1
 lungan :0
 lungans:0
 lunge  :0
@@ -51642,7 +51641,7 @@ macupi :0
 macusi :0
 macuta :0
 macute :0
-mad    :0
+mad    :3
 madafu :0
 madam  :0
 madame :0
@@ -52224,7 +52223,7 @@ mamry  :0
 mamsell:0
 mamushi:0
 mamzer :0
-man    :1
+man    :2
 mana   :0
 manace :0
 manacle:0
@@ -52234,7 +52233,7 @@ manage :0
 managed:0
 managee:0
 manager:0
-manages:0
+manages:1
 manaism:0
 manak  :0
 manakin:0
@@ -52289,7 +52288,7 @@ mandril:0
 mandrin:0
 mands  :0
 mandua :0
-mane   :0
+mane   :1
 maned  :0
 manege :0
 maneges:0
@@ -52510,7 +52509,7 @@ maomao :0
 maori  :0
 maoris :0
 maormor:0
-map    :1
+map    :2
 mapach :0
 mapache:0
 mapau  :0
@@ -52518,7 +52517,7 @@ mapland:0
 maple  :0
 maples :0
 mapo   :0
-mapped :0
+mapped :1
 mappen :0
 mapper :0
 mappers:0
@@ -52558,7 +52557,7 @@ marathi:0
 maraud :0
 marauds:0
 maravi :0
-marble :0
+marble :1
 marbled:0
 marbler:0
 marbles:0
@@ -52586,7 +52585,7 @@ marcot :0
 marcs  :0
 mardi  :0
 mardy  :0
-mare   :0
+mare   :1
 mareca :0
 marehan:0
 marek  :0
@@ -52734,7 +52733,7 @@ marrow :0
 marrowy:0
 marrows:0
 marrube:0
-mars   :0
+mars   :1
 marsala:0
 marse  :0
 marses :0
@@ -52897,7 +52896,7 @@ mastoid:0
 mastras:0
 masts  :0
 masu   :0
-mat    :1
+mat    :2
 matacan:0
 mataco :0
 matador:0
@@ -52917,7 +52916,7 @@ matcher:0
 matches:0
 matchet:0
 matchy :0
-mate   :0
+mate   :1
 mated  :0
 matey  :0
 mateys :0
@@ -53189,7 +53188,7 @@ meaning:0
 meanish:0
 meanly :0
 means  :0
-meant  :0
+meant  :1
 meantes:0
 mear   :0
 meas   :0
@@ -53332,7 +53331,7 @@ meeting:0
 meetly :0
 meets  :0
 meg    :0
-mega   :0
+mega   :1
 megaara:0
 megabar:0
 megabit:0
@@ -53612,7 +53611,7 @@ mercies:0
 mercify:0
 mercury:0
 merd   :0
-mere   :0
+mere   :2
 mered  :0
 merel  :0
 merely :0
@@ -53622,8 +53621,8 @@ meres  :0
 merest :0
 merfold:0
 merfolk:0
-merge  :0
-merged :0
+merge  :1
+merged :1
 merger :0
 mergers:0
 merges :0
@@ -53781,7 +53780,7 @@ mestizo:0
 mestlen:0
 mestome:0
 mesua  :0
-met    :0
+met    :1
 meta   :1
 metabit:0
 metad  :0
@@ -54233,7 +54232,7 @@ milkmen:0
 milko  :0
 milks  :0
 milksop:0
-mill   :1
+mill   :2
 milla  :0
 millage:0
 millard:0
@@ -54819,7 +54818,7 @@ misstop:0
 missuit:0
 missung:0
 missus :0
-mist   :0
+mist   :1
 myst   :0
 mistake:0
 mistal :0
@@ -55651,7 +55650,7 @@ mordu  :0
 mordv  :0
 mordva :0
 mordvin:0
-more   :0
+more   :1
 moreen :0
 moreens:0
 moreish:0
@@ -55843,7 +55842,7 @@ mothery:0
 mothers:0
 mothy  :0
 mothier:0
-moths  :0
+moths  :1
 motif  :0
 motific:0
 motifs :0
@@ -55971,10 +55970,10 @@ mouzah :0
 movable:0
 movably:0
 movant :0
-move   :0
+move   :1
 moved  :0
 movent :0
-mover  :0
+mover  :1
 movers :0
 moves  :0
 movie  :0
@@ -56263,7 +56262,7 @@ mullers:0
 mullet :0
 mullets:0
 mullid :0
-mulling:0
+mulling:1
 mullion:0
 mullite:0
 mullock:0
@@ -56492,7 +56491,7 @@ muscovi:0
 muscovy:0
 muscow :0
 muscule:0
-musculi:0
+muse   :1
 muse   :0
 mused  :0
 museful:0
@@ -56724,7 +56723,7 @@ nacry  :0
 nacrine:0
 nacrite:0
 nacrous:0
-nad    :0
+nad    :1
 nada   :0
 nadder :0
 nadeem :0
@@ -56868,7 +56867,7 @@ namban :0
 nambe  :0
 namby  :0
 namda  :0
-name   :0
+name   :1
 named  :0
 namely :0
 namer  :0
@@ -57075,7 +57074,7 @@ natives:0
 nativus:0
 natl   :0
 nato   :0
-natr   :0
+natr   :1
 natraj :0
 natrium:0
 natrix :0
@@ -57197,7 +57196,7 @@ nearish:0
 nearly :0
 nears  :0
 neascus:0
-neat   :0
+neat   :3
 neaten :0
 neatens:0
 neater :0
@@ -57254,7 +57253,7 @@ neddies:0
 nee    :0
 neebor :0
 neebour:0
-need   :0
+need   :1
 needed :0
 needer :0
 needers:0
@@ -57434,7 +57433,7 @@ nerts  :0
 nertz  :0
 nerval :0
 nervate:0
-nerve  :0
+nerve  :1
 nerved :0
 nerver :0
 nerves :0
@@ -57480,7 +57479,7 @@ nestles:0
 nestor :0
 nestors:0
 nests  :0
-net    :3
+net    :8
 netball:0
 netbush:0
 netcha :0
@@ -57497,7 +57496,7 @@ netman :0
 netmen :0
 netop  :0
 netops :0
-nets   :0
+nets   :1
 netsman:0
 netsuke:0
 nett   :0
@@ -57556,7 +57555,7 @@ neve   :0
 nevel  :0
 nevell :0
 neven  :0
-never  :0
+never  :2
 neves  :0
 nevi   :0
 neville:0
@@ -57565,7 +57564,7 @@ nevoy  :0
 nevoid :0
 nevome :0
 nevus  :0
-new    :0
+new    :1
 newar  :0
 newari :0
 newark :0
@@ -57769,7 +57768,7 @@ niggles:0
 niggly :0
 niggot :0
 niggra :0
-niggun :0
+nigh   :1
 nigh   :0
 nighed :0
 nigher :0
@@ -58059,7 +58058,7 @@ noctule:0
 nocturn:0
 nocuity:0
 nocuous:0
-nod    :0
+nod    :1
 nodal  :0
 nodally:0
 nodated:0
@@ -58073,8 +58072,8 @@ nodding:0
 noddle :0
 noddled:0
 noddles:0
-node   :0
-noded  :0
+node   :1
+noded  :1
 nodes  :0
 nodi   :0
 nodiak :0
@@ -58134,7 +58133,7 @@ noily  :0
 noils  :0
 noint  :0
 noyous :0
-noir   :0
+noir   :1
 noire  :0
 noires :0
 noise  :0
@@ -58405,8 +58404,8 @@ nostoc :0
 nostocs:0
 nostril:0
 nostrum:0
-nosu   :0
-not    :0
+not    :2
+not    :1
 nota   :0
 notable:0
 notably:0
@@ -58426,7 +58425,7 @@ notchel:0
 notcher:0
 notches:0
 notchy :0
-note   :0
+note   :1
 noted  :0
 notedly:0
 notekin:0
@@ -58446,7 +58445,7 @@ notice :0
 noticed:0
 noticer:0
 notices:0
-notify :0
+noting :1
 noting :0
 notion :0
 notions:0
@@ -58514,7 +58513,7 @@ novity :0
 novo   :0
 novum  :0
 novus  :0
-now    :0
+now    :1
 nowaday:0
 noway  :0
 noways :0
@@ -59459,7 +59458,7 @@ olamic :0
 olax   :0
 olcha  :0
 olchi  :0
-old    :0
+old    :2
 olden  :0
 oldened:0
 older  :0
@@ -59646,7 +59645,7 @@ ondy   :0
 ondine :0
 onding :0
 ondule :0
-one    :1
+one    :3
 onefold:0
 onegite:0
 onehood:0
@@ -59666,7 +59665,7 @@ onery  :0
 onerier:0
 onerose:0
 onerous:0
-ones   :1
+ones   :3
 oneself:0
 onethe :0
 onetime:0
@@ -59727,7 +59726,7 @@ ontal  :0
 ontaric:0
 ontario:0
 ontic  :0
-onto   :0
+onto   :1
 onus   :0
 onuses :0
 onward :0
@@ -59864,7 +59863,7 @@ opec   :0
 oped   :0
 opelet :0
 opelu  :0
-open   :0
+open   :1
 opencut:0
 opened :0
 opener :0
@@ -59968,7 +59967,7 @@ opting :0
 option :0
 options:0
 optive :0
-opts   :1
+opts   :2
 opulent:0
 opulus :0
 opuntia:0
@@ -60073,7 +60072,7 @@ orcins :0
 orcinus:0
 orcs   :0
 ord    :0
-ordain :0
+ordain :1
 ordains:0
 ordeal :0
 ordeals:0
@@ -60436,7 +60435,7 @@ otc    :0
 otello :0
 othake :0
 othello:0
-other  :0
+other  :1
 others :0
 othin  :0
 othman :0
@@ -60521,7 +60520,7 @@ ouphe  :0
 ouphes :0
 ouphish:0
 ouphs  :0
-our    :0
+our    :1
 ourali :0
 ourang :0
 ourangs:0
@@ -60533,7 +60532,7 @@ ourebis:0
 ourie  :0
 ourn   :0
 ouroub :0
-ours   :0
+ours   :2
 oursel :0
 ourself:0
 oursels:0
@@ -60548,7 +60547,7 @@ ousters:0
 ousting:0
 oustiti:0
 ousts  :0
-out    :0
+out    :1
 outact :0
 outacts:0
 outadd :0
@@ -60832,7 +60831,7 @@ outrun :0
 outrung:0
 outruns:0
 outrush:0
-outs   :0
+outs   :1
 outsay :0
 outsaid:0
 outsail:0
@@ -60968,7 +60967,7 @@ ovarium:0
 ovate  :0
 ovated :0
 ovately:0
-ovation:0
+ovation:1
 ovey   :0
 oven   :0
 ovendry:0
@@ -60979,7 +60978,7 @@ ovenly :0
 ovenman:0
 ovenmen:0
 ovens  :0
-over   :0
+over   :2
 overact:0
 overage:0
 overall:0
@@ -61063,7 +61062,7 @@ oversad:0
 oversay:0
 oversaw:0
 oversea:0
-oversee:0
+oversee:1
 overset:0
 oversew:0
 oversot:0
@@ -61128,8 +61127,8 @@ ovulite:0
 ovulum :0
 ovum   :0
 owd    :0
-owe    :1
-owed   :0
+owe    :2
+owed   :1
 owelty :0
 owen   :0
 owenia :0
@@ -61140,12 +61139,12 @@ owenite:0
 owenize:0
 ower   :0
 owerby :0
-owes   :0
+owes   :1
 owght  :0
 owhere :0
 owing  :0
 owk    :0
-owl    :1
+owl    :3
 owldom :0
 owler  :0
 owlery :0
@@ -61158,7 +61157,7 @@ owlish :0
 owlism :0
 owllike:0
 owls   :0
-own    :0
+own    :3
 ownable:0
 owned  :0
 owner  :0
@@ -61374,7 +61373,7 @@ paction:0
 pacts  :0
 pactum :0
 pacu   :0
-pad    :0
+pad    :3
 padang :0
 padasha:0
 padauk :0
@@ -61549,7 +61548,7 @@ payor  :0
 payors :0
 payout :0
 paip   :0
-pair   :0
+pair   :1
 paired :0
 pairer :0
 pairial:0
@@ -61619,7 +61618,7 @@ palaver:0
 palazzi:0
 palazzo:0
 palch  :0
-pale   :0
+pale   :1
 palea  :0
 paleae :0
 paleal :0
@@ -62255,7 +62254,7 @@ parsnip:0
 parson :0
 parsony:0
 parsons:0
-part   :0
+part   :1
 partage:0
 partake:0
 partan :0
@@ -62399,7 +62398,7 @@ pastry :0
 pasts  :0
 pasture:0
 pasul  :0
-pat    :0
+pat    :1
 pata   :0
 pataca :0
 patacao:0
@@ -62651,7 +62650,7 @@ pct    :0
 pdl    :0
 pdn    :0
 pdq    :0
-pea    :0
+pea    :2
 peabird:0
 peabody:0
 peabush:0
@@ -62685,7 +62684,7 @@ peakier:0
 peakily:0
 peaking:0
 peakish:0
-peaks  :0
+peaks  :1
 peal   :0
 pealed :0
 pealer :0
@@ -62712,7 +62711,7 @@ peart  :0
 pearten:0
 pearter:0
 peartly:0
-peas   :0
+peas   :1
 peasant:0
 peascod:0
 pease  :0
@@ -62849,7 +62848,7 @@ peeke  :0
 peeked :0
 peeking:0
 peeks  :0
-peel   :0
+peel   :1
 peele  :0
 peeled :0
 peeler :0
@@ -63131,7 +63130,7 @@ penoche:0
 penochi:0
 penoun :0
 penrack:0
-pens   :0
+pens   :1
 pense  :0
 pensee :0
 pensees:0
@@ -63297,7 +63296,7 @@ perinde:0
 perine :0
 perinea:0
 period :0
-periods:0
+periods:1
 periost:0
 perique:0
 peris  :0
@@ -63328,7 +63327,7 @@ permiak:0
 permian:0
 permiss:0
 permit :0
-permits:0
+permits:1
 permix :0
 perms  :0
 permute:0
@@ -63382,7 +63381,7 @@ persio :0
 persis :0
 persism:0
 persist:0
-person :0
+person :1
 persona:0
 persons:0
 persue :0
@@ -63437,7 +63436,7 @@ peso   :0
 pesos  :0
 pess   :0
 pessary:0
-pest   :0
+pest   :1
 peste  :0
 pester :0
 pesters:0
@@ -63448,7 +63447,7 @@ pestle :0
 pestled:0
 pestles:0
 pests  :0
-pet    :1
+pet    :5
 petal  :0
 petaled:0
 petaly :0
@@ -63503,7 +63502,7 @@ petrol :0
 petrols:0
 petrosa:0
 petrous:0
-pets   :0
+pets   :3
 pettah :0
 petted :0
 petter :0
@@ -63742,7 +63741,7 @@ phocoid:0
 phoebe :0
 phoebes:0
 phoebus:0
-phoenix:0
+phoenix:1
 phoh   :0
 pholad :0
 pholas :0
@@ -63921,7 +63920,7 @@ pici   :0
 picidae:0
 picinae:0
 picine :0
-pick   :0
+pick   :1
 pickage:0
 pickax :0
 pickaxe:0
@@ -63932,7 +63931,7 @@ pickel :0
 picker :0
 pickery:0
 pickers:0
-picket :0
+picket :1
 pickets:0
 picky  :0
 pickier:0
@@ -64154,7 +64153,7 @@ pika   :0
 pikake :0
 pikakes:0
 pikas  :0
-pike   :0
+pike   :1
 pyke   :0
 piked  :0
 pikey  :0
@@ -64230,7 +64229,7 @@ pilis  :0
 pilkins:0
 pill   :2
 pillage:0
-pillar :0
+pillar :1
 pillary:0
 pillars:0
 pillas :0
@@ -64305,7 +64304,7 @@ pimply :0
 pimplo :0
 pimploe:0
 pimps  :0
-pin    :1
+pin    :2
 pina   :0
 pinaces:0
 pinacle:0
@@ -64340,7 +64339,7 @@ pindari:0
 pinder :0
 pinders:0
 pindy  :0
-pine   :1
+pine   :2
 pineal :0
 pined  :0
 piney  :0
@@ -64356,7 +64355,7 @@ pinfall:0
 pinfire:0
 pinfish:0
 pinfold:0
-ping   :1
+ping   :2
 pinge  :0
 pinged :0
 pinger :0
@@ -64939,7 +64938,7 @@ planer :0
 planera:0
 planers:0
 planes :0
-planet :0
+planet :1
 planeta:0
 planets:0
 planful:0
@@ -65404,7 +65403,7 @@ podler :0
 podlike:0
 podogyn:0
 podos  :0
-pods   :1
+pods   :2
 podsnap:0
 podsol :0
 podsols:0
@@ -65484,7 +65483,7 @@ poyou  :0
 poyous :0
 poire  :0
 pois   :0
-poise  :0
+poise  :1
 poised :0
 poiser :0
 poisers:0
@@ -65738,7 +65737,7 @@ ponent :0
 ponera :0
 ponerid:0
 pones  :0
-pong   :0
+pong   :1
 ponga  :0
 pongee :0
 pongees:0
@@ -65834,7 +65833,7 @@ poot   :0
 poother:0
 pooty  :0
 poove  :0
-pop    :0
+pop    :1
 popadam:0
 popal  :0
 popcorn:0
@@ -65904,7 +65903,7 @@ porched:0
 porches:0
 porcine:0
 porcula:0
-pore   :0
+pore   :1
 pored  :0
 porella:0
 porer  :0
@@ -66003,8 +66002,8 @@ posadas:0
 posaune:0
 posca  :0
 poschay:0
-pose   :1
-posed  :1
+pose   :3
+posed  :2
 posey  :0
 poser  :0
 posers :0
@@ -66606,7 +66605,7 @@ pretone:0
 pretor :0
 pretors:0
 pretry :0
-pretty :0
+pretty :1
 pretzel:0
 preux  :0
 prev   :0
@@ -66808,7 +66807,7 @@ prizes :0
 prizing:0
 prlate :0
 prn    :0
-pro    :0
+pro    :2
 proa   :0
 proach :0
 proagon:0
@@ -66946,7 +66945,7 @@ proofed:0
 proofer:0
 proofy :0
 proofs :0
-prop   :0
+prop   :1
 propago:0
 propale:0
 propane:0
@@ -67037,7 +67036,7 @@ proteic:0
 proteid:0
 protein:0
 protend:0
-protest:0
+protest:1
 proteus:0
 protext:0
 prothyl:0
@@ -67744,7 +67743,7 @@ push   :0
 pushed :0
 pusher :0
 pushers:0
-pushes :0
+pushes :1
 pushful:0
 pushy  :0
 pushier:0
@@ -67800,7 +67799,7 @@ putout :0
 putouts:0
 putrefy:0
 putrid :0
-puts   :0
+puts   :1
 putsch :0
 putt   :0
 puttan :0
@@ -68120,7 +68119,7 @@ queues :0
 queuing:0
 quezal :0
 quezals:0
-qui    :0
+qui    :1
 quia   :0
 quiapo :0
 quib   :0
@@ -68146,7 +68145,7 @@ quiddle:0
 quids  :0
 quienal:0
 quiesce:0
-quiet  :0
+quiet  :1
 quieta :0
 quieted:0
 quieten:0
@@ -68174,7 +68173,7 @@ quills :0
 quilt  :0
 quilted:0
 quilter:0
-quilts :0
+quilts :1
 quim   :0
 quimper:0
 quin   :0
@@ -68264,9 +68263,9 @@ quiscos:0
 quisle :0
 quisler:0
 quist  :0
-quit   :0
+quit   :2
 quitch :0
-quite  :0
+quite  :1
 quitely:0
 quiteno:0
 quiteve:0
@@ -68463,7 +68462,7 @@ radicle:0
 radidii:0
 radient:0
 radii  :0
-radio  :0
+radio  :1
 radiode:0
 radioed:0
 radion :0
@@ -68480,7 +68479,7 @@ radly  :0
 radman :0
 radome :0
 radomes:0
-radon  :0
+radon  :1
 radons :0
 rads   :0
 radula :0
@@ -68574,7 +68573,7 @@ rah    :0
 rahdar :0
 rahdari:0
 rahul  :0
-ray    :1
+ray    :3
 raia   :0
 raya   :0
 raiae  :0
@@ -68613,7 +68612,7 @@ rails  :0
 railway:0
 raiment:0
 raymond:0
-rain   :0
+rain   :1
 rainbow:0
 rained :0
 rainer :0
@@ -68907,7 +68906,7 @@ ranses :0
 ranseur:0
 ransom :0
 ransoms:0
-rant   :0
+rant   :1
 rantan :0
 ranted :0
 ranter :0
@@ -69085,7 +69084,7 @@ ratchel:0
 ratcher:0
 ratches:0
 ratchet:0
-rate   :0
+rate   :1
 rated  :0
 rateen :0
 ratel  :0
@@ -69110,7 +69109,7 @@ ratifia:0
 ratine :0
 ratines:0
 rating :0
-ratings:0
+ratings:1
 ratio  :0
 ration :0
 rations:0
@@ -69267,7 +69266,7 @@ react  :0
 reacted:0
 reactor:0
 reacts :0
-read   :1
+read   :3
 readapt:0
 readd  :0
 readded:0
@@ -69295,7 +69294,7 @@ reagins:0
 reagree:0
 reak   :0
 reaks  :0
-real   :1
+real   :3
 realarm:0
 realer :0
 reales :0
@@ -69312,7 +69311,7 @@ realize:0
 really :0
 reallot:0
 reallow:0
-realm  :0
+realm  :1
 realms :0
 reals  :0
 realter:0
@@ -69683,7 +69682,7 @@ recuses:0
 recusf :0
 recut  :0
 recuts :0
-red    :3
+red    :2
 redact :0
 redacts:0
 redame :0
@@ -69739,7 +69738,7 @@ redecay:0
 redeck :0
 reded  :0
 redeed :0
-redeem :0
+redeem :1
 redeems:0
 redefer:0
 redefy :0
@@ -69778,7 +69777,7 @@ redly  :0
 redline:0
 redneck:0
 redness:0
-redo   :0
+redo   :2
 redock :0
 redocks:0
 redodid:0
@@ -69847,7 +69846,7 @@ reearns:0
 reebok :0
 reechy :0
 reecho :0
-reed   :3
+reed   :5
 reeded :0
 reeden :0
 reeder :0
@@ -69861,7 +69860,7 @@ reedit :0
 reedits:0
 reedman:0
 reeds  :0
-reef   :0
+reef   :1
 reefed :0
 reefer :0
 reefers:0
@@ -69943,7 +69942,7 @@ refell :0
 refels :0
 refelt :0
 refence:0
-refer  :0
+refer  :1
 referda:0
 refered:0
 referee:0
@@ -70222,7 +70221,7 @@ reim   :0
 reimage:0
 reimpel:0
 reimply:0
-rein   :1
+rein   :2
 reina  :0
 reynard:0
 reincur:0
@@ -70234,7 +70233,7 @@ reinfer:0
 reining:0
 reink  :0
 reynold:0
-reins  :0
+reins  :1
 reinter:0
 reyoke :0
 reyoked:0
@@ -70291,7 +70290,7 @@ relache:0
 relade :0
 reladen:0
 reladle:0
-relay  :0
+relay  :1
 relaid :0
 relayed:0
 relayer:0
@@ -70334,7 +70333,7 @@ releve :0
 relevel:0
 relever:0
 relevy :0
-rely   :0
+rely   :1
 reliant:0
 relic  :0
 relick :0
@@ -70506,7 +70505,7 @@ rendoun:0
 rends  :0
 rendu  :0
 reneg  :0
-renege :0
+renege :1
 reneged:0
 reneger:0
 reneges:0
@@ -70547,14 +70546,14 @@ renove :0
 renovel:0
 renown :0
 renowns:0
-rent   :0
+rent   :3
 rentage:0
 rental :0
 rentals:0
 rente  :0
 rented :0
 rentee :0
-renter :0
+renter :1
 renters:0
 rentes :0
 rentier:0
@@ -70942,7 +70941,7 @@ ressala:0
 ressaut:0
 resshot:0
 ressort:0
-rest   :1
+rest   :5
 restab :0
 restack:0
 restaff:0
@@ -71475,8 +71474,8 @@ riant  :0
 riantly:0
 ryas   :0
 riata  :0
-riatas :0
-rib    :0
+rib    :5
+rib    :4
 ribald :0
 ribalds:0
 riband :0
@@ -71511,7 +71510,7 @@ ribosos:0
 riboza :0
 ribozo :0
 ribozos:0
-ribs   :0
+ribs   :1
 ribskin:0
 ribston:0
 ribwork:0
@@ -71520,7 +71519,7 @@ ribzuba:0
 ric    :0
 ricardo:0
 ricasso:0
-riccia :0
+rice   :1
 rice   :0
 ricecar:0
 riced  :0
@@ -71564,21 +71563,21 @@ ricrac :0
 ricracs:0
 rictal :0
 rictus :0
-rid    :0
+rid    :1
 ridable:0
 ridably:0
 riddam :0
 ridded :0
 riddel :0
-ridden :0
+ridden :1
 ridder :0
 ridders:0
 ridding:0
 riddle :0
 riddled:0
 riddler:0
-riddles:0
-ride   :0
+ride   :3
+ride   :2
 rideau :0
 riden  :0
 rident :0
@@ -71586,7 +71585,7 @@ rider  :0
 ryder  :0
 ridered:0
 riders :0
-rides  :0
+rides  :1
 ridge  :0
 ridged :0
 ridgel :0
@@ -71606,7 +71605,7 @@ ridleys:0
 ridotto:0
 rids   :0
 rie    :0
-rye    :0
+rye    :2
 riel   :0
 riels  :0
 riem   :0
@@ -71632,7 +71631,7 @@ riffle :0
 riffled:0
 riffler:0
 riffles:0
-riffs  :0
+riffs  :1
 rifi   :0
 rifian :0
 rifle  :0
@@ -71663,7 +71662,7 @@ rigging:0
 riggish:0
 riggite:0
 riggot :0
-right  :0
+right  :1
 righted:0
 righten:0
 righter:0
@@ -71672,7 +71671,7 @@ rightle:0
 rightly:0
 righto :0
 rights :0
-rigid  :0
+rigid  :1
 rigidly:0
 riginal:0
 riglet :0
@@ -71724,13 +71723,13 @@ rilling:0
 rillock:0
 rillow :0
 rills  :0
-rim    :0
+rim    :1
 rima   :0
 rimal  :0
 rimas  :0
 rimate :0
 rimbase:0
-rime   :0
+rime   :2
 ryme   :0
 rimed  :0
 rimer  :0
@@ -71771,8 +71770,8 @@ rindy  :0
 rindle :0
 rinds  :0
 rynds  :0
-rine   :0
-ring   :0
+ring   :2
+ring   :1
 ringatu:0
 ringe  :0
 ringed :0
@@ -71797,7 +71796,7 @@ rinks  :0
 rinner :0
 rinning:0
 rins   :0
-rinse  :0
+rinse  :1
 rinsed :0
 rinser :0
 rinsers:0
@@ -71871,7 +71870,7 @@ riptide:0
 ripup  :0
 risala :0
 risberm:0
-rise   :0
+rise   :2
 risen  :0
 riser  :0
 risers :0
@@ -72029,7 +72028,7 @@ robbery:0
 robbers:0
 robbin :0
 robbing:0
-robbins:0
+robbins:1
 robe   :0
 robed  :0
 rober  :0
@@ -72098,10 +72097,10 @@ rodder :0
 rodders:0
 roddin :0
 rodding:0
-rode   :0
+rode   :1
 rodent :0
 rodents:0
-rodeo  :0
+rodeo  :1
 rodeos :0
 roderic:0
 rodge  :0
@@ -72380,7 +72379,7 @@ rooving:0
 ropable:0
 ropand :0
 ropani :0
-rope   :0
+rope   :1
 roped  :0
 ropey  :0
 ropeman:0
@@ -72499,7 +72498,7 @@ rotanev:0
 rotang :0
 rotary :0
 rotas  :0
-rotate :0
+rotate :1
 rotated:0
 rotates:0
 rotator:0
@@ -72566,7 +72565,7 @@ rougeau:0
 rouged :0
 rougeot:0
 rouges :0
-rough  :0
+rough  :1
 roughed:0
 roughen:0
 rougher:0
@@ -72645,7 +72644,7 @@ rovet  :0
 rovetto:0
 roving :0
 rovings:0
-row    :0
+row    :1
 rowable:0
 rowan  :0
 rowans :0
@@ -72665,14 +72664,14 @@ rower  :0
 rowers :0
 rowet  :0
 rowy   :0
-rowing :0
+rowing :1
 rowings:0
 rowland:0
 rowley :0
 rowlet :0
 rowlock:0
 rowport:0
-rows   :0
+rows   :2
 rowt   :0
 rowte  :0
 rowted :0
@@ -72810,7 +72809,7 @@ rudity :0
 rudloff:0
 rudolf :0
 rudolph:0
-rudous :0
+rue    :2
 rue    :1
 rued   :0
 rueful :0
@@ -72841,7 +72840,7 @@ ruffs  :0
 rufous :0
 rufter :0
 rufus  :0
-rug    :0
+rug    :1
 ruga   :0
 rugae  :0
 rugal  :0
@@ -72859,7 +72858,7 @@ rugine :0
 ruglike:0
 rugosa :0
 rugose :0
-rugous :0
+rugs   :1
 rugs   :0
 ruin   :0
 ruinate:0
@@ -72868,7 +72867,7 @@ ruiner :0
 ruiners:0
 ruing  :0
 ruining:0
-ruinous:0
+ruins  :1
 ruins  :0
 rukbat :0
 rukh   :0
@@ -72947,7 +72946,7 @@ rumpot :0
 rumps  :0
 rumpus :0
 rums   :0
-rumshop:0
+run    :1
 run    :0
 runaway:0
 runback:0
@@ -73243,7 +73242,7 @@ sacro  :0
 sacrum :0
 sacrums:0
 sacs   :0
-sad    :0
+sad    :1
 sadaqat:0
 sadden :0
 saddens:0
@@ -73393,7 +73392,7 @@ saidi  :0
 saids  :0
 sayee  :0
 sayer  :0
-sayers :0
+sayers :1
 sayest :0
 sayette:0
 saify  :0
@@ -73502,7 +73501,7 @@ salat  :0
 salband:0
 salchow:0
 saldid :0
-sale   :0
+sale   :1
 salele :0
 salem  :0
 salema :0
@@ -73555,13 +73554,13 @@ salmin :0
 salmine:0
 salmis :0
 salmo  :0
-salmon :0
+salmon :1
 salmons:0
 salol  :0
 salols :0
 salome :0
 salomon:0
-salon  :0
+salon  :1
 salons :0
 saloon :0
 saloons:0
@@ -73612,7 +73611,7 @@ saltish:0
 saltly :0
 saltman:0
 saltpan:0
-salts  :0
+salts  :1
 saltus :0
 salud  :0
 saluda :0
@@ -73796,7 +73795,7 @@ sandpit:0
 sandra :0
 sands  :0
 sandust:0
-sane   :0
+sane   :1
 saned  :0
 sanely :0
 saner  :0
@@ -74061,7 +74060,7 @@ sassily:0
 sassing:0
 sastean:0
 sastra :0
-sat    :1
+sat    :5
 sata   :0
 satable:0
 satai  :0
@@ -74203,7 +74202,7 @@ savara :0
 savarin:0
 savate :0
 savates:0
-save   :0
+save   :1
 saved  :0
 savey  :0
 savelha:0
@@ -74396,7 +74395,7 @@ scanian:0
 scanic :0
 scanmag:0
 scanned:0
-scanner:0
+scanner:1
 scans  :0
 scant  :0
 scanted:0
@@ -75089,7 +75088,7 @@ sdeign :0
 sdlc   :0
 sds    :0
 sdump  :0
-sea    :1
+sea    :5
 seabag :0
 seabags:0
 seabank:0
@@ -75112,7 +75111,7 @@ seagoer:0
 seagull:0
 seah   :0
 seak   :0
-seal   :0
+seal   :2
 sealant:0
 sealch :0
 sealed :0
@@ -75165,8 +75164,8 @@ seasick:0
 seaside:0
 season :0
 seasons:0
-seastar:0
-seat   :2
+seat   :4
+seat   :3
 seatang:0
 seated :0
 seater :0
@@ -75299,13 +75298,13 @@ seduces:0
 seduct :0
 sedum  :0
 sedums :0
-see    :2
+see    :7
 seeable:0
 seeably:0
 seebeck:0
 seecawk:0
 seech  :0
-seed   :0
+seed   :3
 seedage:0
 seedbed:0
 seedbox:0
@@ -75361,7 +75360,7 @@ seer   :0
 seeress:0
 seerpaw:0
 seers  :0
-sees   :1
+sees   :2
 seesaw :0
 seesaws:0
 seesee :0
@@ -75490,7 +75489,7 @@ selina :0
 seling :0
 selion :0
 seljuk :0
-sell   :0
+sell   :1
 sella  :0
 sellar :0
 sellary:0
@@ -75632,7 +75631,7 @@ senhors:0
 senile :0
 seniles:0
 senilis:0
-senior :0
+senior :1
 seniory:0
 seniors:0
 senit  :0
@@ -75712,7 +75711,7 @@ sepioid:0
 sepiola:0
 sepion :0
 sepiost:0
-sepium :0
+sepium :1
 sepn   :0
 sepoy  :0
 sepoys :0
@@ -75834,7 +75833,7 @@ sergiu :0
 sergius:0
 sergt  :0
 seri   :0
-serial :0
+serial :1
 serials:0
 serian :0
 seriary:0
@@ -75900,7 +75899,7 @@ serring:0
 serrula:0
 sers   :0
 sert   :0
-serta  :0
+serta  :1
 serting:0
 sertion:0
 sertive:0
@@ -75916,12 +75915,12 @@ servage:0
 serval :0
 servals:0
 servant:0
-serve  :0
+serve  :1
 served :0
 server :0
 servery:0
 servers:0
-serves :0
+serves :1
 servet :0
 servian:0
 service:0
@@ -75963,8 +75962,7 @@ sestine:0
 sestole:0
 seston :0
 sestuor:0
-sesuto :0
-set    :3
+set    :9
 seta   :0
 setae  :0
 setal  :0
@@ -76040,7 +76038,7 @@ sevier :0
 seville:0
 sevres :0
 sevum  :0
-sew    :0
+sew    :1
 sewable:0
 sewage :0
 sewages:0
@@ -76138,7 +76136,7 @@ shackle:0
 shackly:0
 shacko :0
 shackos:0
-shacks :0
+shad   :1
 shad   :0
 shade  :0
 shaded :0
@@ -76396,7 +76394,7 @@ shawny :0
 shaws  :0
 shawwal:0
 shazam :0
-she    :1
+she    :2
 shea   :0
 sheaf  :0
 sheafed:0
@@ -76450,7 +76448,7 @@ sheered:0
 sheerer:0
 sheerly:0
 sheers :0
-sheet  :0
+sheet  :1
 sheeted:0
 sheeter:0
 sheety :0
@@ -76523,7 +76521,7 @@ sheria :0
 sheriat:0
 sherif :0
 sherifa:0
-sheriff:0
+sheriff:1
 sherifi:0
 sherify:0
 sherifs:0
@@ -77171,7 +77169,7 @@ syddir :0
 siddow :0
 siddur :0
 siddurs:0
-side   :0
+side   :2
 sideage:0
 sidearm:0
 sidebar:0
@@ -77190,7 +77188,7 @@ sidhe  :0
 sidi   :0
 sidy   :0
 sidia  :0
-siding :0
+siding :1
 sidings:0
 sidion :0
 sidle  :0
@@ -77284,7 +77282,7 @@ sigmas :0
 sigmate:0
 sigmoid:0
 sigmund:0
-sign   :0
+sign   :2
 signa  :0
 signal :0
 signals:0
@@ -77392,7 +77390,7 @@ silking:0
 silkman:0
 silkmen:0
 silks  :0
-sill   :0
+sill   :1
 syll   :0
 syllab :0
 syllabe:0
@@ -77426,7 +77424,7 @@ silphid:0
 sylphid:0
 sylphon:0
 sylphs :0
-silt   :0
+silt   :1
 siltage:0
 silted :0
 silty  :0
@@ -77534,7 +77532,7 @@ simpled:0
 simpler:0
 simples:0
 simplex:0
-simply :0
+simply :1
 simplum:0
 sympode:0
 simps  :0
@@ -77621,7 +77619,7 @@ sinewy :0
 sinews :0
 synfuel:0
 sinful :0
-sing   :0
+sing   :1
 syngamy:0
 singe  :0
 singed :0
@@ -77724,7 +77722,7 @@ sioning:0
 sionite:0
 siouan :0
 sioux  :0
-sip    :1
+sip    :3
 sipage :0
 sipapu :0
 sipe   :0
@@ -77755,7 +77753,7 @@ sipping:0
 sippio :0
 sipple :0
 sips   :0
-sir    :2
+sir    :6
 syr    :0
 sircar :0
 sirdar :0
@@ -77882,7 +77880,7 @@ systole:0
 sistra :0
 sistren:0
 sistrum:0
-sit    :3
+sit    :5
 sita   :0
 sitao  :0
 sitar  :0
@@ -77890,10 +77888,10 @@ sitars :0
 sitch  :0
 sitcom :0
 sitcoms:0
-site   :2
+site   :3
 sited  :0
 sitella:0
-sites  :0
+sites  :1
 sitfast:0
 sith   :0
 sithe  :0
@@ -78110,7 +78108,7 @@ sketch :0
 sketchy:0
 skete  :0
 skevish:0
-skew   :0
+skew   :1
 skewed :0
 skewer :0
 skewers:0
@@ -78352,7 +78350,7 @@ slagman:0
 slags  :0
 slay   :0
 slayed :0
-slayer :0
+slayers:1
 slayers:0
 slaying:0
 slain  :0
@@ -78370,7 +78368,7 @@ slakin :0
 slaking:0
 slalom :0
 slaloms:0
-slam   :0
+slam   :1
 slammed:0
 slammer:0
 slamp  :0
@@ -78405,7 +78403,7 @@ slashy :0
 slask  :0
 slat   :0
 slatch :0
-slate  :0
+slate  :1
 slated :0
 slater :0
 slaters:0
@@ -78452,7 +78450,7 @@ sleaves:0
 sleazy :0
 sleb   :0
 sleck  :0
-sled   :0
+sled   :1
 sledded:0
 sledder:0
 sledful:0
@@ -78509,7 +78507,7 @@ slewer :0
 slewing:0
 slews  :0
 slewth :0
-sly    :0
+sly    :1
 slice  :0
 sliced :0
 slicer :0
@@ -78547,12 +78545,12 @@ slyish :0
 slik   :0
 slily  :0
 slyly  :0
-slim   :0
+slim   :1
 slime  :0
 slimed :0
 slimer :0
 slimes :0
-slimy  :0
+slimy  :1
 slimier:0
 slimily:0
 sliming:0
@@ -78565,7 +78563,7 @@ slims  :0
 slimsy :0
 sline  :0
 slyness:0
-sling  :0
+sling  :1
 slinge :0
 slinger:0
 slings :0
@@ -78574,7 +78572,7 @@ slinker:0
 slinky :0
 slinks :0
 slinte :0
-slip   :1
+slip   :2
 slipe  :0
 slype  :0
 sliped :0
@@ -78593,7 +78591,7 @@ slipups:0
 slipway:0
 slirt  :0
 slish  :0
-slit   :0
+slit   :1
 slitch :0
 slite  :0
 slither:0
@@ -78660,7 +78658,7 @@ sloper :0
 slopers:0
 slopes :0
 slopy  :0
-sloping:0
+sloping:1
 slopped:0
 sloppy :0
 slops  :0
@@ -79312,7 +79310,7 @@ soakman:0
 soaks  :0
 soally :0
 soam   :0
-soap   :0
+soap   :1
 soapbox:0
 soaped :0
 soaper :0
@@ -79324,8 +79322,8 @@ soapier:0
 soapily:0
 soaping:0
 soaps  :0
-soapsud:0
-soar   :0
+soar   :2
+soar   :1
 soared :0
 soarer :0
 soarers:0
@@ -79522,7 +79520,7 @@ solders:0
 soldi  :0
 soldier:0
 soldo  :0
-sole   :0
+sole   :1
 solea  :0
 soleas :0
 soled  :0
@@ -79569,7 +79567,7 @@ sollar :0
 soller :0
 sollya :0
 soln   :0
-solo   :0
+solo   :1
 solod  :0
 solodi :0
 soloed :0
@@ -79641,7 +79639,7 @@ somnus :0
 sompay :0
 sompne :0
 sompner:0
-son    :0
+son    :3
 sonable:0
 sonance:0
 sonancy:0
@@ -79663,7 +79661,7 @@ sondes :0
 sone   :0
 soneri :0
 sones  :0
-song   :0
+song   :1
 songbag:0
 songer :0
 songful:0
@@ -79867,7 +79865,7 @@ sorroa :0
 sorrow :0
 sorrowy:0
 sorrows:0
-sort   :0
+sort   :2
 sortal :0
 sorted :0
 sorter :0
@@ -79963,7 +79961,7 @@ soulz  :0
 soum   :0
 soumak :0
 sound  :0
-sounded:0
+sounded:1
 sounder:0
 soundly:0
 sounds :0
@@ -79979,7 +79977,7 @@ souple :0
 soupled:0
 soupon :0
 soups  :0
-sour   :0
+sour   :1
 source :0
 sources:0
 sourd  :0
@@ -80070,10 +80068,10 @@ sozolic:0
 sozzle :0
 sozzled:0
 sozzly :0
-spa    :1
+spa    :2
 spaad  :0
 space  :0
-spaced :0
+spaced :1
 spacer :0
 spacers:0
 spaces :0
@@ -80084,7 +80082,7 @@ spack  :0
 spackle:0
 spad   :0
 spaddle:0
-spade  :0
+spade  :1
 spaded :0
 spader :0
 spaders:0
@@ -80185,7 +80183,7 @@ sparids:0
 sparily:0
 sparing:0
 spark  :0
-sparked:0
+sparked:1
 sparker:0
 sparky :0
 sparkle:0
@@ -80275,7 +80273,7 @@ spearer:0
 speary :0
 spears :0
 speave :0
-spec   :0
+spec   :1
 spece  :0
 special:0
 specie :0
@@ -80348,7 +80346,7 @@ spend  :0
 spender:0
 spends :0
 spense :0
-spent  :0
+spent  :1
 speos  :0
 sperage:0
 sperate:0
@@ -80397,7 +80395,7 @@ spheric:0
 sphex  :0
 sphinx :0
 sphyrna:0
-spy    :1
+spy    :2
 spial  :0
 spyboat:0
 spic   :0
@@ -80533,7 +80531,7 @@ spiran :0
 spirane:0
 spirant:0
 spirate:0
-spire  :2
+spire  :3
 spirea :0
 spireas:0
 spired :0
@@ -80872,7 +80870,7 @@ spunky :0
 spunkie:0
 spunks :0
 spunny :0
-spur   :0
+spur   :1
 spurdie:0
 spurdog:0
 spurge :0
@@ -81173,7 +81171,7 @@ stan   :0
 stance :0
 stances:0
 stanch :0
-stand  :0
+stand  :1
 standby:0
 standee:0
 standel:0
@@ -81438,7 +81436,7 @@ stent  :0
 stenter:0
 stenton:0
 stentor:0
-step   :0
+step   :1
 stephan:0
 stephe :0
 stephen:0
@@ -81635,7 +81633,7 @@ stimies:0
 stymies:0
 stimuli:0
 stine  :0
-sting  :0
+sting  :1
 stinge :0
 stinger:0
 stingy :0
@@ -81865,7 +81863,7 @@ storing:0
 stork  :0
 storken:0
 storks :0
-storm  :0
+storm  :1
 stormed:0
 stormer:0
 stormy :0
@@ -82032,7 +82030,7 @@ strick :0
 stricks:0
 strict :0
 strid  :0
-stride :0
+stride :1
 strider:0
 strides:0
 stridor:0
@@ -82270,7 +82268,7 @@ suaver :0
 suavest:0
 suavify:0
 suavity:0
-sub    :1
+sub    :4
 suba   :0
 subacid:0
 subact :0
@@ -82424,7 +82422,7 @@ subsea :0
 subsect:0
 subsept:0
 subsere:0
-subset :0
+subset :1
 subsets:0
 subside:0
 subsidy:0
@@ -82552,9 +82550,9 @@ sudsier:0
 sudsing:0
 sudsman:0
 sudsmen:0
-sue    :2
+sue    :5
 suecism:0
-sued   :0
+sued   :1
 suede  :0
 sueded :0
 suedes :0
@@ -82638,7 +82636,7 @@ suit   :0
 suite  :0
 suited :0
 suiters:0
-suites :0
+suites :1
 suity  :0
 suiting:0
 suitly :0
@@ -82751,7 +82749,7 @@ summat :0
 summate:0
 summed :0
 summer :0
-summery:0
+summers:1
 summers:0
 summing:0
 summist:0
@@ -82776,7 +82774,7 @@ sumple :0
 sumpman:0
 sumps  :0
 sumpt  :0
-sumpter:0
+sums   :1
 sums   :0
 sun    :0
 sunback:0
@@ -82905,7 +82903,7 @@ supples:0
 supply :0
 suppnea:0
 suppone:0
-support:0
+support:1
 suppos :0
 suppose:0
 suppost:0
@@ -82942,8 +82940,8 @@ surculi:0
 surd   :0
 surdent:0
 surdity:0
-surds  :0
-sure   :1
+sure   :3
+sure   :2
 sured  :0
 surely :0
 surer  :0
@@ -82953,7 +82951,7 @@ suresh :0
 surest :0
 surety :0
 surette:0
-surf   :0
+surf   :1
 surface:0
 surfacy:0
 surfed :0
@@ -83544,10 +83542,10 @@ tackies:0
 tackify:0
 tackily:0
 tacking:0
-tackle :0
+tackle :1
 tackled:0
 tackler:0
-tackles:0
+tackles:1
 tacks  :0
 tacnode:0
 taco   :0
@@ -83555,7 +83553,7 @@ tacoma :0
 taconic:0
 tacos  :0
 tacso  :0
-tact   :0
+tact   :1
 tactful:0
 tactic :0
 tactics:0
@@ -83574,7 +83572,7 @@ tade   :0
 tadjik :0
 tadpole:0
 tads   :0
-tae    :0
+tae    :1
 tael   :0
 taels  :0
 taen   :0
@@ -83622,7 +83620,7 @@ taglock:0
 tagmeme:0
 tagrag :0
 tagrags:0
-tags   :0
+tags   :2
 tagsore:0
 tagster:0
 tagtail:0
@@ -83735,7 +83733,7 @@ takahe :0
 takahes:0
 takao  :0
 takar  :0
-take   :0
+take   :1
 taked  :0
 takeful:0
 takeing:0
@@ -83788,7 +83786,7 @@ talcs  :0
 talcum :0
 talcums:0
 tald   :0
-tale   :0
+tale   :1
 taled  :0
 taleful:0
 talent :0
@@ -83967,7 +83965,7 @@ tamulic:0
 tamure :0
 tamus  :0
 tamzine:0
-tan    :1
+tan    :6
 tana   :0
 tanach :0
 tanadar:0
@@ -83991,7 +83989,7 @@ tandoor:0
 tandour:0
 tane   :0
 tanega :0
-tang   :0
+tang   :1
 tanga  :0
 tanged :0
 tangelo:0
@@ -84008,7 +84006,7 @@ tangile:0
 tanging:0
 tangka :0
 tanglad:0
-tangle :0
+tangle :1
 tangled:0
 tangler:0
 tangles:0
@@ -84038,7 +84036,7 @@ tanite :0
 tanitic:0
 tanjib :0
 tanjong:0
-tank   :0
+tank   :2
 tanka  :0
 tankage:0
 tankah :0
@@ -84054,7 +84052,7 @@ tanking:0
 tankka :0
 tankle :0
 tankman:0
-tanks  :0
+tanks  :1
 tanling:0
 tanna  :0
 tannage:0
@@ -84115,7 +84113,7 @@ taoist :0
 taoists:0
 taos   :0
 taotai :0
-tap    :0
+tap    :2
 tapa   :0
 tapajo :0
 tapalo :0
@@ -84129,7 +84127,7 @@ tapeman:0
 tapemen:0
 tapen  :0
 taper  :0
-tapered:0
+tapered:1
 taperer:0
 tapery :0
 taperly:0
@@ -84170,7 +84168,7 @@ tapoun :0
 tappa  :0
 tappall:0
 tappaul:0
-tapped :0
+tapped :1
 tappen :0
 tapper :0
 tappers:0
@@ -84279,7 +84277,7 @@ taroks :0
 taros  :0
 tarot  :0
 tarots :0
-tarp   :0
+tarp   :2
 tarpan :0
 tarpans:0
 tarpeia:0
@@ -84364,7 +84362,7 @@ tashie :0
 tashlik:0
 tashrif:0
 tasian :0
-task   :0
+task   :2
 taskage:0
 tasked :0
 tasker :0
@@ -84605,7 +84603,7 @@ tchu   :0
 tchwi  :0
 tck    :0
 tdr    :0
-tea    :3
+tea    :7
 teaboy :0
 teabowl:0
 teabox :0
@@ -84630,11 +84628,11 @@ teaish :0
 teaism :0
 teak   :0
 teaks  :0
-teal   :0
+teal   :1
 tealery:0
 tealess:0
 teals  :0
-team   :0
+team   :1
 teaman :0
 teamed :0
 teameo :0
@@ -84649,7 +84647,7 @@ teapoy :0
 teapoys:0
 teapot :0
 teapots:0
-tear   :1
+tear   :3
 tearage:0
 tearcat:0
 teared :0
@@ -84665,7 +84663,7 @@ tearlet:0
 tearoom:0
 tearpit:0
 tears  :0
-teart  :0
+teas   :1
 teas   :0
 tease  :0
 teased :0
@@ -84746,7 +84744,7 @@ tedious:0
 tedium :0
 tediums:0
 teds   :0
-tee    :2
+tee    :7
 teecall:0
 teed   :2
 teedle :0
@@ -84759,7 +84757,7 @@ teemers:0
 teemful:0
 teeming:0
 teems  :0
-teen   :0
+teen   :1
 teenage:0
 teener :0
 teeners:0
@@ -84777,7 +84775,7 @@ teepee :0
 teepees:0
 teer   :0
 teerer :0
-tees   :0
+tees   :1
 teest  :0
 teet   :0
 teetan :0
@@ -84968,7 +84966,7 @@ tempura:0
 tempus :0
 temse  :0
 temser :0
-ten    :2
+ten    :7
 tenable:0
 tenably:0
 tenace :0
@@ -84984,7 +84982,7 @@ tenant :0
 tenants:0
 tench  :0
 tenches:0
-tend   :0
+tend   :1
 tendant:0
 tended :0
 tendent:0
@@ -85035,7 +85033,7 @@ tenon  :0
 tenoned:0
 tenoner:0
 tenons :0
-tenor  :0
+tenor  :1
 tenore :0
 tenors :0
 tenour :0
@@ -85044,7 +85042,7 @@ tenpin :0
 tenpins:0
 tenrec :0
 tenrecs:0
-tens   :0
+tens   :1
 tensas :0
 tensaw :0
 tense  :0
@@ -85188,7 +85186,7 @@ termly :0
 termon :0
 termor :0
 termors:0
-terms  :0
+terms  :1
 tern   :0
 terna  :0
 ternal :0
@@ -85268,7 +85266,7 @@ tess   :0
 tessara:0
 tessel :0
 tessera:0
-test   :0
+test   :2
 testa  :0
 testacy:0
 testae :0
@@ -85420,7 +85418,7 @@ thames :0
 thamin :0
 thammuz:0
 thamus :0
-than   :0
+than   :1
 thana  :0
 thanage:0
 thanah :0
@@ -85428,7 +85426,7 @@ thanan :0
 thane  :0
 thanes :0
 thaness:0
-thank  :0
+thank  :1
 thanked:0
 thankee:0
 thanker:0
@@ -85441,7 +85439,7 @@ tharf  :0
 tharm  :0
 tharms :0
 thasian:0
-that   :0
+that   :1
 thatch :0
 thatchy:0
 thatd  :0
@@ -85459,7 +85457,7 @@ thawier:0
 thawing:0
 thawn  :0
 thaws  :0
-the    :1
+the    :3
 thea   :0
 theah  :0
 theasum:0
@@ -85531,7 +85529,7 @@ themes :0
 theming:0
 themis :0
 themsel:0
-then   :0
+then   :2
 thenad :0
 thenage:0
 thenal :0
@@ -85555,7 +85553,7 @@ theos  :0
 theow  :0
 therap :0
 therapy:0
-there  :0
+there  :1
 thereas:0
 thereat:0
 thereby:0
@@ -85588,7 +85586,7 @@ therms :0
 theroid:0
 theron :0
 thesaur:0
-these  :0
+these  :1
 thesean:0
 theses :0
 theseum:0
@@ -85674,7 +85672,7 @@ thymoma:0
 thyms  :0
 thymus :0
 thin   :0
-thine  :0
+thine  :1
 thing  :0
 thingal:0
 thingy :0
@@ -85797,7 +85795,7 @@ thort  :0
 thorter:0
 thos   :0
 those  :0
-thou   :0
+thou   :1
 thoued :0
 though :0
 thought:0
@@ -85840,7 +85838,7 @@ threave:0
 three  :0
 threep :0
 threeps:0
-threes :0
+threes :1
 threip :0
 threne :0
 threnos:0
@@ -86023,7 +86021,7 @@ tyche  :0
 tichel :0
 tychism:0
 tychite:0
-tick   :0
+tick   :1
 ticked :0
 tickey :0
 ticken :0
@@ -86065,7 +86063,7 @@ tiddle :0
 tiddley:0
 tiddler:0
 tiddly :0
-tide   :0
+tide   :1
 tided  :0
 tideful:0
 tidely :0
@@ -86089,7 +86087,7 @@ tidings:0
 tidiose:0
 tidley :0
 tidling:0
-tie    :4
+tie    :8
 tye    :0
 tieback:0
 tieboy :0
@@ -86116,7 +86114,7 @@ tierer :0
 tiering:0
 tierras:0
 tiers  :0
-ties   :2
+ties   :3
 tyes   :0
 tietick:0
 tievine:0
@@ -86144,10 +86142,10 @@ tigery :0
 tigerly:0
 tigers :0
 tigger :0
-tight  :0
+tight  :1
 tighten:0
 tighter:0
-tightly:0
+tightly:1
 tights :0
 tiglic :0
 tiglon :0
@@ -86240,7 +86238,7 @@ tylotus:0
 tilpah :0
 tils   :0
 tilsit :0
-tilt   :0
+tilt   :1
 tilted :0
 tilter :0
 tilters:0
@@ -86278,7 +86276,7 @@ timbo  :0
 timbre :0
 timbrel:0
 timbres:0
-time   :0
+time   :2
 timed  :0
 timeful:0
 timely :0
@@ -86317,7 +86315,7 @@ timpano:0
 tympano:0
 tympans:0
 timucua:0
-tin    :4
+tin    :9
 tina   :0
 tinage :0
 tinaja :0
@@ -86436,7 +86434,7 @@ tynwald:0
 tinware:0
 tinwork:0
 tiou   :0
-tip    :0
+tip    :1
 typ    :0
 typable:0
 typal  :0
@@ -86549,9 +86547,9 @@ tyrant :0
 tyrants:0
 tirasse:0
 tiraz  :0
-tire   :1
+tire   :3
 tyre   :0
-tired  :0
+tired  :1
 tyred  :0
 tireder:0
 tiredly:0
@@ -86559,7 +86557,7 @@ tiredom:0
 tireman:0
 tiremen:0
 tirer  :0
-tires  :0
+tires  :1
 tyres  :0
 tiresol:0
 tyrian :0
@@ -86790,7 +86788,7 @@ toeing :0
 toeless:0
 toelike:0
 toenail:0
-toes   :0
+toes   :1
 toeshoe:0
 toetoe :0
 toff   :0
@@ -87100,7 +87098,7 @@ tontine:0
 tonto  :0
 tonus  :0
 tonuses:0
-too    :1
+too    :3
 tooart :0
 toodle :0
 took   :0
@@ -87218,7 +87216,7 @@ topples:0
 topply :0
 toprail:0
 toprope:0
-tops   :0
+tops   :1
 topsail:0
 topsy  :0
 topside:0
@@ -87253,13 +87251,13 @@ torchet:0
 torchy :0
 torchon:0
 torcs  :0
-tordion:0
-tore   :0
+tore   :2
+tore   :1
 tored  :0
 torenia:0
 torero :0
 toreros:0
-tores  :0
+tores  :1
 toret  :0
 torfel :0
 torfle :0
@@ -87283,7 +87281,7 @@ tormae :0
 tormen :0
 torment:0
 tormina:0
-torn   :0
+torn   :1
 tornada:0
 tornade:0
 tornado:0
@@ -87355,7 +87353,7 @@ tortive:0
 tortoni:0
 tortor :0
 tortrix:0
-torts  :0
+torts  :1
 tortue :0
 tortula:0
 torture:0
@@ -87409,7 +87407,7 @@ totally:0
 totals :0
 totanus:0
 totara :0
-totchka:0
+tote   :1
 tote   :0
 toted  :0
 totem  :0
@@ -87458,7 +87456,7 @@ touchy :0
 touchup:0
 toufic :0
 toug   :0
-tough  :0
+tough  :2
 toughen:0
 tougher:0
 toughy :0
@@ -87630,7 +87628,7 @@ trabeae:0
 trabes :0
 trabu  :0
 trabuch:0
-trabuco:0
+trace  :1
 trac   :0
 trace  :0
 traced :0
@@ -87654,7 +87652,7 @@ tracts :0
 tractus:0
 trad   :0
 tradal :0
-trade  :0
+trade  :1
 traded :0
 trader :0
 traders:0
@@ -87687,9 +87685,9 @@ trailed:0
 trailer:1
 traily :0
 trails :0
-train  :0
+train  :3
 trayne :0
-trained:0
+trained:1
 trainee:0
 trainel:0
 trainer:0
@@ -87807,7 +87805,7 @@ treague:0
 treas  :0
 treason:0
 treasr :0
-treat  :1
+treat  :2
 treated:1
 treatee:0
 treater:0
@@ -87861,7 +87859,7 @@ tremor :0
 tremors:0
 trenail:0
 trench :0
-trend  :0
+trend  :1
 trended:0
 trendel:0
 trendy :0
@@ -87900,7 +87898,7 @@ trewel :0
 trews  :0
 trf    :0
 tri    :0
-try    :0
+try    :2
 triable:0
 triac  :0
 triace :0
@@ -87940,7 +87938,7 @@ triblet:0
 tribrac:0
 tribual:0
 tribuna:0
-tribune:0
+tribune:1
 tribute:0
 trica  :0
 tricae :0
@@ -87976,7 +87974,7 @@ triduam:0
 triduan:0
 triduo :0
 triduum:0
-tried  :0
+tried  :1
 triedly:0
 triene :0
 trienes:0
@@ -88316,7 +88314,7 @@ tropism:0
 tropist:0
 tropoyl:0
 troppo :0
-trot   :0
+trot   :1
 troth  :0
 trothed:0
 troths :0
@@ -88513,7 +88511,7 @@ tuart  :0
 tuatara:0
 tuatera:0
 tuath  :0
-tub    :0
+tub    :1
 tuba   :0
 tubae  :0
 tubage :0
@@ -88646,7 +88644,7 @@ tuille :0
 tuilles:0
 tuilzie:0
 tuinga :0
-tuis   :0
+tuis   :1
 tuism  :0
 tuition:0
 tuitive:0
@@ -88745,7 +88743,7 @@ tune   :1
 tunebo :0
 tuned  :0
 tuneful:0
-tuner  :0
+tuner  :1
 tuners :0
 tunes  :1
 tuneup :0
@@ -88909,7 +88907,7 @@ turmet :0
 turmit :0
 turmoil:0
 turmut :0
-turn   :0
+turn   :1
 turncap:0
 turndun:0
 turned :0
@@ -89040,7 +89038,7 @@ tutors :0
 tutress:0
 tutrice:0
 tutrix :0
-tuts   :0
+tuts   :1
 tutsan :0
 tutster:0
 tutted :0
@@ -90278,7 +90276,7 @@ unisoil:0
 unison :0
 unisons:0
 unist  :0
-unit   :0
+unit   :1
 unitage:0
 unital :0
 unitary:0
@@ -90676,7 +90674,7 @@ unrhyme:0
 unrich :0
 unricht:0
 unrid  :0
-unride :0
+unrig  :1
 unrife :0
 unrig  :0
 unright:0
@@ -91843,10 +91841,10 @@ usara  :0
 usaron :0
 usation:0
 usaunce:0
-use    :1
+use    :4
 useable:0
 useably:0
-used   :0
+used   :1
 usedly :0
 usednt :0
 usee   :0
@@ -91855,9 +91853,9 @@ usehold:0
 useless:0
 usenet :0
 usent  :0
-user   :0
-users  :0
-uses   :1
+users  :1
+uses   :3
+uses   :2
 ush    :0
 ushabti:0
 ushak  :0
@@ -91923,7 +91921,7 @@ ute    :0
 utees  :0
 utend  :0
 utensil:0
-uteri  :0
+uteri  :1
 uterine:0
 utero  :0
 uterus :0
@@ -92179,9 +92177,9 @@ valvae :0
 valval :0
 valvar :0
 valvata:0
-valvate:0
+valve  :1
 valve  :0
-valved :0
+valves :1
 valves :0
 valving:0
 valvula:0
@@ -92203,7 +92201,7 @@ vampyre:0
 vampish:0
 vamps  :0
 vamure :0
-van    :0
+van    :1
 vanadic:0
 vanadyl:0
 vance  :0
@@ -92320,7 +92318,7 @@ vasal  :0
 vascla :0
 vascon :0
 vascons:0
-vascula:0
+vase   :1
 vase   :0
 vaseful:0
 vaselet:0
@@ -92433,7 +92431,7 @@ veered :0
 veery  :0
 veeries:0
 veering:0
-veers  :0
+veers  :1
 vees   :0
 vefry  :0
 veg    :0
@@ -92726,11 +92724,11 @@ versa  :0
 versal :0
 versant:0
 versate:0
-verse  :0
+verse  :1
 versed :0
 verser :0
 versers:0
-verses :0
+verses :1
 verset :0
 versets:0
 versify:0
@@ -92795,7 +92793,7 @@ vespoid:0
 vessel :1
 vessels:0
 vesses :0
-vessets:0
+vest   :1
 vest   :0
 vesta  :0
 vestal :0
@@ -94930,7 +94928,7 @@ whedder:0
 whee   :0
 wheedle:0
 wheel  :0
-wheeled:0
+wheeled:1
 wheeler:0
 wheely :0
 wheelie:0
@@ -95664,12 +95662,12 @@ wisents:0
 wiser  :0
 wises  :0
 wisest :0
-wish   :0
+wish   :1
 wisha  :0
 wished :0
 wisher :0
 wishers:0
-wishes :0
+wishes :1
 wishful:0
 wishy  :0
 wishing:0
@@ -95868,7 +95866,7 @@ woidre :0
 woilie :0
 wok    :0
 wokas  :0
-woke   :0
+woke   :1
 woken  :0
 wokowi :0
 woks   :0
@@ -95877,7 +95875,7 @@ woldes :0
 woldy  :0
 wolds  :0
 woleai :0
-wolf   :0
+wolf   :2
 wolfdom:0
 wolfed :0
 wolfen :0
@@ -96058,13 +96056,13 @@ wordman:0
 wordmen:0
 words  :0
 wore   :0
-work   :0
+work   :1
 workbag:0
 workbox:0
 workday:0
 worked :0
 worker :0
-workers:0
+workers:1
 workful:0
 worky  :0
 working:0
@@ -96072,7 +96070,7 @@ workman:0
 workmen:0
 workout:0
 workpan:0
-works  :0
+works  :1
 workshy:0
 workup :0
 workups:0
@@ -96093,7 +96091,7 @@ wormils:0
 worming:0
 wormish:0
 worms  :0
-worn   :0
+worn   :1
 wornil :0
 wornout:0
 worral :0
@@ -96104,7 +96102,7 @@ worrier:0
 worries:0
 worrit :0
 worrits:0
-worse  :0
+worse  :1
 worsen :0
 worsens:0
 worser :0
@@ -96118,7 +96116,7 @@ worsted:0
 worsts :0
 worsum :0
 wort   :0
-worth  :0
+worth  :1
 worthed:0
 worthy :0
 worths :0
@@ -96141,7 +96139,7 @@ woubit :0
 wouch  :0
 wouf   :0
 wough  :0
-would  :0
+would  :1
 wouldn :0
 wouldnt:0
 wouldst:0
@@ -96706,7 +96704,7 @@ zendik :0
 zendo  :0
 zendos :0
 zenick :0
-zenith :0
+zenith :1
 zeniths:0
 zenobia:0
 zenonic:0

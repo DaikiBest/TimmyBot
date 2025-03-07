@@ -3,30 +3,20 @@ import java.awt.Rectangle;
 import java.awt.event.InputEvent;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.RandomAccessFile;
 import java.awt.Robot;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
-
-import javax.imageio.ImageIO;
-import javax.sound.sampled.AudioFormat.Encoding;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 import static java.lang.Math.abs;
-import static java.lang.Math.nextDown;
 
 public class WordSolver {
     private Robot bot;
@@ -68,7 +58,6 @@ public class WordSolver {
             if (!isDonutScreen()) { // not in level
                 nextLevel();
             } else {
-                // long startTime = System.currentTimeMillis();
                 donut_center_y = computeHeight();
                 radius = findDonutRadius();
                 letterID.computeLetterSize(ratio);
@@ -80,12 +69,9 @@ public class WordSolver {
                 puzzleScanner.scan(true, 1, CENTER_X);
 
                 Map<String, Integer> validWords = findValidWords(letters);
-                // long finishTime = System.currentTimeMillis();
-                // System.out.println("Time taken: " + (finishTime - startTime) + " ms");
                 makeMoves(validWords, coords);
 
                 reroll(); // after checking solutions, reroll regardless of trying or not
-                bot.mouseMove(100, 100);
             }
         }
     }
@@ -177,6 +163,7 @@ public class WordSolver {
                 }
                 offset += 10;
             }
+            reader.close();
         } catch (Exception e) {
             System.out.println("File reading exception.");
         }
@@ -271,6 +258,7 @@ public class WordSolver {
         List<Integer> frequencies = new ArrayList<>();
         for (String key : keys) {
             String[] parts = key.split(":");
+            // System.out.println(key);
             frequencies.add(Integer.valueOf(parts[1]));
         }
 
@@ -313,8 +301,7 @@ public class WordSolver {
     // Press reroll button: reroll the letter to be in new positions
     private void reroll() {
         bot.mouseMove(REROLL_X, reroll_y);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        pressButton();
         bot.mouseMove(100, 100);
         bot.delay(300);
     }
@@ -322,22 +309,22 @@ public class WordSolver {
     // Move to next level; reset curr level data
     private void nextLevel() {
         bot.mouseMove(1120, 510); // 750, 275 for fullscreen
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // click twice
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        pressButton();
+        pressButton();
         bot.mouseMove(1120, 550);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        pressButton();
         puzzleScanner.clearWordsPuzzle();
 
         // click on console (to make quitting easier)
         bot.mouseMove(625, 825);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        bot.delay(250);
+        pressButton();
+        bot.delay(500);
         
         bot.mouseMove(1120, 510);
+        pressButton();
+    }
+
+    private void pressButton() {
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
