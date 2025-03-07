@@ -21,8 +21,6 @@ public class CirclePixelChecker {
         BufferedImage img = bot.createScreenCapture(new Rectangle(centerX - donutRadius,
                 centerY - donutRadius, donutRadius * 2, donutRadius * 2));
 
-        // BUFFESRED IMAGE!!!! WAYYY FASTEr!!!!!!!! OUT OF MEMORY??!!
-
         int count = 1; // always assumes there's at least one letter
         boolean wasWhite = false;
         Point prevWhitePx = null, start = null;

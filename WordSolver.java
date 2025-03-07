@@ -19,7 +19,9 @@ import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioFormat.Encoding;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -40,7 +42,7 @@ public class WordSolver {
     private int REROLL_X = 1033; // STATIC: 70 pixels from left of screen
     private int reroll_y = 700;
     private static final int DONUT_BACKGROUND_RGB = 0xFFC90A27; // timmy red
-    private static final int MOVEMENT_DELAY = 15;
+    private static final int MOVEMENT_DELAY = 5;
 
     private static final int BASELINE_RADIUS = 95;
     private static final int BASELINE_DONUT_HEIGHT = 37;
@@ -64,7 +66,7 @@ public class WordSolver {
 
         while (true) {
             if (!isDonutScreen()) { // not in level
-                // nextLevel();
+                nextLevel();
             } else {
                 // long startTime = System.currentTimeMillis();
                 donut_center_y = computeHeight();
@@ -82,7 +84,7 @@ public class WordSolver {
                 // System.out.println("Time taken: " + (finishTime - startTime) + " ms");
                 makeMoves(validWords, coords);
 
-                // reroll(); // after checking solutions, reroll regardless of trying or not
+                reroll(); // after checking solutions, reroll regardless of trying or not
                 bot.mouseMove(100, 100);
             }
         }
@@ -153,7 +155,7 @@ public class WordSolver {
         String line;
         boolean isValid;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("NEW_OUTPUT.txt")); // reset reader
+            BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME)); // reset reader
             int offset = 0;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(":");
@@ -198,15 +200,11 @@ public class WordSolver {
     }
 
     // Using possible word combinations, input them into word challenge
-    private void makeMoves(Map<String, Integer> unsortedValidWords, List<Coordinate> coords) {
-        // Sorts map by frequency (values in map)
-        Map<Object, Object> validWords = unsortedValidWords.entrySet().stream()
-                .sorted(Entry.comparingByValue())
-                .collect(Collectors.toMap(Entry::getKey, Entry::getValue,
-                        (e1, e2) -> e1, HashMap::new));
+    private void makeMoves(Map<String, Integer> validWordsMap, List<Coordinate> coords) {
+        List<String> validWords = sortByFrequency(validWordsMap);
 
-        for (Object key : validWords.keySet()) {
-            String[] parts = key.toString().split(":");
+        for (String key : validWords) {
+            String[] parts = key.split(":");
             String word = parts[0].trim();
             int frequency = Integer.valueOf(parts[1]);
             List<Coordinate> wordCoords = makeLetterCoords(word, coords);
@@ -215,7 +213,7 @@ public class WordSolver {
                 nextLevel();
                 break;
             } else if (filterOut(wordCoords)) { // filter for necessary lengths
-                System.out.print("\u001B[31m[" + word + "] \u001B[0m");
+                System.out.print("\u001B[31m[" + word + "]" + frequency + "\u001B[0m ");
             } else {
                 Coordinate prev = wordCoords.get(0);
                 for (int i = 1; i < wordCoords.size(); i++) {
@@ -225,21 +223,25 @@ public class WordSolver {
                 bot.delay(MOVEMENT_DELAY);
                 bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-                System.out.print(word + " ");
+                System.out.print(word + "-");
 
+                bot.delay(21);
                 // If current word solved the puzzle, increase frequency
                 if (puzzleScanner.updatePuzzleWords()) {
                     try {
-                        RandomAccessFile fileHandler = new RandomAccessFile("NEW_OUTPUT.txt", "rw");
-                        int offset = (int) validWords.get(key);
-                        String updatedDict = word + String.join("", Collections.nCopies(7 - word.length(), " "))
-                                + ":" + ++frequency;
+                        System.out.print("\u001B[34m" + (frequency + 1) + "\u001B[0m ");
+                        RandomAccessFile fileHandler = new RandomAccessFile(FILE_NAME, "rw");
+                        int offset = Integer.valueOf(validWordsMap.get(key));
+                        String updatedDict = word + String.join("", Collections.nCopies(7 - word.length(), " ")) + ":"
+                                + ++frequency;
                         fileHandler.seek(offset);
                         fileHandler.writeBytes(updatedDict);
                         fileHandler.close();
                     } catch (Exception e) {
                         System.out.println("Problems writing into file.");
                     }
+                } else {
+                    System.out.print(frequency + " ");
                 }
             }
         }
@@ -253,6 +255,39 @@ public class WordSolver {
         bot.mouseMove(CENTER_X, donut_center_y);
         bot.delay(MOVEMENT_DELAY);
         bot.mouseMove(next.getX(), next.getY());
+    }
+
+    // Returns the list of validWords for puzzle sorted by their frequency
+    private List<String> sortByFrequency(Map<String, Integer> wordsMap) {
+        // Keys and frequencies have same indices; make indices[]
+        int n = wordsMap.keySet().size();
+        Integer[] indices = new Integer[n];
+        for (int i = 0; i < n; ++i) {
+            indices[i] = i;
+        }
+
+        // Make list of frequencies (parsing map key; parts[1])
+        List<String> keys = new ArrayList<>(wordsMap.keySet());
+        List<Integer> frequencies = new ArrayList<>();
+        for (String key : keys) {
+            String[] parts = key.split(":");
+            frequencies.add(Integer.valueOf(parts[1]));
+        }
+
+        // Sort indices[] by order of frequencies
+        Arrays.sort(indices,
+                new Comparator<Integer>() {
+                    public int compare(Integer a, Integer b) {
+                        return frequencies.get(b).compareTo(frequencies.get(a));
+                    }
+                });
+
+        // Sort keys by indices[]
+        List<String> orderedWords = new ArrayList<>();
+        for (int index : indices) {
+            orderedWords.add(keys.get(index));
+        }
+        return orderedWords;
     }
 
     // Filters out currWord if it is not a needed length
@@ -301,5 +336,9 @@ public class WordSolver {
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         bot.delay(250);
+        
+        bot.mouseMove(1120, 510);
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
     }
 }

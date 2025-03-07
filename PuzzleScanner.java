@@ -39,9 +39,9 @@ public class PuzzleScanner {
         BufferedImage img = bot.createScreenCapture(new Rectangle(CENTER_X - CROSSWORD_HALF_SIZE,
                 CROSSWORD_Y - CROSSWORD_HALF_SIZE, CROSSWORD_HALF_SIZE * 2, CROSSWORD_HALF_SIZE * 2));
 
-        // File file = new File("my" + ".png");
+        // File file = new File("puzzle" + ".png");
         // try {
-        // ImageIO.write(img, "PNG", file);
+        //     ImageIO.write(img, "PNG", file);
         // } catch (Exception e) {
 
         // }
@@ -100,7 +100,7 @@ public class PuzzleScanner {
                 isCheckingLine = false;
             } else if (toggleNextStartChecking) {
                 isCheckingLine = true;
-                var1 += CROSSWORD_DIST_TOLERANCE;
+                var1 += 5; // Avoid being on round edge
             }
         }
         if (isColumn) { // after doing the column words, go again now for rows
@@ -110,6 +110,7 @@ public class PuzzleScanner {
 
     // Updates words left to be solved from puzzle; returns true if puzzle was updated
     public boolean updatePuzzleWords() {
+        boolean update = false;
         boolean remove = false;
         for (Iterator<List<Coordinate>> itr = wordsInPuzzle.iterator(); itr.hasNext();) {
             remove = true;
@@ -122,9 +123,10 @@ public class PuzzleScanner {
             }
             if (remove) {
                 itr.remove();
+                update = true;
             }
         }
-        return remove;
+        return update;
     }
 
     public List<List<Coordinate>> getWordsPuzzle() {
