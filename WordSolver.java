@@ -3,16 +3,28 @@ import java.awt.Rectangle;
 import java.awt.event.InputEvent;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.RandomAccessFile;
 import java.awt.Robot;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioFormat.Encoding;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 import static java.lang.Math.abs;
+import static java.lang.Math.nextDown;
 
 public class WordSolver {
     private Robot bot;
@@ -28,14 +40,13 @@ public class WordSolver {
     private int REROLL_X = 1033; // STATIC: 70 pixels from left of screen
     private int reroll_y = 700;
     private static final int DONUT_BACKGROUND_RGB = 0xFFC90A27; // timmy red
-    private static final int MOVEMENT_DELAY = 5;
+    private static final int MOVEMENT_DELAY = 15;
 
     private static final int BASELINE_RADIUS = 95;
     private static final int BASELINE_DONUT_HEIGHT = 37;
     private double ratio;
 
     private static final String FILE_NAME = "output.txt";
-    private BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME));
     private List<Character> letters;
     private int radius;
 
@@ -53,24 +64,25 @@ public class WordSolver {
 
         while (true) {
             if (!isDonutScreen()) { // not in level
-                nextLevel();
+                // nextLevel();
             } else {
-                // compute configs
+                // long startTime = System.currentTimeMillis();
                 donut_center_y = computeHeight();
-                // adjust for different sized donuts
                 radius = findDonutRadius();
                 letterID.computeLetterSize(ratio);
-                
+
                 letters = new ArrayList<>();
                 int numLetters = circle.countLetters(CENTER_X, donut_center_y, radius, ratio);
                 System.out.println(numLetters + " letters");
                 List<Coordinate> coords = calculateCoodinates(letters, numLetters);
                 puzzleScanner.scan(true, 1, CENTER_X);
 
-                List<List<Coordinate>> words = findValidWords(letters, coords);
-                makeMoves(words);
+                Map<String, Integer> validWords = findValidWords(letters);
+                // long finishTime = System.currentTimeMillis();
+                // System.out.println("Time taken: " + (finishTime - startTime) + " ms");
+                makeMoves(validWords, coords);
 
-                reroll(); // after checking solutions, reroll regardless of trying or not
+                // reroll(); // after checking solutions, reroll regardless of trying or not
                 bot.mouseMove(100, 100);
             }
         }
@@ -131,77 +143,104 @@ public class WordSolver {
         return coords;
     }
 
-    // Find all words that can be formed using letters in curr puzzle; create list
-    // of coordinate combinations to input said words
-    private List<List<Coordinate>> findValidWords(List<Character> letters, List<Coordinate> coords) {
-        List<List<Coordinate>> words = new ArrayList<>();
+    // Find all words that can be formed using letters in curr puzzle; create map
+    // with a list
+    // of coordinate combinations to input said words, and offset of word in
+    // dictionary
+    private Map<String, Integer> findValidWords(List<Character> letters) {
+        Map<String, Integer> validWords = new HashMap<>();
+
         String line;
         boolean isValid;
         try {
+            BufferedReader reader = new BufferedReader(new FileReader("NEW_OUTPUT.txt")); // reset reader
+            int offset = 0;
             while ((line = reader.readLine()) != null) {
-                List<Character> temp = new ArrayList<>(letters);
-                List<Coordinate> currWord = new ArrayList<>();
-                char[] lineChars = line.toCharArray();
-                isValid = true;
+                String[] parts = line.split(":");
+                String word = parts[0].trim();
 
-                for (int i = 0; i < lineChars.length; i++) {
-                    if (!temp.contains(lineChars[i])) {
+                List<Character> temp = new ArrayList<>(letters);
+                char[] wordChars = word.toCharArray();
+                isValid = true;
+                for (int i = 0; i < wordChars.length; i++) {
+                    if (!temp.contains(wordChars[i])) {
                         isValid = false;
                         break;
                     }
-                    temp.remove(Character.valueOf(lineChars[i]));
-                    addLetterCoordinate(lineChars[i], currWord, coords);
+                    temp.remove(Character.valueOf(wordChars[i])); // no duplicate letters
                 }
 
                 if (isValid) {
-                    words.add(currWord);
+                    validWords.put(line, offset);
                 }
+                offset += 10;
             }
-            reader = new BufferedReader(new FileReader(FILE_NAME)); // reset reader
-        } catch (UnsupportedOperationException e) {
-            System.out.println("unsuported");
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("index out of bounds");
         } catch (Exception e) {
-            System.out.println("Problem with bufferedReader");
+            System.out.println("File reading exception.");
         }
-        return words;
+        return validWords;
     }
 
     // Makes sure a word is not made up of letter's of duplicate coordinates (eg.
     // two A's, using same A twice)
-    private void addLetterCoordinate(char c, List<Coordinate> currWord, List<Coordinate> coords) {
-        for (Coordinate coord : coords) {
-            if (!currWord.contains(coord) && c == coord.getLetter()) {
-                currWord.add(coord);
-                break;
+    private List<Coordinate> makeLetterCoords(String word, List<Coordinate> coords) {
+        List<Coordinate> wordsCoords = new ArrayList<>();
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            for (Coordinate coord : coords) {
+                if (!wordsCoords.contains(coord) && c == coord.getLetter()) {
+                    wordsCoords.add(coord);
+                    break;
+                }
             }
         }
+        return wordsCoords;
     }
 
     // Using possible word combinations, input them into word challenge
-    private void makeMoves(List<List<Coordinate>> words) {
-        for (List<Coordinate> currWord : words) {
-            String word = "";
-                for (Coordinate curr : currWord) {
-                    word = word + curr.getLetter();
-                }
+    private void makeMoves(Map<String, Integer> unsortedValidWords, List<Coordinate> coords) {
+        // Sorts map by frequency (values in map)
+        Map<Object, Object> validWords = unsortedValidWords.entrySet().stream()
+                .sorted(Entry.comparingByValue())
+                .collect(Collectors.toMap(Entry::getKey, Entry::getValue,
+                        (e1, e2) -> e1, HashMap::new));
+
+        for (Object key : validWords.keySet()) {
+            String[] parts = key.toString().split(":");
+            String word = parts[0].trim();
+            int frequency = Integer.valueOf(parts[1]);
+            List<Coordinate> wordCoords = makeLetterCoords(word, coords);
+
             if (!isDonutScreen()) { // if no longer on donut screen
                 nextLevel();
                 break;
-            } else if (filterOut(currWord)) { // filter for lengths and repeated words
+            } else if (filterOut(wordCoords)) { // filter for necessary lengths
                 System.out.print("\u001B[31m[" + word + "] \u001B[0m");
             } else {
-                Coordinate prev = currWord.get(0);
-                for (int i = 1; i < currWord.size(); i++) {
-                    move(prev, currWord.get(i));
-                    prev = currWord.get(i);
+                Coordinate prev = wordCoords.get(0);
+                for (int i = 1; i < wordCoords.size(); i++) {
+                    move(prev, wordCoords.get(i));
+                    prev = wordCoords.get(i);
                 }
                 bot.delay(MOVEMENT_DELAY);
                 bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
                 System.out.print(word + " ");
-                puzzleScanner.updatePuzzleWords();
+
+                // If current word solved the puzzle, increase frequency
+                if (puzzleScanner.updatePuzzleWords()) {
+                    try {
+                        RandomAccessFile fileHandler = new RandomAccessFile("NEW_OUTPUT.txt", "rw");
+                        int offset = (int) validWords.get(key);
+                        String updatedDict = word + String.join("", Collections.nCopies(7 - word.length(), " "))
+                                + ":" + ++frequency;
+                        fileHandler.seek(offset);
+                        fileHandler.writeBytes(updatedDict);
+                        fileHandler.close();
+                    } catch (Exception e) {
+                        System.out.println("Problems writing into file.");
+                    }
+                }
             }
         }
     }
@@ -220,7 +259,7 @@ public class WordSolver {
     // Returns true if it does filter currWord, false if word is to be tried
     // Omit word filtering if the puzzle was not empty when scanned
     private boolean filterOut(List<Coordinate> currWord) {
-        //if board is not empty, don't filter out
+        // if board is not empty, don't filter out
         if (puzzleScanner.getWordsPuzzle().isEmpty()) {
             return false;
         }
@@ -247,10 +286,10 @@ public class WordSolver {
 
     // Move to next level; reset curr level data
     private void nextLevel() {
-        bot.mouseMove(1120, 510); //750, 275 for fullscreen
+        bot.mouseMove(1120, 510); // 750, 275 for fullscreen
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK); //click twice
+        bot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // click twice
         bot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         bot.mouseMove(1120, 550);
         bot.mousePress(InputEvent.BUTTON1_DOWN_MASK);

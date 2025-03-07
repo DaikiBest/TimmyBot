@@ -76,7 +76,7 @@ public class PuzzleScanner {
                         }
                         distanceToNext = 0;
                         toggleNextStopChecking = true;
-                    } else if (img.getRGB(x, y) == CROSSWORD_SOLVED_RGB) { //if puzzle is not empty
+                    } else if (img.getRGB(x, y) == CROSSWORD_SOLVED_RGB) { // if puzzle is not empty
                         img.flush();
                         throw new PuzzleNotEmptyException();
                     } else {
@@ -108,15 +108,14 @@ public class PuzzleScanner {
         }
     }
 
-    // Updates words left to be solved from puzzle
-    public void updatePuzzleWords() {
-        boolean remove;
+    // Updates words left to be solved from puzzle; returns true if puzzle was updated
+    public boolean updatePuzzleWords() {
+        boolean remove = false;
         for (Iterator<List<Coordinate>> itr = wordsInPuzzle.iterator(); itr.hasNext();) {
             remove = true;
             List<Coordinate> puzzleWords = itr.next();
             for (Coordinate letter : puzzleWords) {
-                if (Math.abs(
-                        bot.getPixelColor(letter.getX(), letter.getY()).getRGB() - CROSSWORD_BLANK_RGB) <= 500000) {
+                if (bot.getPixelColor(letter.getX(), letter.getY()).getRGB() == CROSSWORD_BLANK_RGB) {
                     remove = false;
                     break;
                 }
@@ -125,6 +124,7 @@ public class PuzzleScanner {
                 itr.remove();
             }
         }
+        return remove;
     }
 
     public List<List<Coordinate>> getWordsPuzzle() {
